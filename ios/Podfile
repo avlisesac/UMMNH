@@ -35,6 +35,7 @@ target 'UMMNH' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
 
   target 'UMMNHTests' do
     inherit! :search_paths
