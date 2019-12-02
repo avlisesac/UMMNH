@@ -20,6 +20,10 @@
 		2DCD954D1E0B4F2C00145EB5 /* UMMNHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* UMMNHTests.m */; };
 		D009E82206F3BCE79475F2F1 /* libPods-UMMNHTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8CAF34682B2FDED20DDAF /* libPods-UMMNHTests.a */; };
 		D3A1D41468A6D512BF4E4EE9 /* libPods-UMMNH-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019F0AFC36D2DE061169E1B /* libPods-UMMNH-tvOSTests.a */; };
+		F5C753032395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
+		F5C753042395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
+		F5C753052395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
+		F5C753062395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,7 @@
 		B6B79508BC886EA95EA9BE85 /* Pods-UMMNH-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH-tvOS.release.xcconfig"; path = "Target Support Files/Pods-UMMNH-tvOS/Pods-UMMNH-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F5C753022395696300C0325A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6708FE87B3D7DABAC62E962 /* libPods-UMMNH-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UMMNH-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +130,7 @@
 		13B07FAE1A68108700A75B9A /* UMMNH */ = {
 			isa = PBXGroup;
 			children = (
+				F5C753022395696300C0325A /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,7 +167,6 @@
 				AE01BA733D032D771F308916 /* Pods-UMMNHTests.debug.xcconfig */,
 				A2F44072B434B2D4BFE1EA73 /* Pods-UMMNHTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +313,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -329,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C753042395696300C0325A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +345,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F5C753032395696300C0325A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				F5C753052395696300C0325A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C753062395696300C0325A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
