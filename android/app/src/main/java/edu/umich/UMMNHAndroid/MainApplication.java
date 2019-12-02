@@ -1,4 +1,4 @@
-package com.ummnh;
+package edu.umich.UMMNHAndroid;
 
 import android.app.Application;
 import android.content.Context;

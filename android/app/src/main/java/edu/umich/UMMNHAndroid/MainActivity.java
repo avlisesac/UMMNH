@@ -1,4 +1,4 @@
-package com.ummnh;
+package edu.umich.UMMNHAndroid;
 
 import com.facebook.react.ReactActivity;
 
