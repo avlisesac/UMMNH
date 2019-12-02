@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1076500767416",
+    "firebase_url": "https://ummnh-33f82.firebaseio.com",
+    "project_id": "ummnh-33f82",
+    "storage_bucket": "ummnh-33f82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076500767416:android:15d827e763d2586a730a4d",
+        "android_client_info": {
+          "package_name": "edu.umich.UMMNHAndroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076500767416-m8gge206jei45akkapprep9g3mc36j3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU8qI4p8MDaRrcmXKT4kmwc1FD6dxX3ow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076500767416-m8gge206jei45akkapprep9g3mc36j3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
