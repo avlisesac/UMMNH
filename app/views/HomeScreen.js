@@ -26,6 +26,7 @@ export default class HomeScreen extends React.Component {
 						</View>
 						<View style = { styles.buttonContainer }>
 							<Text>Button Container</Text>
+
 						</View>
 					</View>
 				</SafeAreaView>
@@ -58,7 +59,6 @@ const styles = StyleSheet.create({
 		width: '100%',
 		paddingTop: 10,
 		paddingRight: 10,
-		//backgroundColor: 'red',
 	},
 	messageText: {
 		fontFamily: "Whitney-Black",
