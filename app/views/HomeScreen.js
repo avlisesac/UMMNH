@@ -9,14 +9,24 @@ import {
 
 import images from '../modules/Images'
 import colors from '../modules/Colors'
+import fontSizes from '../modules/FontSizes'
 
 export default class HomeScreen extends React.Component {
 	render() {
 		return (
 			<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
 				<SafeAreaView style = { styles.mainContainer }>
-					<View style = { styles.menuContainer }>
-						<Text style = { styles.helloWorld }>Hello World!</Text>
+					<View style = { styles.menuContainer }>			
+						<View style = { styles.messageContainer }>
+							<Text style = {[ styles.messageText, styles.messageHeader ]}>Welcome</Text>
+							<Text style = {[ styles.messageText, styles.messageBody ]}>to the brand new</Text>
+							<Text style = {[ styles.messageText, styles.messageBody ]}>University of Michigan</Text>
+							<Text style = {[ styles.messageText, styles.messageBig ]}>Museum of</Text>
+							<Text style = {[ styles.messageText, styles.messageBig ]}>Natural History!</Text>
+						</View>
+						<View style = { styles.buttonContainer }>
+							<Text>Button Container</Text>
+						</View>
 					</View>
 				</SafeAreaView>
 			</ImageBackground>
@@ -43,8 +53,32 @@ const styles = StyleSheet.create({
 		marginBottom: 10,
 		alignItems: 'center'
 	},
-	helloWorld:{
-		fontFamily: 'Whitney-Bold',
-		color: colors.ummnhDarkBlue,
+	messageContainer: {
+		flex: 1,
+		width: '100%',
+		paddingTop: 10,
+		paddingRight: 10,
+		//backgroundColor: 'red',
+	},
+	messageText: {
+		fontFamily: "Whitney-Black",
+		color: colors.ummnhLightBlue,
+		textAlign: 'right'
+	},
+	messageHeader: {
+		fontSize: fontSizes.welcomeHeader,
+	},
+	messageBig: {
+		fontSize: fontSizes.welcomeBig,
+	},
+	messageBody: {
+		fontSize: fontSizes.welcomeBody,
+	},
+	buttonContainer: {
+		flex: 1,
+		width: '100%',
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: 'blue'
 	}
 })
