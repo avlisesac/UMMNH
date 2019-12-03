@@ -13,13 +13,25 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1EAB32DC56E37665BB14AAD5 /* libPods-UMMNH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B53C8767AE4100D10B6EDFB6 /* libPods-UMMNH.a */; };
+		230E985DD6714DE7B168FA0D /* Whitney-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1F85B0C50C490EA00E090E /* Whitney-Light.otf */; };
 		2674C333701A3CAAB11D613B /* libPods-UMMNH-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6708FE87B3D7DABAC62E962 /* libPods-UMMNH-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* UMMNHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* UMMNHTests.m */; };
+		4081F6FE057E4BD29AAD5E05 /* Whitney-MediumItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E01BF86FC4A4B5BA9897A12 /* Whitney-MediumItal.otf */; };
+		4210B6179F31492188CB7C0C /* Whitney-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C760960AF4748E8BC11ABB6 /* Whitney-BookItal.otf */; };
+		44DC3198C81F44CAAE5EC8F2 /* Whitney-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F90BBF71F2843F79C809587 /* Whitney-Medium.otf */; };
+		54ED5D183EB84FE3B7AF7038 /* Whitney-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED27DE89160B4141A842425A /* Whitney-Semibold.otf */; };
+		7E9AFCAAE6A049A7B2147884 /* Whitney-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73D0D14838C04AD8B340E105 /* Whitney-Book.otf */; };
+		B21939668AC14A61813102DF /* Whitney-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A056B107332645BC9B72F61C /* Whitney-Bold.otf */; };
+		B783047FF32B48EAB2102A95 /* Whitney-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = C150933DAB1B48B58584DEB5 /* Whitney-LightItal.otf */; };
+		B96B3B4FB9A34CF1959507FB /* Whitney-SemiboldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5E8DC546FA84A89BC99A079 /* Whitney-SemiboldItal.otf */; };
+		BE51C38DF02A41ED98C58C9A /* Whitney-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4D31E08211E4BFDA3BD0A05 /* Whitney-BoldItal.otf */; };
+		C63AF3E60FBB4BB5B53919C6 /* Whitney-BlackItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72CAB244FA134F1A87E16B35 /* Whitney-BlackItal.otf */; };
 		D009E82206F3BCE79475F2F1 /* libPods-UMMNHTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8CAF34682B2FDED20DDAF /* libPods-UMMNHTests.a */; };
 		D3A1D41468A6D512BF4E4EE9 /* libPods-UMMNH-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019F0AFC36D2DE061169E1B /* libPods-UMMNH-tvOSTests.a */; };
+		F22F8A673C34421BA799BFEE /* Whitney-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99F79C7758514BA68477D48A /* Whitney-Black.otf */; };
 		F5C753032395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
 		F5C753042395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
 		F5C753052395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
@@ -48,6 +60,8 @@
 		00E356EE1AD99517003FC87E /* UMMNHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UMMNHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* UMMNHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMMNHTests.m; sourceTree = "<group>"; };
+		056509FBCEAF46BCBFB269D3 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		06C95E3954E7498E81D1E22C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		1019F0AFC36D2DE061169E1B /* libPods-UMMNH-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UMMNH-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* UMMNH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMMNH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = UMMNH/AppDelegate.h; sourceTree = "<group>"; };
@@ -56,18 +70,44 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = UMMNH/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = UMMNH/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = UMMNH/main.m; sourceTree = "<group>"; };
+		1863DF866A1C4A6A9F332519 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		1B98CDAE97144EF086033FA6 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* UMMNH-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMMNH-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* UMMNH-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UMMNH-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8CAF34682B2FDED20DDAF /* libPods-UMMNHTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UMMNHTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E01BF86FC4A4B5BA9897A12 /* Whitney-MediumItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-MediumItal.otf"; path = "../app/assets/fonts/Whitney-MediumItal.otf"; sourceTree = "<group>"; };
+		3172B5EDD9C340F597E2ABED /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		3E1F85B0C50C490EA00E090E /* Whitney-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Light.otf"; path = "../app/assets/fonts/Whitney-Light.otf"; sourceTree = "<group>"; };
+		4E66BCC062674C688E5DD4A8 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		4EFD3814181E774C001EB3C0 /* Pods-UMMNH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH.release.xcconfig"; path = "Target Support Files/Pods-UMMNH/Pods-UMMNH.release.xcconfig"; sourceTree = "<group>"; };
+		531FE051ADC047F0992288D4 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		5C760960AF4748E8BC11ABB6 /* Whitney-BookItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BookItal.otf"; path = "../app/assets/fonts/Whitney-BookItal.otf"; sourceTree = "<group>"; };
 		6B3226828FAA76F9257A1740 /* Pods-UMMNH-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-UMMNH-tvOSTests/Pods-UMMNH-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		72CAB244FA134F1A87E16B35 /* Whitney-BlackItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BlackItal.otf"; path = "../app/assets/fonts/Whitney-BlackItal.otf"; sourceTree = "<group>"; };
+		73D0D14838C04AD8B340E105 /* Whitney-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Book.otf"; path = "../app/assets/fonts/Whitney-Book.otf"; sourceTree = "<group>"; };
+		7F90BBF71F2843F79C809587 /* Whitney-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Medium.otf"; path = "../app/assets/fonts/Whitney-Medium.otf"; sourceTree = "<group>"; };
+		85197C6133024CCA91520EB9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		91D02650AA3D436AB003E8DF /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		940765D1DE004CD9A474C40C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		94F716A83A8D48F9B3BB785A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		99F79C7758514BA68477D48A /* Whitney-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Black.otf"; path = "../app/assets/fonts/Whitney-Black.otf"; sourceTree = "<group>"; };
+		A056B107332645BC9B72F61C /* Whitney-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Bold.otf"; path = "../app/assets/fonts/Whitney-Bold.otf"; sourceTree = "<group>"; };
 		A2F44072B434B2D4BFE1EA73 /* Pods-UMMNHTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNHTests.release.xcconfig"; path = "Target Support Files/Pods-UMMNHTests/Pods-UMMNHTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4D31E08211E4BFDA3BD0A05 /* Whitney-BoldItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BoldItal.otf"; path = "../app/assets/fonts/Whitney-BoldItal.otf"; sourceTree = "<group>"; };
+		A51AC573EE7849C6872740DF /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		A8DAEC04FBA149C182C18F91 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		AB6BA915225E56779173D5EE /* Pods-UMMNH-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-UMMNH-tvOS/Pods-UMMNH-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AD22A0C7D2E04FC55FDFE839 /* Pods-UMMNH-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-UMMNH-tvOSTests/Pods-UMMNH-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADE230C0F1D1E14A02B7C1EC /* Pods-UMMNH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH.debug.xcconfig"; path = "Target Support Files/Pods-UMMNH/Pods-UMMNH.debug.xcconfig"; sourceTree = "<group>"; };
 		AE01BA733D032D771F308916 /* Pods-UMMNHTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNHTests.debug.xcconfig"; path = "Target Support Files/Pods-UMMNHTests/Pods-UMMNHTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B53C8767AE4100D10B6EDFB6 /* libPods-UMMNH.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UMMNH.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E8DC546FA84A89BC99A079 /* Whitney-SemiboldItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-SemiboldItal.otf"; path = "../app/assets/fonts/Whitney-SemiboldItal.otf"; sourceTree = "<group>"; };
 		B6B79508BC886EA95EA9BE85 /* Pods-UMMNH-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH-tvOS.release.xcconfig"; path = "Target Support Files/Pods-UMMNH-tvOS/Pods-UMMNH-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C150933DAB1B48B58584DEB5 /* Whitney-LightItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-LightItal.otf"; path = "../app/assets/fonts/Whitney-LightItal.otf"; sourceTree = "<group>"; };
+		CFCAA7A9777D46D0A1D12ECF /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		D24A042C7E4742009836CCBF /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		DF53420EC5F642328E8A0E29 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		ED27DE89160B4141A842425A /* Whitney-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Semibold.otf"; path = "../app/assets/fonts/Whitney-Semibold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F5C753022395696300C0325A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -188,6 +228,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				40C21F44081712C4DA91706E /* Pods */,
+				D57A3B1C3B7545F0A604D0D0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -203,6 +244,41 @@
 				2D02E4901E0B4A5D006451C7 /* UMMNH-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D57A3B1C3B7545F0A604D0D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99F79C7758514BA68477D48A /* Whitney-Black.otf */,
+				72CAB244FA134F1A87E16B35 /* Whitney-BlackItal.otf */,
+				A056B107332645BC9B72F61C /* Whitney-Bold.otf */,
+				A4D31E08211E4BFDA3BD0A05 /* Whitney-BoldItal.otf */,
+				73D0D14838C04AD8B340E105 /* Whitney-Book.otf */,
+				5C760960AF4748E8BC11ABB6 /* Whitney-BookItal.otf */,
+				3E1F85B0C50C490EA00E090E /* Whitney-Light.otf */,
+				C150933DAB1B48B58584DEB5 /* Whitney-LightItal.otf */,
+				7F90BBF71F2843F79C809587 /* Whitney-Medium.otf */,
+				2E01BF86FC4A4B5BA9897A12 /* Whitney-MediumItal.otf */,
+				ED27DE89160B4141A842425A /* Whitney-Semibold.otf */,
+				B5E8DC546FA84A89BC99A079 /* Whitney-SemiboldItal.otf */,
+				D24A042C7E4742009836CCBF /* AntDesign.ttf */,
+				3172B5EDD9C340F597E2ABED /* Entypo.ttf */,
+				94F716A83A8D48F9B3BB785A /* EvilIcons.ttf */,
+				940765D1DE004CD9A474C40C /* Feather.ttf */,
+				CFCAA7A9777D46D0A1D12ECF /* FontAwesome.ttf */,
+				1B98CDAE97144EF086033FA6 /* FontAwesome5_Brands.ttf */,
+				A8DAEC04FBA149C182C18F91 /* FontAwesome5_Regular.ttf */,
+				056509FBCEAF46BCBFB269D3 /* FontAwesome5_Solid.ttf */,
+				1863DF866A1C4A6A9F332519 /* Fontisto.ttf */,
+				91D02650AA3D436AB003E8DF /* Foundation.ttf */,
+				A51AC573EE7849C6872740DF /* Ionicons.ttf */,
+				06C95E3954E7498E81D1E22C /* MaterialCommunityIcons.ttf */,
+				85197C6133024CCA91520EB9 /* MaterialIcons.ttf */,
+				531FE051ADC047F0992288D4 /* Octicons.ttf */,
+				DF53420EC5F642328E8A0E29 /* SimpleLineIcons.ttf */,
+				4E66BCC062674C688E5DD4A8 /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +369,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -352,6 +428,18 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				F5C753032395696300C0325A /* GoogleService-Info.plist in Resources */,
+				F22F8A673C34421BA799BFEE /* Whitney-Black.otf in Resources */,
+				C63AF3E60FBB4BB5B53919C6 /* Whitney-BlackItal.otf in Resources */,
+				B21939668AC14A61813102DF /* Whitney-Bold.otf in Resources */,
+				BE51C38DF02A41ED98C58C9A /* Whitney-BoldItal.otf in Resources */,
+				7E9AFCAAE6A049A7B2147884 /* Whitney-Book.otf in Resources */,
+				4210B6179F31492188CB7C0C /* Whitney-BookItal.otf in Resources */,
+				230E985DD6714DE7B168FA0D /* Whitney-Light.otf in Resources */,
+				B783047FF32B48EAB2102A95 /* Whitney-LightItal.otf in Resources */,
+				44DC3198C81F44CAAE5EC8F2 /* Whitney-Medium.otf in Resources */,
+				4081F6FE057E4BD29AAD5E05 /* Whitney-MediumItal.otf in Resources */,
+				54ED5D183EB84FE3B7AF7038 /* Whitney-Semibold.otf in Resources */,
+				B96B3B4FB9A34CF1959507FB /* Whitney-SemiboldItal.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

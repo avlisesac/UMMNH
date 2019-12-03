@@ -13,6 +13,8 @@ import AsyncStorage from '@react-native-community/async-storage'
 
 import firebase from 'react-native-firebase';
 
+import HomeScreen from './app/views/HomeScreen.js'
+
 export default class App extends React.Component {
 
   //When application loads, check for permissions and listen for notifications
@@ -24,7 +26,7 @@ export default class App extends React.Component {
   //Remove listeners allocated in createNotificationListener
   componentWillUnmount(){
     this.notificationListener()
-    this.notificationOpenedListener()
+    //this.notificationOpenedListener()
   }
 
   //Check if permission given
@@ -115,9 +117,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Hello World!</Text>
-      </View>
+      <HomeScreen />
     )
   }
 };

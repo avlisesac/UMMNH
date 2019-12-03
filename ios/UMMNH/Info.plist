@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
@@ -57,5 +57,36 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Whitney-Black.otf</string>
+		<string>Whitney-BlackItal.otf</string>
+		<string>Whitney-Bold.otf</string>
+		<string>Whitney-BoldItal.otf</string>
+		<string>Whitney-Book.otf</string>
+		<string>Whitney-BookItal.otf</string>
+		<string>Whitney-Light.otf</string>
+		<string>Whitney-LightItal.otf</string>
+		<string>Whitney-Medium.otf</string>
+		<string>Whitney-MediumItal.otf</string>
+		<string>Whitney-Semibold.otf</string>
+		<string>Whitney-SemiboldItal.otf</string>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -8,7 +8,6 @@ import {
 } from 'react-native'
 
 import images from '../modules/Images'
-import colors from '../modules/Colors'
 
 export default class HomeScreen extends React.Component {
 	render() {
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	helloWorld:{
-		fontFamily: 'Whitney-Bold',
-		color: colors.ummnhDarkBlue,
+		fontFamily: 'Whitney Bold',
+		color: 'yellow'
 	}
 })
