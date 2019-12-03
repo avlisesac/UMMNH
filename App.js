@@ -11,17 +11,7 @@ import {
 
 import AsyncStorage from '@react-native-community/async-storage'
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
 import firebase from 'react-native-firebase';
-
-
 
 export default class App extends React.Component {
 
