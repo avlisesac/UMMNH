@@ -21,7 +21,10 @@ import AsyncStorage from '@react-native-community/async-storage'
 
 import firebase from 'react-native-firebase';
 
-import HomeScreen from './app/views/HomeScreen.js'
+import HomeScreen from './app/views/HomeScreen'
+import AboutScreen from './app/views/AboutScreen'
+
+import colors from './app/modules/Colors'
 
 export default class App extends React.Component {
 
@@ -134,11 +137,21 @@ export default class App extends React.Component {
 //Navigation Stack
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen
+    Home: HomeScreen,
+    About: AboutScreen
   },
   {
-    initialRouteName: 'Home'
-  }
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerTitleStyle: {
+        color: colors.ummnhDarkBlue
+      },
+      headerBackTitleStyle: {
+        color: colors.ummnhDarkBlue
+      },
+      headerTintColor: colors.ummnhDarkBlue
+    }
+  },
 )
 
 //App Container

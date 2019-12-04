@@ -20,12 +20,13 @@ const ButtonEx = withPreventDoubleClick(Button)
 export default class HomeScreen extends React.Component {
 	static navigationOptions = {
 		title: "Home",
-		headerTitleStyle: {
-			color: colors.ummnhDarkBlue
-		},
 		headerStyle: {
 			backgroundColor: colors.ummnhLightBlue
 		},
+	}
+
+	pushScreen = (screenToPush) => {
+		this.props.navigation.push(screenToPush)
 	}
 
 	render() {
@@ -63,7 +64,7 @@ export default class HomeScreen extends React.Component {
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = "About"
-									onPress = { () => console.log('About button pressed')}
+									onPress = { () => this.pushScreen('About')}
 								/>
 							</View>
 						</View>
