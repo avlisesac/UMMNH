@@ -18,7 +18,18 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 const ButtonEx = withPreventDoubleClick(Button)
 
 export default class HomeScreen extends React.Component {
+	static navigationOptions = {
+		title: "Home",
+		headerTitleStyle: {
+			color: colors.ummnhDarkBlue
+		},
+		headerStyle: {
+			backgroundColor: colors.ummnhLightBlue
+		},
+	}
+
 	render() {
+		const { navigate } = this.props.navigation
 		return (
 			<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
 				<SafeAreaView style = { styles.mainContainer }>

@@ -9,6 +9,14 @@ import {
   StatusBar,
 } from 'react-native';
 
+import {
+  createAppContainer
+} from 'react-navigation'
+
+import {
+  createStackNavigator
+} from 'react-navigation-stack'
+
 import AsyncStorage from '@react-native-community/async-storage'
 
 import firebase from 'react-native-firebase';
@@ -117,7 +125,21 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <HomeScreen />
+      <AppContainer />
     )
   }
 };
+
+
+//Navigation Stack
+const RootStack = createStackNavigator(
+  {
+    Home: HomeScreen
+  },
+  {
+    initialRouteName: 'Home'
+  }
+)
+
+//App Container
+const AppContainer = createAppContainer(RootStack)
