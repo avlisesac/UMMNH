@@ -6,10 +6,16 @@ import {
 	Text,
 	View,
 } from 'react-native'
+import {
+	Button
+} from 'react-native-elements'
 
 import images from '../modules/Images'
 import colors from '../modules/Colors'
 import fontSizes from '../modules/FontSizes'
+import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
+
+const ButtonEx = withPreventDoubleClick(Button)
 
 export default class HomeScreen extends React.Component {
 	render() {
@@ -25,8 +31,10 @@ export default class HomeScreen extends React.Component {
 							<Text style = {[ styles.messageText, styles.messageBig ]}>Natural History!</Text>
 						</View>
 						<View style = { styles.buttonContainer }>
-							<Text>Button Container</Text>
-
+							<ButtonEx
+								title = "About"
+								onPress = { () => console.log('About button pressed')}
+							/>
 						</View>
 					</View>
 				</SafeAreaView>
