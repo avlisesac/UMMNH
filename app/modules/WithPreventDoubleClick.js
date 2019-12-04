@@ -1,5 +1,11 @@
 import React from 'react'
+import {
+	StyleSheet
+} from 'react-native'
+
 import debounce from 'lodash.debounce'
+import colors from './Colors'
+import fontSizes from './FontSizes'
 
 const withPreventDoubleClick = (WrappedComponent) => {
 	class PreventDoubleClick extends React.Component {
@@ -10,7 +16,7 @@ const withPreventDoubleClick = (WrappedComponent) => {
 		onPress = debounce(this.debouncedOnPress, 500, { leading: true, trailing: false })
 
 		render() {
-			return <WrappedComponent {...this.props} onPress = { this.onPress } />
+			return <WrappedComponent {...this.props}  buttonStyle = { styles.buttonStyle } titleStyle = { styles.titleStyle } onPress = { this.onPress } />
 		}
 	}
 	
@@ -20,3 +26,14 @@ const withPreventDoubleClick = (WrappedComponent) => {
 }
 
 export default withPreventDoubleClick
+
+const styles = StyleSheet.create({
+	buttonStyle: {
+		backgroundColor: colors.ummnhYellow
+	},
+	titleStyle: {
+		color: colors.ummnhDarkBlue,
+		fontFamily: 'Whitney-Black',
+		fontSize: fontSizes.button,
+	},
+})

@@ -31,10 +31,30 @@ export default class HomeScreen extends React.Component {
 							<Text style = {[ styles.messageText, styles.messageBig ]}>Natural History!</Text>
 						</View>
 						<View style = { styles.buttonContainer }>
-							<ButtonEx
-								title = "About"
-								onPress = { () => console.log('About button pressed')}
-							/>
+							<View style = { styles.buttonWrapper }>
+								<ButtonEx
+									title = "Tours"
+									onPress = { () => console.log('Tours button pressed')}
+								/>
+							</View>
+							<View style = { styles.buttonWrapper }>
+								<ButtonEx
+									title = "Today @ UMMNH"
+									onPress = { () => console.log('Today @ UMMNH button pressed') }
+								/>
+							</View>
+							<View style = { styles.buttonWrapper }>
+								<ButtonEx
+									title = "Map"
+									onPress = { () => console.log('Map button pressed')}
+								/>
+							</View>
+							<View style = { styles.buttonWrapper }>
+								<ButtonEx
+									title = "About"
+									onPress = { () => console.log('About button pressed')}
+								/>
+							</View>
 						</View>
 					</View>
 				</SafeAreaView>
@@ -86,7 +106,15 @@ const styles = StyleSheet.create({
 		flex: 1,
 		width: '100%',
 		alignItems: 'center',
-		justifyContent: 'center',
-		backgroundColor: 'blue'
+		justifyContent: 'flex-end',
+		paddingBottom: 10,
+	},
+	buttonWrapper: {
+		width: '66%',
+		marginTop: 5,
+		marginBottom: 5,
+	},
+	buttonMainStyle: {
+		backgroundColor: 'red'
 	}
 })
