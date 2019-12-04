@@ -23,6 +23,7 @@ import firebase from 'react-native-firebase';
 
 import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
+import MapScreen from './app/views/MapScreen'
 
 import colors from './app/modules/Colors'
 
@@ -138,7 +139,8 @@ export default class App extends React.Component {
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
-    About: AboutScreen
+    About: AboutScreen,
+    Map: MapScreen,
   },
   {
     initialRouteName: 'Home',

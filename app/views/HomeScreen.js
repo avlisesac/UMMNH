@@ -58,7 +58,7 @@ export default class HomeScreen extends React.Component {
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = "Map"
-									onPress = { () => console.log('Map button pressed')}
+									onPress = { () => this.pushScreen('Map')}
 								/>
 							</View>
 							<View style = { styles.buttonWrapper }>
