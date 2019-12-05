@@ -25,6 +25,7 @@ import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
 import MapScreen from './app/views/MapScreen'
 import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
+import NavigationScreen from './app/views/NavigationScreen'
 
 import colors from './app/modules/Colors'
 
@@ -143,6 +144,7 @@ const RootStack = createStackNavigator(
     About: AboutScreen,
     Map: MapScreen,
     TodayAtUMMNH: TodayAtUMMNHScreen,
+    Navigation: NavigationScreen,
   },
   {
     initialRouteName: 'Home',
