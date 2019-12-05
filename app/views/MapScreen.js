@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+	SafeAreaView,
 	View,
 	StyleSheet,
 	Text,
@@ -20,28 +21,34 @@ export default class MapScreen extends React.Component{
 
 	render(){
 		return(
-			<View style = { styles.mainContainer }>
+			<SafeAreaView style = { styles.mainContainer }>
 				<WebView
 					style = { styles.webView }
-					containerStyle = { { marginTop: 0, marginBottom: 0} }
 					source = {{ uri: 'https://firebasestorage.googleapis.com/v0/b/ummnh-33f82.appspot.com/o/images%2Fmaps%2FMuseumMap.png?alt=media&token=2bd3953e-5cd7-4456-8932-de01ea0fe035'}}
-				
 				/>
-			</View>
+				<View style = { styles.underView }>
+					<Text style = { styles.underText }>This is below! Can you see how below this is? It is quite below, indeed.</Text>
+				</View>
+			</SafeAreaView>
 		)
 	}
 }
 
 const styles = StyleSheet.create({
 	webView: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
+		flex: 3,
+		backgroundColor: 'green'
+
 	},
 	mainContainer: {
 		flex: 1,
-		backgroundColor: 'red',
-		justifyContent: 'center',
-		//alignItems: 'center'
+		backgroundColor: 'white'
+	},
+	underView: {
+		backgroundColor: 'grey'
+	},
+	underText: {
+		padding: 10,
+		textAlign: 'center'
 	}
 })

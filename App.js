@@ -24,6 +24,7 @@ import firebase from 'react-native-firebase';
 import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
 import MapScreen from './app/views/MapScreen'
+import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
 
 import colors from './app/modules/Colors'
 
@@ -141,6 +142,7 @@ const RootStack = createStackNavigator(
     Home: HomeScreen,
     About: AboutScreen,
     Map: MapScreen,
+    TodayAtUMMNH: TodayAtUMMNHScreen,
   },
   {
     initialRouteName: 'Home',

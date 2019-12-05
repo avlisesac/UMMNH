@@ -52,7 +52,7 @@ export default class HomeScreen extends React.Component {
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = "Today @ UMMNH"
-									onPress = { () => console.log('Today @ UMMNH button pressed') }
+									onPress = { () => this.pushScreen('TodayAtUMMNH') }
 								/>
 							</View>
 							<View style = { styles.buttonWrapper }>
