@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+	Image,
 	SafeAreaView,
 	View,
 	StyleSheet,
@@ -10,6 +11,9 @@ import {
 } from 'react-native-webview'
 
 import colors from '../modules/Colors'
+
+const imageSource = require('../assets/HTML/BlankMap.html')
+const webViewSource = Image.resolveAssetSource(imageSource)
 
 export default class MapScreen extends React.Component{
 	static navigationOptions = {
@@ -24,7 +28,8 @@ export default class MapScreen extends React.Component{
 			<SafeAreaView style = { styles.mainContainer }>
 				<WebView
 					style = { styles.webView }
-					source = {{ uri: 'https://firebasestorage.googleapis.com/v0/b/ummnh-33f82.appspot.com/o/images%2Fmaps%2FMuseumMap.png?alt=media&token=2bd3953e-5cd7-4456-8932-de01ea0fe035'}}
+					source = { webViewSource }
+					originWhiteList = {["*"]}
 				/>
 				<View style = { styles.underView }>
 					<Text style = { styles.underText }>This is below! Can you see how below this is? It is quite below, indeed.</Text>
@@ -36,8 +41,9 @@ export default class MapScreen extends React.Component{
 
 const styles = StyleSheet.create({
 	webView: {
+		width: '100%',
 		flex: 3,
-		backgroundColor: 'green'
+		backgroundColor: 'white'
 
 	},
 	mainContainer: {
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white'
 	},
 	underView: {
-		backgroundColor: 'grey'
+		backgroundColor: 'white'
 	},
 	underText: {
 		padding: 10,

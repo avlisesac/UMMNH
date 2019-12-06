@@ -1,6 +1,5 @@
 import React from 'react'
 import{
-	Button,
 	Image,
 	SafeAreaView,
 	ScrollView,
@@ -9,27 +8,23 @@ import{
 	View,
 } from 'react-native'
 
+import {
+	Button,
+	Icon,
+} from 'react-native-elements'
+
 import Swiper from 'react-native-swiper'
 
 import colors from '../modules/Colors'
 import images from '../modules/Images'
+import fontSizes from '../modules/FontSizes'
 import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
+
+import BodyCopy from '../components/BodyCopy'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
 export default class NavigationScreen extends React.Component {
-	static navigationOptions = {
-		title: 'Find:',
-		headerStyle: {
-			backgroundColor: colors.ummnhLightRed
-		},
-		headerRight: (
-			<ButtonEx
-				title = "Exit"
-				onPress = { () => navigation.push('Exit')}
-			/>
-		)
-	}
 
 	render(){
 		return(
@@ -37,8 +32,9 @@ export default class NavigationScreen extends React.Component {
 				<ScrollView style = { styles.scrollView }>
 					<View style = { styles.mainContainer }>
 						<View style = { styles.upperArea }>
+						
 							<View style = { styles.swipeContainer }>
-								<Swiper style = { styles.wrapper } showsButtons = { true } activeDotColor = { 'white' } nextButton = { <Text style = { styles.buttonText }>›</Text>} prevButton = { <Text style = { styles.buttonText }>‹</Text>}>
+								<Swiper style = { styles.wrapper } removeClippedSubviews = { false } showsButtons = { true } activeDotColor = { 'white' } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
 									<Image 
 										source = { images.navigation.highlightsTour.stop1.image1 }
 										style = { styles.imageStyle }
@@ -49,10 +45,34 @@ export default class NavigationScreen extends React.Component {
 									/>
 								</Swiper>
 							</View>
+							
+							<Text style = { styles.header }>{ this.props.header }</Text>
+
+							<View style = { styles.subheaderContainer }>
+								<Icon name = 'md-pin' type = 'ionicon' size = { fontSizes.subheader } color = { colors.ummnhDarkRed } />
+								<Text style = { styles.subheader }>{ this.props.subheader }</Text>
+							</View>
+
+							<Text style = { styles.bodyCopy }>
+								<BodyCopy textString = { this.props.body }/>
+							</Text>
 						</View>
 
 						<View style = { styles.lowerArea }>
-							<Text>Lower</Text>
+							<View style = { styles.buttonContainer }>
+								<View style = { styles.buttonWrapper }>
+									<ButtonEx
+										title = 'Show on Map'
+										onPress = { () => console.log('Show on Map pressed')}
+									/>
+								</View>
+								<View style = { styles.buttonWrapper }>
+									<ButtonEx
+										title = 'Found It!'
+										onPress = { () => console.log('Found It pressed')}
+									/>
+								</View>
+							</View>
 						</View>
 					</View>
 				</ScrollView>
@@ -75,27 +95,73 @@ const styles = StyleSheet.create({
 		marginBottom: 10,
 		alignItems: 'center',
 		alignSelf: 'center',
-		backgroundColor: 'red'
 	},
 	upperArea: {
 		flex: 2,
-		backgroundColor: 'blue'
+		width: '100%',
 	},
 	lowerArea: {
 		flex: 1,
+		width: '100%',
 		alignItems: 'center',
-		backgroundColor: 'green'
 	},
 	swipeContainer: {
 		width: '100%',
 		aspectRatio: 1920/1080,
 		overflow: 'hidden'
 	},
+	swipeButtonText: {
+		fontSize: 65,
+		color: 'white',
+		textShadowColor: 'black',
+		textShadowOffset: {
+			width: 1.5,
+			height: 1.5,
+		},
+		textShadowRadius: 1,
+	},
 	imageStyle: {
 		flex: 1,
 		height: null,
 		width: null,
 		resizeMode: 'contain',
-		backgroundColor: 'purple'
+	},
+	header: {
+		color: colors.ummnhDarkBlue,
+		fontSize: fontSizes.header,
+		fontFamily: 'Whitney-Black',
+		marginTop: 10
+	},
+	subheaderContainer: {
+		flexDirection: 'row',
+		marginTop: 5,
+	},
+	subheader: {
+		color: colors.ummnhDarkRed,
+		fontSize: fontSizes.subheader,
+		fontFamily: 'Whitney-Semibold',
+		marginLeft: 5
+	},
+	bodyCopy: {
+		fontSize: fontSizes.body,
+		fontFamily: 'Whitney-Medium',
+		textAlign: 'justify',
+		lineHeight: (fontSizes.body * 1.25),
+		marginTop: 5,
+	},
+	buttonContainer: {
+		width: '66%',
+		marginTop: 10,
+		marginBottom: 10,
+	},
+	buttonWrapper: {
+		marginTop: 10,
+		marginBottom: 10,
+	},
+	exitButtonStyle: {
+		backgroundColor: 'rgba(0,0,0,0)'
+	},
+	exitButtonTitleStyle: {
+		color: colors.ummnhDarkBlue
 	}
 })

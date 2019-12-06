@@ -25,7 +25,10 @@ import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
 import MapScreen from './app/views/MapScreen'
 import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
-import NavigationScreen from './app/views/NavigationScreen'
+//import NavigationScreen from './app/views/NavigationScreen'
+
+//HighlightsTour
+import HighlightsTourNav1 from './app/views/HighlightsTour/HighlightsTourNav1'
 
 import colors from './app/modules/Colors'
 
@@ -144,7 +147,8 @@ const RootStack = createStackNavigator(
     About: AboutScreen,
     Map: MapScreen,
     TodayAtUMMNH: TodayAtUMMNHScreen,
-    Navigation: NavigationScreen,
+    //Navigation: NavigationScreen,
+    HighlightsTourNav1: HighlightsTourNav1
   },
   {
     initialRouteName: 'Home',
@@ -155,7 +159,8 @@ const RootStack = createStackNavigator(
       headerBackTitleStyle: {
         color: colors.ummnhDarkBlue
       },
-      headerTintColor: colors.ummnhDarkBlue
+      headerTintColor: colors.ummnhDarkBlue,
+
     }
   },
 )
