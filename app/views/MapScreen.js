@@ -11,9 +11,10 @@ import {
 } from 'react-native-webview'
 
 import colors from '../modules/Colors'
+import images from '../modules/Images'
 
-const imageSource = require('../assets/HTML/BlankMap.html')
-const webViewSource = Image.resolveAssetSource(imageSource)
+import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView'
+
 
 export default class MapScreen extends React.Component{
 	static navigationOptions = {
@@ -23,14 +24,38 @@ export default class MapScreen extends React.Component{
 		},
 	}
 
+	constructor(props){
+		super(props)
+
+		this.state = {
+			renderedOnce: false
+		}
+	}
+
+	componentDidMount(){
+		this.setState({
+			renderedOnce: true
+		})
+	}
+
 	render(){
 		return(
 			<SafeAreaView style = { styles.mainContainer }>
-				<WebView
-					style = { styles.webView }
-					source = { webViewSource }
-					originWhiteList = {["*"]}
-				/>
+				<ReactNativeZoomableView 
+					style = { styles.zoomView }
+					maxZoom = { 2 }
+					minZoom = { 1 }
+					zoomStep = { 0.5 }
+					initialZoom = { 1 }
+					bindToBorders = { true }
+					pinchToZoomInSensitivity = { 0 }
+					pinchToZoomOutSensitivity = { 0 }
+					>
+					<Image
+						style = { styles.image }
+						source = { images.map }
+					/>
+				</ReactNativeZoomableView>
 				<View style = { styles.underView }>
 					<Text style = { styles.underText }>This is below! Can you see how below this is? It is quite below, indeed.</Text>
 				</View>
@@ -42,9 +67,18 @@ export default class MapScreen extends React.Component{
 const styles = StyleSheet.create({
 	webView: {
 		width: '100%',
-		flex: 3,
-		backgroundColor: 'white'
+		height: '100%',
+		backgroundColor: 'red'
 
+	},
+	zoomView: {
+		width: '100%',
+		flex: 1,
+	},
+	image: {
+		width: '100%',
+		height: '100%',
+		resizeMode: 'contain'
 	},
 	mainContainer: {
 		flex: 1,

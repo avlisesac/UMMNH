@@ -1,6 +1,8 @@
 const images = {
 	homescreenBackground: require('../assets/images/home_background.png'),
 
+	map: require('../assets/images/mapImages/MuseumMap.jpg'),
+
 	navigation: {
 		highlightsTour: {
 			stop1: {
