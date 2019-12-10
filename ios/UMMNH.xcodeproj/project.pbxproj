@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* UMMNHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* UMMNHTests.m */; };
+		09E90FC29B254289903004E8 /* Whitney-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB410AADF0AA478ABC3E0180 /* Whitney-BookItalic.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -19,19 +20,58 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* UMMNHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* UMMNHTests.m */; };
-		4081F6FE057E4BD29AAD5E05 /* Whitney-MediumItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2E01BF86FC4A4B5BA9897A12 /* Whitney-MediumItal.otf */; };
-		4210B6179F31492188CB7C0C /* Whitney-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C760960AF4748E8BC11ABB6 /* Whitney-BookItal.otf */; };
+		3578420FB25549EAA352510A /* Whitney-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86138A07976B49A3AF218CDE /* Whitney-MediumItalic.otf */; };
 		44DC3198C81F44CAAE5EC8F2 /* Whitney-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F90BBF71F2843F79C809587 /* Whitney-Medium.otf */; };
+		54325AAF29574374B291C90C /* Whitney-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 235CAA4130794771941B4327 /* Whitney-LightItalic.otf */; };
 		54ED5D183EB84FE3B7AF7038 /* Whitney-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED27DE89160B4141A842425A /* Whitney-Semibold.otf */; };
 		7E9AFCAAE6A049A7B2147884 /* Whitney-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73D0D14838C04AD8B340E105 /* Whitney-Book.otf */; };
+		9D3194319F5F4BC9BBBCCE9B /* Whitney-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55A33563F7A3414D9A2B5123 /* Whitney-BlackItalic.otf */; };
 		B21939668AC14A61813102DF /* Whitney-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A056B107332645BC9B72F61C /* Whitney-Bold.otf */; };
-		B783047FF32B48EAB2102A95 /* Whitney-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = C150933DAB1B48B58584DEB5 /* Whitney-LightItal.otf */; };
-		B96B3B4FB9A34CF1959507FB /* Whitney-SemiboldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5E8DC546FA84A89BC99A079 /* Whitney-SemiboldItal.otf */; };
-		BE51C38DF02A41ED98C58C9A /* Whitney-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4D31E08211E4BFDA3BD0A05 /* Whitney-BoldItal.otf */; };
-		C63AF3E60FBB4BB5B53919C6 /* Whitney-BlackItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72CAB244FA134F1A87E16B35 /* Whitney-BlackItal.otf */; };
+		CAA14ED6F7C8498DB94712BC /* Whitney-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69141564108E422EBA5B122D /* Whitney-SemiboldItalic.otf */; };
 		D009E82206F3BCE79475F2F1 /* libPods-UMMNHTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8CAF34682B2FDED20DDAF /* libPods-UMMNHTests.a */; };
 		D3A1D41468A6D512BF4E4EE9 /* libPods-UMMNH-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019F0AFC36D2DE061169E1B /* libPods-UMMNH-tvOSTests.a */; };
 		F22F8A673C34421BA799BFEE /* Whitney-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99F79C7758514BA68477D48A /* Whitney-Black.otf */; };
+		F31DA31047E24C1B99FE310B /* Whitney-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 775F723F288A466CAA118FDC /* Whitney-BoldItalic.otf */; };
+		F50F95BF23A0239300B08079 /* fossil_prep_lab.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B523A0239200B08079 /* fossil_prep_lab.mp3 */; };
+		F50F95C023A0239300B08079 /* fossil_prep_lab.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B523A0239200B08079 /* fossil_prep_lab.mp3 */; };
+		F50F95C123A0239300B08079 /* fossil_prep_lab.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B523A0239200B08079 /* fossil_prep_lab.mp3 */; };
+		F50F95C223A0239300B08079 /* fossil_prep_lab.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B523A0239200B08079 /* fossil_prep_lab.mp3 */; };
+		F50F95C323A0239300B08079 /* doli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B623A0239200B08079 /* doli.mp3 */; };
+		F50F95C423A0239300B08079 /* doli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B623A0239200B08079 /* doli.mp3 */; };
+		F50F95C523A0239300B08079 /* doli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B623A0239200B08079 /* doli.mp3 */; };
+		F50F95C623A0239300B08079 /* doli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B623A0239200B08079 /* doli.mp3 */; };
+		F50F95C723A0239300B08079 /* dynamic_planet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B723A0239300B08079 /* dynamic_planet.mp3 */; };
+		F50F95C823A0239300B08079 /* dynamic_planet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B723A0239300B08079 /* dynamic_planet.mp3 */; };
+		F50F95C923A0239300B08079 /* dynamic_planet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B723A0239300B08079 /* dynamic_planet.mp3 */; };
+		F50F95CA23A0239300B08079 /* dynamic_planet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B723A0239300B08079 /* dynamic_planet.mp3 */; };
+		F50F95CB23A0239300B08079 /* tree_of_life.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B823A0239300B08079 /* tree_of_life.mp3 */; };
+		F50F95CC23A0239300B08079 /* tree_of_life.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B823A0239300B08079 /* tree_of_life.mp3 */; };
+		F50F95CD23A0239300B08079 /* tree_of_life.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B823A0239300B08079 /* tree_of_life.mp3 */; };
+		F50F95CE23A0239300B08079 /* tree_of_life.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B823A0239300B08079 /* tree_of_life.mp3 */; };
+		F50F95CF23A0239300B08079 /* sediba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B923A0239300B08079 /* sediba.mp3 */; };
+		F50F95D023A0239300B08079 /* sediba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B923A0239300B08079 /* sediba.mp3 */; };
+		F50F95D123A0239300B08079 /* sediba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B923A0239300B08079 /* sediba.mp3 */; };
+		F50F95D223A0239300B08079 /* sediba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95B923A0239300B08079 /* sediba.mp3 */; };
+		F50F95D323A0239300B08079 /* whales.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BA23A0239300B08079 /* whales.mp3 */; };
+		F50F95D423A0239300B08079 /* whales.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BA23A0239300B08079 /* whales.mp3 */; };
+		F50F95D523A0239300B08079 /* whales.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BA23A0239300B08079 /* whales.mp3 */; };
+		F50F95D623A0239300B08079 /* whales.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BA23A0239300B08079 /* whales.mp3 */; };
+		F50F95D723A0239300B08079 /* majungasaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BB23A0239300B08079 /* majungasaurus.mp3 */; };
+		F50F95D823A0239300B08079 /* majungasaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BB23A0239300B08079 /* majungasaurus.mp3 */; };
+		F50F95D923A0239300B08079 /* majungasaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BB23A0239300B08079 /* majungasaurus.mp3 */; };
+		F50F95DA23A0239300B08079 /* majungasaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BB23A0239300B08079 /* majungasaurus.mp3 */; };
+		F50F95DB23A0239300B08079 /* quetz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BC23A0239300B08079 /* quetz.mp3 */; };
+		F50F95DC23A0239300B08079 /* quetz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BC23A0239300B08079 /* quetz.mp3 */; };
+		F50F95DD23A0239300B08079 /* quetz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BC23A0239300B08079 /* quetz.mp3 */; };
+		F50F95DE23A0239300B08079 /* quetz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BC23A0239300B08079 /* quetz.mp3 */; };
+		F50F95DF23A0239300B08079 /* mastodons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BD23A0239300B08079 /* mastodons.mp3 */; };
+		F50F95E023A0239300B08079 /* mastodons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BD23A0239300B08079 /* mastodons.mp3 */; };
+		F50F95E123A0239300B08079 /* mastodons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BD23A0239300B08079 /* mastodons.mp3 */; };
+		F50F95E223A0239300B08079 /* mastodons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BD23A0239300B08079 /* mastodons.mp3 */; };
+		F50F95E323A0239300B08079 /* evolution.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BE23A0239300B08079 /* evolution.mp3 */; };
+		F50F95E423A0239300B08079 /* evolution.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BE23A0239300B08079 /* evolution.mp3 */; };
+		F50F95E523A0239300B08079 /* evolution.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BE23A0239300B08079 /* evolution.mp3 */; };
+		F50F95E623A0239300B08079 /* evolution.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F50F95BE23A0239300B08079 /* evolution.mp3 */; };
 		F5C753032395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
 		F5C753042395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
 		F5C753052395696300C0325A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C753022395696300C0325A /* GoogleService-Info.plist */; };
@@ -72,6 +112,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = UMMNH/main.m; sourceTree = "<group>"; };
 		1863DF866A1C4A6A9F332519 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		1B98CDAE97144EF086033FA6 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		235CAA4130794771941B4327 /* Whitney-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-LightItalic.otf"; path = "../app/assets/fonts/Whitney-LightItalic.otf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* UMMNH-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMMNH-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* UMMNH-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UMMNH-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8CAF34682B2FDED20DDAF /* libPods-UMMNHTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UMMNHTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,12 +122,16 @@
 		4E66BCC062674C688E5DD4A8 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		4EFD3814181E774C001EB3C0 /* Pods-UMMNH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH.release.xcconfig"; path = "Target Support Files/Pods-UMMNH/Pods-UMMNH.release.xcconfig"; sourceTree = "<group>"; };
 		531FE051ADC047F0992288D4 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		55A33563F7A3414D9A2B5123 /* Whitney-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BlackItalic.otf"; path = "../app/assets/fonts/Whitney-BlackItalic.otf"; sourceTree = "<group>"; };
 		5C760960AF4748E8BC11ABB6 /* Whitney-BookItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BookItal.otf"; path = "../app/assets/fonts/Whitney-BookItal.otf"; sourceTree = "<group>"; };
+		69141564108E422EBA5B122D /* Whitney-SemiboldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-SemiboldItalic.otf"; path = "../app/assets/fonts/Whitney-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		6B3226828FAA76F9257A1740 /* Pods-UMMNH-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMMNH-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-UMMNH-tvOSTests/Pods-UMMNH-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72CAB244FA134F1A87E16B35 /* Whitney-BlackItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BlackItal.otf"; path = "../app/assets/fonts/Whitney-BlackItal.otf"; sourceTree = "<group>"; };
 		73D0D14838C04AD8B340E105 /* Whitney-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Book.otf"; path = "../app/assets/fonts/Whitney-Book.otf"; sourceTree = "<group>"; };
+		775F723F288A466CAA118FDC /* Whitney-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BoldItalic.otf"; path = "../app/assets/fonts/Whitney-BoldItalic.otf"; sourceTree = "<group>"; };
 		7F90BBF71F2843F79C809587 /* Whitney-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Medium.otf"; path = "../app/assets/fonts/Whitney-Medium.otf"; sourceTree = "<group>"; };
 		85197C6133024CCA91520EB9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		86138A07976B49A3AF218CDE /* Whitney-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-MediumItalic.otf"; path = "../app/assets/fonts/Whitney-MediumItalic.otf"; sourceTree = "<group>"; };
 		91D02650AA3D436AB003E8DF /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		940765D1DE004CD9A474C40C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		94F716A83A8D48F9B3BB785A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -110,9 +155,20 @@
 		ED27DE89160B4141A842425A /* Whitney-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-Semibold.otf"; path = "../app/assets/fonts/Whitney-Semibold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F50F95B523A0239200B08079 /* fossil_prep_lab.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fossil_prep_lab.mp3; path = ../android/app/src/main/res/raw/fossil_prep_lab.mp3; sourceTree = "<group>"; };
+		F50F95B623A0239200B08079 /* doli.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = doli.mp3; path = ../android/app/src/main/res/raw/doli.mp3; sourceTree = "<group>"; };
+		F50F95B723A0239300B08079 /* dynamic_planet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dynamic_planet.mp3; path = ../android/app/src/main/res/raw/dynamic_planet.mp3; sourceTree = "<group>"; };
+		F50F95B823A0239300B08079 /* tree_of_life.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tree_of_life.mp3; path = ../android/app/src/main/res/raw/tree_of_life.mp3; sourceTree = "<group>"; };
+		F50F95B923A0239300B08079 /* sediba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sediba.mp3; path = ../android/app/src/main/res/raw/sediba.mp3; sourceTree = "<group>"; };
+		F50F95BA23A0239300B08079 /* whales.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = whales.mp3; path = ../android/app/src/main/res/raw/whales.mp3; sourceTree = "<group>"; };
+		F50F95BB23A0239300B08079 /* majungasaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = majungasaurus.mp3; path = ../android/app/src/main/res/raw/majungasaurus.mp3; sourceTree = "<group>"; };
+		F50F95BC23A0239300B08079 /* quetz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = quetz.mp3; path = ../android/app/src/main/res/raw/quetz.mp3; sourceTree = "<group>"; };
+		F50F95BD23A0239300B08079 /* mastodons.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mastodons.mp3; path = ../android/app/src/main/res/raw/mastodons.mp3; sourceTree = "<group>"; };
+		F50F95BE23A0239300B08079 /* evolution.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = evolution.mp3; path = ../android/app/src/main/res/raw/evolution.mp3; sourceTree = "<group>"; };
 		F5C753022395696300C0325A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F5C753072395702200C0325A /* UMMNH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = UMMNH.entitlements; path = UMMNH/UMMNH.entitlements; sourceTree = "<group>"; };
 		F6708FE87B3D7DABAC62E962 /* libPods-UMMNH-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UMMNH-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB410AADF0AA478ABC3E0180 /* Whitney-BookItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Whitney-BookItalic.otf"; path = "../app/assets/fonts/Whitney-BookItalic.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +278,16 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F50F95B623A0239200B08079 /* doli.mp3 */,
+				F50F95B723A0239300B08079 /* dynamic_planet.mp3 */,
+				F50F95BE23A0239300B08079 /* evolution.mp3 */,
+				F50F95B523A0239200B08079 /* fossil_prep_lab.mp3 */,
+				F50F95BB23A0239300B08079 /* majungasaurus.mp3 */,
+				F50F95BD23A0239300B08079 /* mastodons.mp3 */,
+				F50F95BC23A0239300B08079 /* quetz.mp3 */,
+				F50F95B923A0239300B08079 /* sediba.mp3 */,
+				F50F95B823A0239300B08079 /* tree_of_life.mp3 */,
+				F50F95BA23A0239300B08079 /* whales.mp3 */,
 				13B07FAE1A68108700A75B9A /* UMMNH */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* UMMNHTests */,
@@ -277,6 +343,12 @@
 				531FE051ADC047F0992288D4 /* Octicons.ttf */,
 				DF53420EC5F642328E8A0E29 /* SimpleLineIcons.ttf */,
 				4E66BCC062674C688E5DD4A8 /* Zocial.ttf */,
+				55A33563F7A3414D9A2B5123 /* Whitney-BlackItalic.otf */,
+				775F723F288A466CAA118FDC /* Whitney-BoldItalic.otf */,
+				FB410AADF0AA478ABC3E0180 /* Whitney-BookItalic.otf */,
+				235CAA4130794771941B4327 /* Whitney-LightItalic.otf */,
+				86138A07976B49A3AF218CDE /* Whitney-MediumItalic.otf */,
+				69141564108E422EBA5B122D /* Whitney-SemiboldItalic.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -417,7 +489,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50F95D023A0239300B08079 /* sediba.mp3 in Resources */,
+				F50F95D423A0239300B08079 /* whales.mp3 in Resources */,
+				F50F95C823A0239300B08079 /* dynamic_planet.mp3 in Resources */,
 				F5C753042395696300C0325A /* GoogleService-Info.plist in Resources */,
+				F50F95C023A0239300B08079 /* fossil_prep_lab.mp3 in Resources */,
+				F50F95DC23A0239300B08079 /* quetz.mp3 in Resources */,
+				F50F95D823A0239300B08079 /* majungasaurus.mp3 in Resources */,
+				F50F95CC23A0239300B08079 /* tree_of_life.mp3 in Resources */,
+				F50F95C423A0239300B08079 /* doli.mp3 in Resources */,
+				F50F95E023A0239300B08079 /* mastodons.mp3 in Resources */,
+				F50F95E423A0239300B08079 /* evolution.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,17 +511,27 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				F5C753032395696300C0325A /* GoogleService-Info.plist in Resources */,
 				F22F8A673C34421BA799BFEE /* Whitney-Black.otf in Resources */,
-				C63AF3E60FBB4BB5B53919C6 /* Whitney-BlackItal.otf in Resources */,
+				F50F95DB23A0239300B08079 /* quetz.mp3 in Resources */,
+				F50F95CF23A0239300B08079 /* sediba.mp3 in Resources */,
 				B21939668AC14A61813102DF /* Whitney-Bold.otf in Resources */,
-				BE51C38DF02A41ED98C58C9A /* Whitney-BoldItal.otf in Resources */,
+				F50F95CB23A0239300B08079 /* tree_of_life.mp3 in Resources */,
+				F50F95BF23A0239300B08079 /* fossil_prep_lab.mp3 in Resources */,
+				F50F95D323A0239300B08079 /* whales.mp3 in Resources */,
+				F50F95C323A0239300B08079 /* doli.mp3 in Resources */,
 				7E9AFCAAE6A049A7B2147884 /* Whitney-Book.otf in Resources */,
-				4210B6179F31492188CB7C0C /* Whitney-BookItal.otf in Resources */,
 				230E985DD6714DE7B168FA0D /* Whitney-Light.otf in Resources */,
-				B783047FF32B48EAB2102A95 /* Whitney-LightItal.otf in Resources */,
 				44DC3198C81F44CAAE5EC8F2 /* Whitney-Medium.otf in Resources */,
-				4081F6FE057E4BD29AAD5E05 /* Whitney-MediumItal.otf in Resources */,
 				54ED5D183EB84FE3B7AF7038 /* Whitney-Semibold.otf in Resources */,
-				B96B3B4FB9A34CF1959507FB /* Whitney-SemiboldItal.otf in Resources */,
+				9D3194319F5F4BC9BBBCCE9B /* Whitney-BlackItalic.otf in Resources */,
+				F31DA31047E24C1B99FE310B /* Whitney-BoldItalic.otf in Resources */,
+				09E90FC29B254289903004E8 /* Whitney-BookItalic.otf in Resources */,
+				F50F95D723A0239300B08079 /* majungasaurus.mp3 in Resources */,
+				F50F95DF23A0239300B08079 /* mastodons.mp3 in Resources */,
+				54325AAF29574374B291C90C /* Whitney-LightItalic.otf in Resources */,
+				3578420FB25549EAA352510A /* Whitney-MediumItalic.otf in Resources */,
+				F50F95C723A0239300B08079 /* dynamic_planet.mp3 in Resources */,
+				CAA14ED6F7C8498DB94712BC /* Whitney-SemiboldItalic.otf in Resources */,
+				F50F95E323A0239300B08079 /* evolution.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +539,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50F95D923A0239300B08079 /* majungasaurus.mp3 in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				F50F95D123A0239300B08079 /* sediba.mp3 in Resources */,
 				F5C753052395696300C0325A /* GoogleService-Info.plist in Resources */,
+				F50F95C523A0239300B08079 /* doli.mp3 in Resources */,
+				F50F95E123A0239300B08079 /* mastodons.mp3 in Resources */,
+				F50F95D523A0239300B08079 /* whales.mp3 in Resources */,
+				F50F95DD23A0239300B08079 /* quetz.mp3 in Resources */,
+				F50F95E523A0239300B08079 /* evolution.mp3 in Resources */,
+				F50F95CD23A0239300B08079 /* tree_of_life.mp3 in Resources */,
+				F50F95C123A0239300B08079 /* fossil_prep_lab.mp3 in Resources */,
+				F50F95C923A0239300B08079 /* dynamic_planet.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +558,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50F95D223A0239300B08079 /* sediba.mp3 in Resources */,
+				F50F95D623A0239300B08079 /* whales.mp3 in Resources */,
+				F50F95CA23A0239300B08079 /* dynamic_planet.mp3 in Resources */,
 				F5C753062395696300C0325A /* GoogleService-Info.plist in Resources */,
+				F50F95C223A0239300B08079 /* fossil_prep_lab.mp3 in Resources */,
+				F50F95DE23A0239300B08079 /* quetz.mp3 in Resources */,
+				F50F95DA23A0239300B08079 /* majungasaurus.mp3 in Resources */,
+				F50F95CE23A0239300B08079 /* tree_of_life.mp3 in Resources */,
+				F50F95C623A0239300B08079 /* doli.mp3 in Resources */,
+				F50F95E223A0239300B08079 /* mastodons.mp3 in Resources */,
+				F50F95E623A0239300B08079 /* evolution.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +587,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		037571EB58210103664AC7B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -16,7 +16,7 @@ export default class StopQuickInfo extends React.Component {
 	render() {
 		return (
 			<View style = { styles.mainContainer }>
-				<Text style = { styles.header }>Header</Text>
+				<Text style = { styles.header }>{ this.props.header }</Text>
 				<View style = { styles.subheaderContainer }>
 					<Icon 
 						name = 'md-bulb'
@@ -24,7 +24,7 @@ export default class StopQuickInfo extends React.Component {
 						size = { fontSizes.subheader }
 						color = { colors.ummnhDarkRed }
 					/>
-					<Text style = { styles.subheader }>Subheader</Text>
+					<Text style = { styles.subheader }>{ this.props.subheader }</Text>
 				</View>
 				<Text style = { styles.shortDescription }>
 					<BodyCopy textString = { this.props.shortDescription } />

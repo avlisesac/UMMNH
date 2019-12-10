@@ -5447,6 +5447,11 @@ react-native-safe-area-view@^0.14.1:
   dependencies:
     debounce "^1.2.0"
 
+react-native-sound-player@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/react-native-sound-player/-/react-native-sound-player-0.10.3.tgz#42f5c7c80d1d015dd89d01da8318a39900321f6f"
+  integrity sha512-YiNpH58bDWJlpmlvwMnBAuqmZiikykn/8EfMD4ReF9qvGZe4haIVjZd40r0MleCn8BaxDhBj55w8Vnfy3qdBbQ==
+
 react-native-status-bar-height@^2.2.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.4.0.tgz#de8cee4bb733a196167210d2d0bc1fa10acba3e3"

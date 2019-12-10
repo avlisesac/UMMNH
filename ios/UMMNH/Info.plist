@@ -87,6 +87,12 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>Whitney-BlackItalic.otf</string>
+		<string>Whitney-BoldItalic.otf</string>
+		<string>Whitney-BookItalic.otf</string>
+		<string>Whitney-LightItalic.otf</string>
+		<string>Whitney-MediumItalic.otf</string>
+		<string>Whitney-SemiboldItalic.otf</string>
 	</array>
 </dict>
 </plist>
