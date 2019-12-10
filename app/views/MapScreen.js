@@ -6,15 +6,11 @@ import {
 	StyleSheet,
 	Text,
 } from 'react-native'
-import {
-	WebView
-} from 'react-native-webview'
 
 import colors from '../modules/Colors'
 import images from '../modules/Images'
 
-import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView'
-
+import PinchableImage from '../components/PinchableImage'
 
 export default class MapScreen extends React.Component{
 	static navigationOptions = {
@@ -22,6 +18,10 @@ export default class MapScreen extends React.Component{
 		headerStyle: {
 			backgroundColor: colors.ummnhLightRed
 		},
+	}
+
+	pushScreen = (screenToPush) => {
+		this.props.navigation.push(screenToPush)
 	}
 
 	constructor(props){
@@ -41,47 +41,22 @@ export default class MapScreen extends React.Component{
 	render(){
 		return(
 			<SafeAreaView style = { styles.mainContainer }>
-				<ReactNativeZoomableView 
-					style = { styles.zoomView }
-					maxZoom = { 2 }
-					minZoom = { 1 }
-					zoomStep = { 0.5 }
-					initialZoom = { 1 }
-					bindToBorders = { true }
-					pinchToZoomInSensitivity = { 0 }
-					pinchToZoomOutSensitivity = { 0 }
-					>
-					<Image
-						style = { styles.image }
-						source = { images.map }
-					/>
-				</ReactNativeZoomableView>
-				<View style = { styles.underView }>
-					<Text style = { styles.underText }>This is below! Can you see how below this is? It is quite below, indeed.</Text>
-				</View>
+				<PinchableImage style = { styles.mapImage } image = { images.map } showOverlay = { this.props.showOverlay } xPercent = { this.props.xPercent } yPercent = { this.props.yPercent } />
 			</SafeAreaView>
 		)
 	}
 }
 
 const styles = StyleSheet.create({
-	webView: {
-		width: '100%',
-		height: '100%',
-		backgroundColor: 'red'
-
-	},
-	zoomView: {
-		width: '100%',
-		flex: 1,
-	},
-	image: {
-		width: '100%',
-		height: '100%',
-		resizeMode: 'contain'
-	},
 	mainContainer: {
 		flex: 1,
+		width: '100%',
+		backgroundColor: 'white'
+	},
+	mapImage: {
+		width: '100%',
+		flex: 1,
+		resizeMode: 'contain',
 		backgroundColor: 'white'
 	},
 	underView: {

@@ -26,6 +26,8 @@ export default class HighlightsTourNav1 extends React.Component {
 				header = 'Find: The Mastodons'
 				subheader = '1st Floor - Main Atrium'
 				body = "Enter the museum through the main entrance. You will know you're at the right door if you walk between two Puma's. The Mastodons are in the main atrium across from the information desk."
+				map = "HighlightsTourMap1"
+				stop = "HighlightsTourStop1"
 			/>
 		)
 	}

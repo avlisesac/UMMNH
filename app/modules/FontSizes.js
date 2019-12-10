@@ -12,7 +12,8 @@ const fontSizes = {
 	header: (width / 20 > 25) ? 25 : width / 20,
 	subheader: (width / 22 > 22) ? 22 : width / 22,
 	body: (width / 25 > 22) ? 22 : width / 25,
-	buttonIcon: (width / 10 > 50) ? 50 : width / 10
+	buttonIcon: (width / 10 > 50) ? 50 : width / 10,
+	mapIcon: (width / 10 > 60 ) ? 60 : width / 10,
 }
 
 export default fontSizes

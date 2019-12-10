@@ -23,12 +23,17 @@ import firebase from 'react-native-firebase';
 
 import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
-import MapScreen from './app/views/MapScreen'
+import BlankMap from './app/views/BlankMap'
 import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
-//import NavigationScreen from './app/views/NavigationScreen'
 
-//HighlightsTour
+//Navigation Screens
 import HighlightsTourNav1 from './app/views/HighlightsTour/HighlightsTourNav1'
+
+//Stop Screens
+import HighlightsTourStop1 from './app/views/HighlightsTour/HighlightsTourStop1'
+
+//Map Screens
+import HighlightsTourMap1 from './app/views/HighlightsTour/HighlightsTourMap1'
 
 import colors from './app/modules/Colors'
 
@@ -145,10 +150,17 @@ const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
     About: AboutScreen,
-    Map: MapScreen,
+    Map: BlankMap,
     TodayAtUMMNH: TodayAtUMMNHScreen,
-    //Navigation: NavigationScreen,
-    HighlightsTourNav1: HighlightsTourNav1
+    
+    //Navigation
+    HighlightsTourNav1: HighlightsTourNav1,
+
+    //Maps
+    HighlightsTourMap1: HighlightsTourMap1,
+
+    //Stops
+    HighlightsTourStop1: HighlightsTourStop1,
   },
   {
     initialRouteName: 'Home',

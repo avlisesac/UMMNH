@@ -12,6 +12,9 @@ import {
 	Button,
 	Icon,
 } from 'react-native-elements'
+import {
+	withNavigation
+} from 'react-navigation'
 
 import Swiper from 'react-native-swiper'
 
@@ -24,7 +27,13 @@ import BodyCopy from '../components/BodyCopy'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-export default class NavigationScreen extends React.Component {
+class NavigationScreen extends React.Component {
+
+	pushScreen = (screenToPush) => {
+		this.props.navigation.push(screenToPush, {
+			gallery: this.props.gallery
+		})
+	}
 
 	render(){
 		return(
@@ -63,13 +72,13 @@ export default class NavigationScreen extends React.Component {
 								<View style = { styles.buttonWrapper }>
 									<ButtonEx
 										title = 'Show on Map'
-										onPress = { () => console.log('Show on Map pressed')}
+										onPress = { () => this.pushScreen(this.props.map)}
 									/>
 								</View>
 								<View style = { styles.buttonWrapper }>
 									<ButtonEx
 										title = 'Found It!'
-										onPress = { () => console.log('Found It pressed')}
+										onPress = { () => this.pushScreen(this.props.stop)}
 									/>
 								</View>
 							</View>
@@ -80,6 +89,8 @@ export default class NavigationScreen extends React.Component {
 		)
 	}
 }
+
+export default withNavigation(NavigationScreen)
 
 const styles = StyleSheet.create({
 	safeAreaView: {
