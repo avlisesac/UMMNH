@@ -17,8 +17,9 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 const ButtonEx = withPreventDoubleClick(Button)
 
 class StopHero extends React.Component {
-	pushScreen = (screenToPush) => {
-		this.props.navigation.push(screenToPush)
+	constructor(props){
+		super(props)
+		console.log('gallery passed: ', this.props.gallery)
 	}
 
 	render() {
@@ -32,7 +33,11 @@ class StopHero extends React.Component {
 				<View style = { styles.buttonWrapper }>
 					<ButtonEx 
 						title = 'Image Gallery'
-						onPress = { () => this.pushScreen() }
+						onPress = { () => {
+							this.props.navigation.push('GalleryScreen', {
+							gallery: this.props.gallery
+						}) 
+						console.log('pushing gallery with: ', this.props.gallery)}}
 					/>
 				</View>
 			</View>

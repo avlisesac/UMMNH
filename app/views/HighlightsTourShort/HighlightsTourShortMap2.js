@@ -4,7 +4,7 @@ import MapScreen from '../MapScreen'
 
 import colors from '../../modules/Colors'
 
-export default class HighlightsTourMap1 extends React.Component {
+export default class HighlightsTourShortMap2 extends React.Component {
 	static navigationOptions = {
 		headerStyle: {
 			backgroundColor: colors.ummnhLightRed
@@ -13,7 +13,7 @@ export default class HighlightsTourMap1 extends React.Component {
 
 	render(){
 		return (
-			<MapScreen showOverlay = { true } xPercent = { 0.51 } yPercent = { 0.51 } />
+			<MapScreen showOverlay = { true } xPercent = { 0.68 } yPercent = { 0.38 } />
 		)
 	}
 }

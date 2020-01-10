@@ -1,32 +1,12 @@
 import React from 'react'
 
-import {
-	Button
-} from 'react-native-elements'
-
+import images from '../../modules/Images'
 import StopScreen from '../StopScreen'
 
-import images from '../../modules/Images'
-import colors from '../../modules/Colors'
-
-export default class HighlightsTourStop1 extends React.Component{
-	static navigationOptions = {
-		title: 'Stop: 1 / 10',
-		headerStyle: {
-			backgroundColor: colors.ummnhLightRed
-		},
-		headerRight: (
-			<Button
-				title = "Exit"
-				titleStyle = {{ color: colors.ummnhDarkBlue }}
-				buttonStyle = {{ backgroundColor: 'rgba(0,0,0,0)' }}
-				onPress = { () => navigation.push('Exit')}
-			/>
-		)
-	}
+export default class Mastodons extends React.Component {
 
 	render(){
-		return(
+		return (
 			<StopScreen
 				//Hero Info
 				heroImage = { images.heroImages.mastodons }
@@ -87,6 +67,11 @@ The larger skeleton is from a male that lived about 13,000 years ago. He was fou
 				a1 = { `A: The male mastadon’s right rear leg might look a bit different. That’s because the scientists at the museum left this 3D printed bone partially unfinished. They wanted to give visitors a look at how they create model bones. If you look closely, you might notice a slight 'Pixelated' appearance that shows the polygonal modeling. This right leg is actually a copy of the left leg that they scanned in and mirrored to create a missing piece!` }
 				a2 = { `A: While you might think that humans killed this male mastodon, it was actually much more likely another male in a fight over a female. This male has a hole in his skull near his jaw that was probably made by the other male’s tusk.` }
 				a3 = { `A: On the ribs of the male mastodon, you can observe some cut marks that were made by human tools. After this mastodon was felled by a competing male, humans likely found the body and harvested meat from it. You can also see some severed toes where humans chopped right through.` }
+
+				isOnTour = { this.props.isOnTour }
+				bottomButtonTitle = { this.props.bottomButtonTitle }
+				bottomButtonTarget = { this.props.bottomButtonTarget }
+
 			/>
 		)
 	}

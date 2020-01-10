@@ -45,11 +45,11 @@ class NavigationScreen extends React.Component {
 							<View style = { styles.swipeContainer }>
 								<Swiper style = { styles.wrapper } removeClippedSubviews = { false } showsButtons = { true } activeDotColor = { 'white' } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
 									<Image 
-										source = { images.navigation.highlightsTour.stop1.image1 }
+										source = { this.props.image1 }
 										style = { styles.imageStyle }
 									/>
 									<Image 
-										source = { images.navigation.highlightsTour.stop1.image2 }
+										source = { this.props.image2 }
 										style = { styles.imageStyle }
 									/>
 								</Swiper>

@@ -10,7 +10,7 @@ import {
 import colors from '../modules/Colors'
 import images from '../modules/Images'
 
-import PinchableImage from '../components/PinchableImage'
+import PinchableMapImage from '../components/PinchableMapImage'
 
 export default class MapScreen extends React.Component{
 	static navigationOptions = {
@@ -41,7 +41,7 @@ export default class MapScreen extends React.Component{
 	render(){
 		return(
 			<SafeAreaView style = { styles.mainContainer }>
-				<PinchableImage style = { styles.mapImage } image = { images.map } showOverlay = { this.props.showOverlay } xPercent = { this.props.xPercent } yPercent = { this.props.yPercent } />
+				<PinchableMapImage style = { styles.mapImage } image = { images.map } showOverlay = { this.props.showOverlay } xPercent = { this.props.xPercent } yPercent = { this.props.yPercent } />
 			</SafeAreaView>
 		)
 	}

@@ -25,15 +25,24 @@ import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
 import BlankMap from './app/views/BlankMap'
 import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
+import GalleryScreen from './app/views/GalleryScreen'
+import ExitScreen from './app/views/ExitScreen'
 
 //Navigation Screens
-import HighlightsTourNav1 from './app/views/HighlightsTour/HighlightsTourNav1'
+import HighlightsTourShortNav1 from './app/views/HighlightsTourShort/HighlightsTourShortNav1'
+import HighlightsTourShortNav2 from './app/views/HighlightsTourShort/HighlightsTourShortNav2'
 
 //Stop Screens
-import HighlightsTourStop1 from './app/views/HighlightsTour/HighlightsTourStop1'
+import HighlightsTourShortStop1 from './app/views/HighlightsTourShort/HighlightsTourShortStop1'
+import HighlightsTourShortStop2 from './app/views/HighlightsTourShort/HighlightsTourShortStop2'
 
 //Map Screens
-import HighlightsTourMap1 from './app/views/HighlightsTour/HighlightsTourMap1'
+import HighlightsTourShortMap1 from './app/views/HighlightsTourShort/HighlightsTourShortMap1'
+import HighlightsTourShortMap2 from './app/views/HighlightsTourShort/HighlightsTourShortMap2'
+
+//Exhibit Screens
+import Mastodons from './app/views/Exhibits/Mastodons'
+import MichiganRivers from './app/views/Exhibits/MichiganRivers'
 
 import colors from './app/modules/Colors'
 
@@ -152,15 +161,24 @@ const RootStack = createStackNavigator(
     About: AboutScreen,
     Map: BlankMap,
     TodayAtUMMNH: TodayAtUMMNHScreen,
+    GalleryScreen: GalleryScreen,
+    Exit: ExitScreen,
     
     //Navigation
-    HighlightsTourNav1: HighlightsTourNav1,
+    HighlightsTourShortNav1: HighlightsTourShortNav1,
+    HighlightsTourShortNav2: HighlightsTourShortNav2,
 
     //Maps
-    HighlightsTourMap1: HighlightsTourMap1,
+    HighlightsTourShortMap1: HighlightsTourShortMap1,
+    HighlightsTourShortMap2: HighlightsTourShortMap2,
 
     //Stops
-    HighlightsTourStop1: HighlightsTourStop1,
+    HighlightsTourShortStop1: HighlightsTourShortStop1,
+    HighlightsTourShortStop2: HighlightsTourShortStop2,
+
+    //Exhibits
+    Mastodons: Mastodons,
+    MichiganRivers: MichiganRivers,
   },
   {
     initialRouteName: 'Home',

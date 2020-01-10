@@ -19,9 +19,7 @@ import {
 import colors from '../modules/Colors'
 import fontSizes from '../modules/FontSizes'
 
-//const AnimatedCachedImage = Animated.createAnimatedComponent(CachedImage)
-
-export default class PinchableImage extends React.Component {
+export default class PinchableMapImage extends React.Component {
 	panRef = React.createRef()
 	pinchRef = React.createRef()
 
@@ -192,6 +190,6 @@ const styles = StyleSheet.create({
 	image: {
 		width: '100%',
 		flex: 1,
-		resizeMode: 'contain'
+		resizeMode: 'contain',
 	}
 })

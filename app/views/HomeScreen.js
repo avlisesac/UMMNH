@@ -46,7 +46,7 @@ export default class HomeScreen extends React.Component {
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = "Tours"
-									onPress = { () => this.pushScreen('HighlightsTourNav1')}
+									onPress = { () => this.pushScreen('HighlightsTourShortNav1')}
 								/>
 							</View>
 							<View style = { styles.buttonWrapper }>
@@ -64,7 +64,7 @@ export default class HomeScreen extends React.Component {
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = "About"
-									onPress = { () => this.pushScreen('About')}
+									onPress = { () => this.pushScreen('Mastodons')}
 								/>
 							</View>
 						</View>

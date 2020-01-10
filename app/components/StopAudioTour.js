@@ -24,7 +24,60 @@ export default class StopAudioTour extends React.Component {
 		this.state = {
 			showFullDescription: false,
 			playPauseIcon: 'md-play',
+			audioPlaying: false,
+			audioLoaded: false,
 		}
+
+		_onFinishedLoadingFileSubscription = SoundPlayer.addEventListener('FinishedLoadingFile', ({success, name, type }) => {
+			console.log('finished loading file', success, name, type)
+
+		})
+
+		_onFinishedPlayingSubscription = SoundPlayer.addEventListener('FinishedPlaying', ({success}) => {
+			console.log('finished playing', success)
+			if(success){
+				console.log('finished playing audio file successfully. stopping...')
+				this.stop()
+			}
+
+		})
+
+		SoundPlayer.loadSoundFile(this.props.audioFile, 'mp3')
+	}
+
+	componentWillUnmount(){
+		this.stop()
+		_onFinishedPlayingSubscription.remove()
+		_onFinishedLoadingFileSubscription.remove()
+	}
+
+	playPause = () => {
+		console.log('play/pause pressed')
+		if(!this.state.audioPlaying){
+			console.log('audio not currently playing, starting...')
+			SoundPlayer.play()
+			this.setState({
+				audioPlaying: true,
+				playPauseIcon: 'md-pause'
+			})
+		} else {
+			console.log('audio currently playing, pausing...')
+			SoundPlayer.pause()
+			this.setState({
+				audioPlaying: false,
+				playPauseIcon: 'md-play'
+			})
+		}
+	}
+
+	stop = () => {
+		console.log('stop called')
+		SoundPlayer.stop()
+		SoundPlayer.seek(0)
+		this.setState({
+			audioPlaying: false,
+			playPauseIcon: 'md-play'
+		})
 	}
 
 	render() {
@@ -39,7 +92,7 @@ export default class StopAudioTour extends React.Component {
 							buttonStyle = { styles.button }
 							icon = {{ name: this.state.playPauseIcon, type: 'ionicon', size: fontSizes.button, style: {marginRight: 0}}}
 							onPress = { () => {
-								console.log('play/pause pressed')
+								this.playPause()
 							}}
 						/>
 						</View>
@@ -49,7 +102,7 @@ export default class StopAudioTour extends React.Component {
 							buttonStyle = { styles.button }
 							icon = {{ name: 'md-square', type: 'ionicon', size: fontSizes.button, style: {marginRight: 0}}}
 							onPress = { () => {
-								console.log('stop pressed')
+								this.stop()
 							}}
 						/>
 						</View>
