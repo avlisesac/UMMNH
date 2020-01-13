@@ -54,6 +54,12 @@ Unfortunately, the people who utilize Michigan’s rivers have not always been a
 				a2 = { `A: Our diorama displays six different types of fish that call the Michigan rivers their home. If you’re having trouble finding the tiny minnows, check for one in the mouth of the painted turtle!` }
 				a3 = { `A: The Kids Cave offers a great view of both the Red Squirrel on the Cottonwood tree, as well as the Black Bear perched on his fallen log. While you’re here, take a look at some of the grubs, worms, and other invertebrates that inhabit the soil!` }
 
+				//While You're Here
+				substop1title = { `PLACEHOLDER` }
+				substop1text = { `PLACEHOLDER`}
+				substop2title = { `PLACEHOLDER` }
+				substop2text = { `PLACEHOLDER` }
+
 				isOnTour = { this.props.isOnTour }
 				bottomButtonTitle = { this.props.bottomButtonTitle }
 				bottomButtonTarget = { this.props.bottomButtonTarget }

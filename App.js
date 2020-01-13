@@ -31,14 +31,27 @@ import ExitScreen from './app/views/ExitScreen'
 //Navigation Screens
 import HighlightsTourShortNav1 from './app/views/HighlightsTourShort/HighlightsTourShortNav1'
 import HighlightsTourShortNav2 from './app/views/HighlightsTourShort/HighlightsTourShortNav2'
-
-//Stop Screens
-import HighlightsTourShortStop1 from './app/views/HighlightsTourShort/HighlightsTourShortStop1'
-import HighlightsTourShortStop2 from './app/views/HighlightsTourShort/HighlightsTourShortStop2'
+import HighlightsTourShortNav3 from './app/views/HighlightsTourShort/HighlightsTourShortNav3'
+import HighlightsTourShortNav4 from './app/views/HighlightsTourShort/HighlightsTourShortNav4'
+import HighlightsTourShortNav5 from './app/views/HighlightsTourShort/HighlightsTourShortNav5'
+import HighlightsTourShortNav6 from './app/views/HighlightsTourShort/HighlightsTourShortNav6'
 
 //Map Screens
 import HighlightsTourShortMap1 from './app/views/HighlightsTourShort/HighlightsTourShortMap1'
 import HighlightsTourShortMap2 from './app/views/HighlightsTourShort/HighlightsTourShortMap2'
+import HighlightsTourShortMap3 from './app/views/HighlightsTourShort/HighlightsTourShortMap3'
+import HighlightsTourShortMap4 from './app/views/HighlightsTourShort/HighlightsTourShortMap4'
+import HighlightsTourShortMap5 from './app/views/HighlightsTourShort/HighlightsTourShortMap5'
+import HighlightsTourShortMap6 from './app/views/HighlightsTourShort/HighlightsTourShortMap6'
+
+//Stop Screens
+import HighlightsTourShortStop1 from './app/views/HighlightsTourShort/HighlightsTourShortStop1'
+import HighlightsTourShortStop2 from './app/views/HighlightsTourShort/HighlightsTourShortStop2'
+import HighlightsTourShortStop3 from './app/views/HighlightsTourShort/HighlightsTourShortStop3'
+import HighlightsTourShortStop4 from './app/views/HighlightsTourShort/HighlightsTourShortStop4'
+import HighlightsTourShortStop5 from './app/views/HighlightsTourShort/HighlightsTourShortStop5'
+import HighlightsTourShortStop6 from './app/views/HighlightsTourShort/HighlightsTourShortStop6'
+
 
 //Exhibit Screens
 import Mastodons from './app/views/Exhibits/Mastodons'
@@ -167,18 +180,26 @@ const RootStack = createStackNavigator(
     //Navigation
     HighlightsTourShortNav1: HighlightsTourShortNav1,
     HighlightsTourShortNav2: HighlightsTourShortNav2,
+    HighlightsTourShortNav3: HighlightsTourShortNav3,
+    HighlightsTourShortNav4: HighlightsTourShortNav4,
+    HighlightsTourShortNav5: HighlightsTourShortNav5,
+    HighlightsTourShortNav6: HighlightsTourShortNav6,
 
     //Maps
     HighlightsTourShortMap1: HighlightsTourShortMap1,
     HighlightsTourShortMap2: HighlightsTourShortMap2,
+    HighlightsTourShortMap3: HighlightsTourShortMap3,
+    HighlightsTourShortMap4: HighlightsTourShortMap4,
+    HighlightsTourShortMap5: HighlightsTourShortMap5,
+    HighlightsTourShortMap6: HighlightsTourShortMap6,
 
     //Stops
     HighlightsTourShortStop1: HighlightsTourShortStop1,
     HighlightsTourShortStop2: HighlightsTourShortStop2,
-
-    //Exhibits
-    Mastodons: Mastodons,
-    MichiganRivers: MichiganRivers,
+    HighlightsTourShortStop3: HighlightsTourShortStop3,
+    HighlightsTourShortStop4: HighlightsTourShortStop4,
+    HighlightsTourShortStop5: HighlightsTourShortStop5,
+    HighlightsTourShortStop6: HighlightsTourShortStop6,
   },
   {
     initialRouteName: 'Home',

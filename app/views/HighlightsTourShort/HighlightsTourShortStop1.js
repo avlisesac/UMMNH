@@ -11,7 +11,7 @@ import colors from '../../modules/Colors'
 
 export default class HighlightsTourShortStop1 extends React.Component{
 	static navigationOptions = ({navigation}) => ({
-		title: 'Stop: 1 / 10',
+		title: 'Stop: 1 / 7',
 		headerStyle: {
 			backgroundColor: colors.ummnhLightRed
 		},

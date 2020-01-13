@@ -5,14 +5,14 @@ import {
 } from 'react-native-elements'
 
 //Change to desired exhibit
-import MichiganRivers from '../Exhibits/MichiganRivers'
+import Quetz from '../Exhibits/Quetz'
 
 import images from '../../modules/Images'
 import colors from '../../modules/Colors'
 
-export default class HighlightsTourShortStop2 extends React.Component{
+export default class HighlightsTourShortStop5 extends React.Component{
 	static navigationOptions = ({navigation}) => ({
-		title: 'Stop: 2 / 7',
+		title: 'Stop: 5 / 7',
 		headerStyle: {
 			backgroundColor: colors.ummnhLightRed
 		},
@@ -28,10 +28,10 @@ export default class HighlightsTourShortStop2 extends React.Component{
 
 	render(){
 		return(
-			<MichiganRivers
+			<Quetz
 				isOnTour = { true }
 				bottomButtonTitle = { 'Next Stop! '}
-				bottomButtonTarget = { 'HighlightsTourShortNav3' }
+				bottomButtonTarget = { 'HighlightsTourShortNav6' }
 			/>
 		)
 	}

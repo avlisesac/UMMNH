@@ -10,7 +10,7 @@ import Swiper from 'react-native-swiper'
 
 import PinchableGalleryImage from '../components/PinchableGalleryImage'
 import fontSizes from '../modules/FontSizes'
-import BodyCopy from '../modules/BodyCopy'
+import BodyCopy from '../components/BodyCopy'
 
 export default class GalleryScreen extends React.Component{
 	constructor(props){

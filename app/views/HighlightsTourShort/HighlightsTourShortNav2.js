@@ -7,7 +7,7 @@ import images from '../../modules/Images'
 
 export default class HighlightsTourShortNav2 extends React.Component {
 	static navigationOptions = ({navigation}) => ({
-		title: 'Find: 2 / 10',
+		title: 'Find: 2 / 7',
 		headerStyle: {
 			backgroundColor: colors.ummnhLightRed
 		},

@@ -8,7 +8,7 @@ import {
 
 import colors from '../modules/Colors'
 import fontSizes from '../modules/FontSizes'
-import BodyCopy from '../modules/BodyCopy'
+import BodyCopy from '../components/BodyCopy'
 
 export default class StopTLAS extends React.Component {
 	constructor(props){
@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
 	mainContainer: {
 		backgroundColor: colors.ummnhLightGreen,
 		borderRadius: 5,
-		paddingBottom: 5
+		paddingBottom: 5,
+		marginBottom: 5,
 	},
 	header: {
 		width: '100%',

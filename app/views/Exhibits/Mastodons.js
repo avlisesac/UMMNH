@@ -68,6 +68,12 @@ The larger skeleton is from a male that lived about 13,000 years ago. He was fou
 				a2 = { `A: While you might think that humans killed this male mastodon, it was actually much more likely another male in a fight over a female. This male has a hole in his skull near his jaw that was probably made by the other male’s tusk.` }
 				a3 = { `A: On the ribs of the male mastodon, you can observe some cut marks that were made by human tools. After this mastodon was felled by a competing male, humans likely found the body and harvested meat from it. You can also see some severed toes where humans chopped right through.` }
 
+				//While You're Here
+				substop1title = { 'Fossil Prep Lab' }
+				substop1text = { `Get a look at where U-M scientists prepare fossils for study and display. The Fossil Prep Lab allows visitors the chance to see some of the people and tools that help bring our museum to life!`}
+				substop2title = { `Field Research Station` }
+				substop2text = { `Investigate the Field Research Station located next to the Welcome Desk to get some extra info about what scientists at the University of Michigan are currently studying!` }
+
 				isOnTour = { this.props.isOnTour }
 				bottomButtonTitle = { this.props.bottomButtonTitle }
 				bottomButtonTarget = { this.props.bottomButtonTarget }

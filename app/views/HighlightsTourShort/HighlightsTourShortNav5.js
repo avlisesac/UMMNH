@@ -5,9 +5,9 @@ import NavigationScreen from '../NavigationScreen'
 import colors from '../../modules/Colors'
 import images from '../../modules/Images'
 
-export default class HighlightsTourShortNav1 extends React.Component {
+export default class HighlightsTourShortNav5 extends React.Component {
 	static navigationOptions = ({navigation}) => ({
-		title: 'Find: 1 / 7',
+		title: 'Find: 5 / 7',
 		headerStyle: {
 			backgroundColor: colors.ummnhLightRed
 		},
@@ -24,13 +24,13 @@ export default class HighlightsTourShortNav1 extends React.Component {
 	render() {
 		return (
 			<NavigationScreen
-				image1 = { images.navigation.highlightstour_short.stop1.image1 }
-				image2 = { images.navigation.highlightstour_short.stop1.image2 }
-				header = 'Find: The Mastodons'
-				subheader = '1st Floor - Main Atrium'
-				body = "Enter the museum through the main entrance. You will know you're at the right door if you walk between two Puma's. The Mastodons are in the main atrium across from the information desk."
-				map = "HighlightsTourShortMap1"
-				stop = "HighlightsTourShortStop1"
+				image1 = { images.navigation.highlightstour_short.stop5.image1 }
+				image2 = { images.navigation.highlightstour_short.stop5.image2 }
+				header = 'Find: Quetzalcoatlus'
+				subheader = '2nd Floor - West Atrium'
+				body = "Continue through the Evolution gallery until you exit on the other side. When you come out to the atrium overlook, you will see <i>Quetzalcoatlus</i> soaring through the air above."
+				map = "HighlightsTourShortMap5"
+				stop = "HighlightsTourShortStop5"
 			/>
 		)
 	}

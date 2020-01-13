@@ -10,7 +10,7 @@ import {
 
 import fontSizes from '../modules/FontSizes'
 import colors from '../modules/Colors'
-import BodyCopy from '../modules/BodyCopy'
+import BodyCopy from './BodyCopy'
 
 export default class StopQuickInfo extends React.Component {
 	render() {

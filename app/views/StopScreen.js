@@ -16,6 +16,7 @@ import StopHero from '../components/StopHero'
 import StopQuickInfo from '../components/StopQuickInfo'
 import StopAudioTour from '../components/StopAudioTour'
 import StopTLAS from '../components/StopTLAS'
+import WhileYoureHere from '../components/WhileYoureHere'
 
 import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 
@@ -65,6 +66,14 @@ class StopScreen extends React.Component{
 							a1 = { this.props.a1 }
 							a2 = { this.props.a2 }
 							a3 = { this.props.a3 }/>
+
+						{/* While You're Here Holder */}
+						<WhileYoureHere
+							substop1title = { this.props.substop1title }
+							substop1text = { this.props.substop1text }
+							substop2title = { this.props.substop2title }
+							substop2text = { this.props.substop2text }
+						/>
 
 						{/* Next Stop (if on tour) or Return (if not on tour)*/}
 						<View style = { styles.buttonContainer }>

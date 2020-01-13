@@ -5,7 +5,8 @@ const colors = {
 	ummnhLightGreen: '#a4d65e',
 	ummnhDarkGreen: '#007367',
 	ummnhLightRed: '#f03d69',
-	ummnhDarkRed: '#781f1c'
+	ummnhDarkRed: '#781f1c',
+	ummnhWarmGray: '#bfb8af',
 }
 
 export default colors;

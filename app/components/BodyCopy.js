@@ -72,9 +72,9 @@ formattedString = (textString, parentFamily) => {
 
 const styles = StyleSheet.create({
 	medItalic: {
-		fontFamily: 'Whitney-MediumItal'
+		fontFamily: 'Whitney-MediumItalic'
 	},
 	blackItalic: {
-		fontFamily: 'Whitney-BlackItal'
+		fontFamily: 'Whitney-BlackItalic'
 	}
 })
