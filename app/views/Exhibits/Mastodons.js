@@ -71,8 +71,8 @@ The larger skeleton is from a male that lived about 13,000 years ago. He was fou
 				//While You're Here
 				substop1title = { 'Fossil Prep Lab' }
 				substop1text = { `Get a look at where U-M scientists prepare fossils for study and display. The Fossil Prep Lab allows visitors the chance to see some of the people and tools that help bring our museum to life!`}
-				substop2title = { `Field Research Station` }
-				substop2text = { `Investigate the Field Research Station located next to the Welcome Desk to get some extra info about what scientists at the University of Michigan are currently studying!` }
+				substop2title = { `Research Station` }
+				substop2text = { `Investigate the Field Research Station located next to the Welcome Desk to get some extra info about what scientists at the University of Michigan are currently studying! Look for the block 'M'.` }
 
 				isOnTour = { this.props.isOnTour }
 				bottomButtonTitle = { this.props.bottomButtonTitle }
