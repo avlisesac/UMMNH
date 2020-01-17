@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Alert,
   SafeAreaView,
@@ -16,6 +16,8 @@ import {
 import {
   createStackNavigator
 } from 'react-navigation-stack'
+
+import SplashScreen from 'react-native-splash-screen'
 
 import AsyncStorage from '@react-native-community/async-storage'
 
@@ -62,6 +64,7 @@ export default class App extends React.Component {
 
   //When application loads, check for permissions and listen for notifications
   componentDidMount = async () => {
+    SplashScreen.hide()
     this.checkPermission()
     this.createNotificationListeners()
   }
