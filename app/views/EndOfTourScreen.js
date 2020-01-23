@@ -10,6 +10,9 @@ import {
 	Button
 } from 'react-native-elements'
 
+import firebase from 'react-native-firebase'
+let Analytics = firebase.analytics()
+
 import fontSizes from '../modules/FontSizes'
 import links from '../modules/Links'
 
@@ -18,6 +21,10 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 const ButtonEx = withPreventDoubleClick(Button)
 
 export default class EndOfTourScreen extends React.Component{
+	componentDidMount = () => {
+		Analytics.logEvent('FinishedTour')
+	}
+
 	render(){
 		return(
 			<SafeAreaView style = { styles.safeArea }>

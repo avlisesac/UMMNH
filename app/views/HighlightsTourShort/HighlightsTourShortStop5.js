@@ -4,6 +4,9 @@ import {
 	Button
 } from 'react-native-elements'
 
+import firebase from 'react-native-firebase'
+let Analytics = firebase.analytics()
+
 //Change to desired exhibit
 import Quetz from '../Exhibits/Quetz'
 
@@ -25,6 +28,10 @@ export default class HighlightsTourShortStop5 extends React.Component{
 			/>
 		)
 	})
+
+	componentDidMount = () => {
+		Analytics.logEvent('Viewed_TourStop_5')
+	}
 
 	render(){
 		return(

@@ -4,6 +4,9 @@ import {
 	Button
 } from 'react-native-elements'
 
+import firebase from 'react-native-firebase'
+let Analytics = firebase.analytics()
+
 //Change to desired exhibit
 import DynamicPlanet from '../Exhibits/DynamicPlanet'
 
@@ -25,6 +28,10 @@ export default class HighlightsTourShortStop6 extends React.Component{
 			/>
 		)
 	})
+
+	componentDidMount = () => {
+		Analytics.logEvent('Viewed_TourStop_6')
+	}
 
 	render(){
 		return(

@@ -30,6 +30,7 @@ import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
 import GalleryScreen from './app/views/GalleryScreen'
 import ExitScreen from './app/views/ExitScreen'
 import EndOfTourScreen from './app/views/EndOfTourScreen'
+import TourPreviewScreen from './app/views/TourPreviewScreen'
 
 //Navigation Screens
 import HighlightsTourShortNav1 from './app/views/HighlightsTourShort/HighlightsTourShortNav1'
@@ -179,6 +180,7 @@ const RootStack = createStackNavigator(
     GalleryScreen: GalleryScreen,
     Exit: ExitScreen,
     EndOfTour: EndOfTourScreen,
+    TourPreview: TourPreviewScreen,
     
     //Navigation
     HighlightsTourShortNav1: HighlightsTourShortNav1,

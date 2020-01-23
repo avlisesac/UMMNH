@@ -10,6 +10,9 @@ import {
 	Button,
 } from 'react-native-elements'
 
+import firebase from 'react-native-firebase'
+let Analytics = firebase.analytics()
+
 import moment from 'moment'
 import NetInfo from '@react-native-community/netinfo'
 
@@ -43,8 +46,10 @@ export default class TodayAtUMMNHScreen extends React.Component {
 
 	}
 
-	componentDidMount(){
+	componentDidMount = () => {
+		console.log('componentDidMount fired...')
 		this.loadData(urlToFetchFrom)
+		Analytics.logEvent('Viewed_TodayAtUMMNHScreen')
 	}
 
 	//Attempt to load data from Happenings

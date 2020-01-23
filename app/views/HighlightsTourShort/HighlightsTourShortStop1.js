@@ -4,6 +4,10 @@ import {
 	Button
 } from 'react-native-elements'
 
+import firebase from 'react-native-firebase'
+let Analytics = firebase.analytics()
+
+//Change to desired exhibit
 import Mastodons from '../Exhibits/Mastodons'
 
 import images from '../../modules/Images'
@@ -24,6 +28,10 @@ export default class HighlightsTourShortStop1 extends React.Component{
 			/>
 		)
 	})
+
+	componentDidMount = () => {
+		Analytics.logEvent('Viewed_TourStop_1')
+	}
 
 	render(){
 		return(

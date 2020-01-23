@@ -14,6 +14,9 @@ import {
 	Icon
 } from 'react-native-elements'
 
+import firebase from 'react-native-firebase'
+let Analytics = firebase.analytics()
+
 import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 import colors from '../modules/Colors'
 import fontSizes from '../modules/FontSizes'
@@ -27,6 +30,10 @@ export default class AboutScreen extends React.Component {
 		headerStyle: {
 			backgroundColor: colors.ummnhYellow
 		},
+	}
+
+	componentDidMount = () => {
+		Analytics.logEvent('Viewed_AboutScreen')
 	}
 
 	render() {

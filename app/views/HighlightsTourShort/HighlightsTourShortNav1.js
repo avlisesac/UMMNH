@@ -28,7 +28,7 @@ export default class HighlightsTourShortNav1 extends React.Component {
 				image2 = { images.navigation.highlightstour_short.stop1.image2 }
 				header = 'Find: The Mastodons'
 				subheader = '1st Floor - Main Atrium'
-				body = "Enter the museum through the main entrance. You will know you're at the right door if you walk between two Puma's. The Mastodons are in the main atrium across from the information desk."
+				body = "Enter the museum through the main entrance. You will know you're at the right door if you walk between two pumas. The Mastodons are in the main atrium across from the information desk."
 				map = "HighlightsTourShortMap1"
 				stop = "HighlightsTourShortStop1"
 			/>
