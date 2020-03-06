@@ -16,6 +16,12 @@ import BodyCopy from '../components/BodyCopy'
 
 function GalleryScreen({route, navigation}){
 	const { gallery } = route.params
+	const [index, setIndex] = useState(0)
+
+	onChangeImage (index) {
+		console.log('changingIndex. passed:', index)
+		setIndex(index)
+	}
 
 	console.log('Gallery screen param log:' , gallery)
 
@@ -34,6 +40,7 @@ function GalleryScreen({route, navigation}){
 	return(
 		<Gallery style = {{ flex: 1, backgroundColor: 'white' }}
 			images = { gallery }
+			onPageSelected = { this.onChangeImage }
 		/>
 
 		// <SafeAreaView style = { styles.safeArea }>
