@@ -9,43 +9,71 @@ import {
 	Button
 } from 'react-native-elements'
 import {
-	withNavigation
-} from 'react-navigation'
+	useNavigation
+} from '@react-navigation/native'
 
 import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-class StopHero extends React.Component {
-	constructor(props){
-		super(props)
-		console.log('gallery passed: ', this.props.gallery)
-	}
+function StopHero(props){
+	const navigation = useNavigation()
+	console.log('passed props to hero..', props)
 
-	render() {
-		return (
-			<View style = { styles.mainContainer }>
-				<Image
-					source = { this.props.image }
-					style = { styles.image }
+	return (
+		<View style = { styles.mainContainer }>
+			<Image
+				source = { props.image }
+				style = { styles.image }
+			/>
+
+			<View style = { styles.buttonWrapper }>
+				<ButtonEx
+					title = 'Image Gallery'
+					onPress = { () => {
+						navigation.push('GalleryScreen', {
+						gallery: props.gallery
+					})
+					console.log('pushing gallery with: ', props.gallery)}}
 				/>
-
-				<View style = { styles.buttonWrapper }>
-					<ButtonEx 
-						title = 'Image Gallery'
-						onPress = { () => {
-							this.props.navigation.push('GalleryScreen', {
-							gallery: this.props.gallery
-						}) 
-						console.log('pushing gallery with: ', this.props.gallery)}}
-					/>
-				</View>
 			</View>
-		)
-	}
+		</View>
+	)
 }
 
-export default withNavigation(StopHero)
+export default StopHero
+
+// export default class StopHero extends React.Component {
+// 	constructor(props){
+// 		super(props)
+// 		console.log('gallery passed: ', this.props.gallery)
+// 	}
+//
+// 	render() {
+// 		const navigation = useNavigation()
+//
+// 		return (
+// 			<View style = { styles.mainContainer }>
+// 				<Image
+// 					source = { this.props.image }
+// 					style = { styles.image }
+// 				/>
+//
+// 				<View style = { styles.buttonWrapper }>
+// 					<ButtonEx
+// 						title = 'Image Gallery'
+// 						onPress = { () => {
+// 							navigation.push('GalleryScreen', {
+// 							gallery: this.props.gallery
+// 						})
+// 						console.log('pushing gallery with: ', this.props.gallery)}}
+// 					/>
+// 				</View>
+// 			</View>
+// 		)
+// 	}
+// }
+
 
 const styles = StyleSheet.create({
 	mainContainer:{

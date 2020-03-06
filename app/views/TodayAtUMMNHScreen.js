@@ -27,12 +27,6 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 const ButtonEx = withPreventDoubleClick(Button)
 
 export default class TodayAtUMMNHScreen extends React.Component {
-	static navigationOptions = {
-		title: moment().format("ddd MMM Do YYYY").toString(),
-		headerStyle: {
-			backgroundColor: colors.ummnhLightGreen
-		},
-	}
 
 	constructor(props){
 		super(props)
@@ -40,22 +34,23 @@ export default class TodayAtUMMNHScreen extends React.Component {
 		this.state = {
 			dataLoaded: false,
 			dataToDisplay: 'No data to display...',
-			activeConnection: false,
+			activeConnection: null,
 			connectionType: null,
 		}
 
 	}
 
-	componentDidMount = () => {
+	componentDidMount = async () => {
 		console.log('componentDidMount fired...')
-		this.loadData(urlToFetchFrom)
+		await this.loadData(urlToFetchFrom)
 		Analytics.logEvent('Viewed_TodayAtUMMNHScreen')
 	}
 
 	//Attempt to load data from Happenings
-	loadData = (urlToFetchFrom) => {
+	loadData = async (urlToFetchFrom) => {
 		//Check for active internet connection
 		let hasConnection = this.checkConnection()
+		console.log(hasConnection)
 
 		//If there is a connection, fetch data
 		if(hasConnection){
@@ -105,9 +100,20 @@ export default class TodayAtUMMNHScreen extends React.Component {
 	}
 
 	render() {
+		//Before Anything
+		if(this.state.activeConnection === null){
+			console.log('connection is nullllllll')
+			return(
+				<View style = {  styles.notifContainer }>
+					<LoadingIndicator />
+				</View>
+			)
+		}
+
 
 		//No internet connection
 		if(!this.state.activeConnection){
+			console.log('activeConnection is false, but does not equal null')
 			return(
 				<View style = { styles.notifContainer }>
 					<Text style = { styles.notifText }>You do not appear to have an active internet connection!</Text>
@@ -124,6 +130,7 @@ export default class TodayAtUMMNHScreen extends React.Component {
 
 		//Connected - Loading
 		if(!this.state.dataLoaded){
+			console.log('we have connection, data loading')
 			return(
 				<View style = { styles.notifContainer }>
 					<LoadingIndicator />
@@ -135,17 +142,21 @@ export default class TodayAtUMMNHScreen extends React.Component {
 
 		//Connected - No events today
 		if(this.state.dataToDisplay.length < 1){
+			console.log('connection, data done loading, no events...')
 			return(
-				<View style = { styles.notifContainer }>
-					<Text style = { styles.notifText }>No events at the museum today.</Text>
-					<WebScheduleLinks />
-				</View>
+				<SafeAreaView style = { styles.mainContainer}>
+					<View style = { styles.notifContainer }>
+						<Text style = { styles.notifText }>No events at the museum today.</Text>
+						<WebScheduleLinks />
+					</View>
+				</SafeAreaView>
 			)
 		}
 
 		//Connected - Events to show
 		return(
 			<SafeAreaView style = { styles.mainContainer }>
+				<Text style = { styles.dateText }>{ (moment().format("dddd MMM Do YYYY").toString()) }</Text>
 				<FlatList
 					data = { this.state.dataToDisplay }
 					renderItem = {({ item }) =>
@@ -187,6 +198,13 @@ const styles = StyleSheet.create({
 		lineHeight: (fontSizes.body * 1.25),
 		marginTop: 10,
 		width: '80%',
+	},
+	dateText:{
+		textAlign: 'center',
+		fontFamily:'Whitney-Semibold',
+		fontSize: fontSizes.body,
+		marginTop: 10,
+		marginBottom: 10,
 	},
 	listItem: {
 		marginTop: 10,

@@ -1,13 +1,13 @@
 import React from 'react'
 
 import images from '../../modules/Images'
-import StopScreen from '../StopScreen'
+import ExhibitScreen from '../ExhibitScreen'
 
 export default class DynamicPlanet extends React.Component {
 
 	render(){
 		return (
-			<StopScreen
+			<ExhibitScreen
 				//Hero Info
 				heroImage = { images.heroImages.dynamicplanet }
 				gallery = {[
@@ -22,7 +22,7 @@ export default class DynamicPlanet extends React.Component {
 					{
 						image: images.galleries.dynamicplanet.image3,
 						description: 'Two pieces of wood, one modern and one petrified. Interact with these to learn more about petrification!'
-					},		
+					},
 				]}
 
 				//Quick Info

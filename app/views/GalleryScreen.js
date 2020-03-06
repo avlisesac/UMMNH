@@ -12,38 +12,66 @@ import PinchableGalleryImage from '../components/PinchableGalleryImage'
 import fontSizes from '../modules/FontSizes'
 import BodyCopy from '../components/BodyCopy'
 
-export default class GalleryScreen extends React.Component{
-	constructor(props){
-		super(props)
+function GalleryScreen({route, navigation}){
+	const { gallery } = route.params
 
-		this.state = {
-			gallery: this.props.navigation.getParam('gallery')
-		}
-		console.log('navigation is:', this.props.navigation)
-		console.log('gallery is: ', this.props.navigation.getParam('gallery'))
-	}
+	console.log(gallery)
 
-	render(){
-		let slides = Object.keys(this.state.gallery).map( (key, index) => {
-			return(
-				<View style = { styles.slide } key = { index }>
-					<PinchableGalleryImage style = { styles.image } image = { this.state.gallery[key].image }/>
-					<Text style = { styles.text }>
-						<BodyCopy textString = { this.state.gallery[key].description } />
-					</Text>
-				</View>
-			)
-		})
-
-		return(
-			<SafeAreaView style = { styles.safeArea }>
-				<Swiper style = { styles.wrapper } removeClippedSubviews = { false } paginationStyle = { {bottom:5, backgroundColor: 'rgba(255,255,255,0.5)'}} activeDotColor = { 'black' } showsButtons = { true } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
-					{ slides }
-				</Swiper>
-			</SafeAreaView>
+	//Create the slides
+	const slides = Object.keys(gallery).map( (key, index) => {
+		return (
+			<View style = { styles.slide } key = { index }>
+				<PinchableGalleryImage style = { styles.image } image = { gallery[key].image }/>
+			 	<Text style = { styles.text }>
+			 		<BodyCopy textString = { gallery[key].description } />
+				</Text>
+			</View>
 		)
-	}
+	})
+
+	return(
+		<SafeAreaView style = { styles.safeArea }>
+			<Swiper style = { styles.wrapper } removeClippedSubviews = { false } paginationStyle = { {bottom:5, backgroundColor: 'rgba(255,255,255,0.5)'}} activeDotColor = { 'black' } showsButtons = { true } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
+		 		{ slides }
+			</Swiper>
+		</SafeAreaView>
+	)
 }
+
+export default GalleryScreen
+
+// export default class GalleryScreen extends React.Component{
+// 	constructor(props){
+// 		super(props)
+//
+// 		// this.state = {
+// 		// 	gallery: this.props.navigation.getParam('gallery')
+// 		// }
+// 		console.log('navigation is:', this.props.navigation)
+// 		console.log('gallery is: ', this.props.navigation.getParam('gallery'))
+// 	}
+//
+// 	render(){
+// 		let slides = Object.keys(this.state.gallery).map( (key, index) => {
+// 			return(
+// 				<View style = { styles.slide } key = { index }>
+// 					<PinchableGalleryImage style = { styles.image } image = { this.state.gallery[key].image }/>
+// 					<Text style = { styles.text }>
+// 						<BodyCopy textString = { this.state.gallery[key].description } />
+// 					</Text>
+// 				</View>
+// 			)
+// 		})
+//
+// 		return(
+// 			<SafeAreaView style = { styles.safeArea }>
+// 				<Swiper style = { styles.wrapper } removeClippedSubviews = { false } paginationStyle = { {bottom:5, backgroundColor: 'rgba(255,255,255,0.5)'}} activeDotColor = { 'black' } showsButtons = { true } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
+// 					{ slides }
+// 				</Swiper>
+// 			</SafeAreaView>
+// 		)
+// 	}
+// }
 
 const styles = StyleSheet.create({
 	safeArea: {

@@ -34,7 +34,7 @@ export default class HomeScreen extends React.Component {
 		return (
 			<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
 				<SafeAreaView style = { styles.mainContainer }>
-					<View style = { styles.menuContainer }>			
+					<View style = { styles.menuContainer }>
 						<View style = { styles.messageContainer }>
 							<Text style = {[ styles.messageText, styles.messageHeader ]}>Welcome</Text>
 							<Text style = {[ styles.messageText, styles.messageBody ]}>to the brand new</Text>
@@ -45,14 +45,8 @@ export default class HomeScreen extends React.Component {
 						<View style = { styles.buttonContainer }>
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
-									title = "Tours"
+									title = "Tour"
 									onPress = { () => this.pushScreen('TourPreview')}
-								/>
-							</View>
-							<View style = { styles.buttonWrapper }>
-								<ButtonEx
-									title = "Today @ UMMNH"
-									onPress = { () => this.pushScreen('TodayAtUMMNH') }
 								/>
 							</View>
 							<View style = { styles.buttonWrapper }>

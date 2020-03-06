@@ -1,13 +1,13 @@
 import React from 'react'
 
 import images from '../../modules/Images'
-import StopScreen from '../StopScreen'
+import ExhibitScreen from '../ExhibitScreen'
 
 export default class Mastodons extends React.Component {
 
 	render(){
 		return (
-			<StopScreen
+			<ExhibitScreen
 				//Hero Info
 				heroImage = { images.heroImages.mastodons }
 				gallery = {[

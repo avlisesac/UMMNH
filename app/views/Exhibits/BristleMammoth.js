@@ -1,13 +1,13 @@
 import React from 'react'
 
 import images from '../../modules/Images'
-import StopScreen from '../StopScreen'
+import ExhibitScreen from '../ExhibitScreen'
 
 export default class BristleMammoth extends React.Component {
 
 	render(){
 		return (
-			<StopScreen
+			<ExhibitScreen
 				//Hero Info
 				heroImage = { images.heroImages.bristlemammoth }
 				gallery = {[
@@ -26,7 +26,7 @@ export default class BristleMammoth extends React.Component {
 					{
 						image: images.galleries.bristlemammoth.image4,
 						description: 'Installing the skull into its new home in the People and the Planet gallery.'
-					},		
+					},
 				]}
 
 				//Quick Info
@@ -55,11 +55,6 @@ export default class BristleMammoth extends React.Component {
 				substop1text = { `PLACEHOLDER`}
 				substop2title = { `PLACEHOLDER` }
 				substop2text = { `PLACEHOLDER` }
-
-				isOnTour = { this.props.isOnTour }
-				bottomButtonTitle = { this.props.bottomButtonTitle }
-				bottomButtonTarget = { this.props.bottomButtonTarget }
-
 			/>
 		)
 	}

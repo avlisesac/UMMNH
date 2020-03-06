@@ -1,13 +1,13 @@
 import React from 'react'
 
 import images from '../../modules/Images'
-import StopScreen from '../StopScreen'
+import ExhibitScreen from '../ExhibitScreen'
 
 export default class Majungasaurus extends React.Component {
 
 	render(){
 		return (
-			<StopScreen
+			<ExhibitScreen
 				//Hero Info
 				heroImage = { images.heroImages.majungasaurus }
 				gallery = {[
