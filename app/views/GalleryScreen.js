@@ -8,6 +8,8 @@ import {
 
 import Swiper from 'react-native-swiper'
 
+import Gallery from 'react-native-image-gallery'
+
 import PinchableGalleryImage from '../components/PinchableGalleryImage'
 import fontSizes from '../modules/FontSizes'
 import BodyCopy from '../components/BodyCopy'
@@ -15,7 +17,7 @@ import BodyCopy from '../components/BodyCopy'
 function GalleryScreen({route, navigation}){
 	const { gallery } = route.params
 
-	console.log(gallery)
+	console.log('Gallery screen param log:' , gallery)
 
 	//Create the slides
 	const slides = Object.keys(gallery).map( (key, index) => {
@@ -30,11 +32,16 @@ function GalleryScreen({route, navigation}){
 	})
 
 	return(
-		<SafeAreaView style = { styles.safeArea }>
-			<Swiper style = { styles.wrapper } removeClippedSubviews = { false } paginationStyle = { {bottom:5, backgroundColor: 'rgba(255,255,255,0.5)'}} activeDotColor = { 'black' } showsButtons = { true } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
-		 		{ slides }
-			</Swiper>
-		</SafeAreaView>
+		<Gallery style = {{ flex: 1, backgroundColor: 'white' }}
+			images = { gallery }
+		/>
+
+		// <SafeAreaView style = { styles.safeArea }>
+		// 	<Swiper style = { styles.wrapper } removeClippedSubviews = { false } paginationStyle = { {bottom:5, backgroundColor: 'rgba(255,255,255,0.5)'}} activeDotColor = { 'black' } showsButtons = { true } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
+		//  		{ slides }
+		// 	</Swiper>
+		// </SafeAreaView>
+
 	)
 }
 

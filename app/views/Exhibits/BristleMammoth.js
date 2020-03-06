@@ -13,19 +13,31 @@ export default class BristleMammoth extends React.Component {
 				gallery = {[
 					{
 						image: images.galleries.bristlemammoth.image1,
-						description: 'Securing and inspecting the apparatus that holds the mammoth skull.'
+						source: images.galleries.bristlemammoth.image1,
+						description: 'Securing and inspecting the apparatus that holds the mammoth skull.',
+						caption: 'Securing and inspecting the apparatus that holds the mammoth skull.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
 						image: images.galleries.bristlemammoth.image2,
-						description: 'A close-up of how the skull is held aloft in the display.'
+						source: images.galleries.bristlemammoth.image2,
+						description: 'A close-up of how the skull is held aloft in the display.',
+						caption: 'A close-up of how the skull is held aloft in the display.',
+						dimensions: { width: 1280 , height: 1920 }
 					},
 					{
 						image: images.galleries.bristlemammoth.image3,
-						description: 'Attaching the first of two cast reconstructed tusks to the mammoth skull.'
+						source: images.galleries.bristlemammoth.image3,
+						description: 'Attaching the first of two cast reconstructed tusks to the mammoth skull.',
+						caption: 'Attaching the first of two cast reconstructed tusks to the mammoth skull.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
 						image: images.galleries.bristlemammoth.image4,
-						description: 'Installing the skull into its new home in the People and the Planet gallery.'
+						source: images.galleries.bristlemammoth.image4,
+						description: 'Installing the skull into its new home in the People and the Planet gallery.',
+						caption: 'Installing the skull into its new home in the People and the Planet gallery.',
+						dimensions: { width: 1280 , height: 788 }
 					},
 				]}
 
