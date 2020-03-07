@@ -12,20 +12,24 @@ export default class MichiganRivers extends React.Component {
 				heroImage = { images.heroImages.michiganrivers }
 				gallery = {[
 					{
-						image: images.galleries.michiganrivers.image1,
-						description: 'Sometimes the shoreline needs a little help being carved in.'
+						source: images.galleries.michiganrivers.image1,
+						caption: 'Sometimes the shoreline needs a little help being carved in.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.michiganrivers.image2,
-						description: 'Artisans ensure that the giant cottonwood tree is as accurate as possible.'
+						source: images.galleries.michiganrivers.image2,
+						caption: 'Artisans ensure that the giant cottonwood tree is as accurate as possible.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.michiganrivers.image3,
-						description: 'A group bear hug helps our new addition fit in as his riverside home.'
+						source: images.galleries.michiganrivers.image3,
+						caption: 'A group bear hug helps our new addition fit in as his riverside home.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.michiganrivers.image4,
-						description: 'Have YOU gotten a chance to view our diarama from the Kids Cave? Trust me, adults can fit inside to have a look too!'
+						source: images.galleries.michiganrivers.image4,
+						caption: 'Have YOU gotten a chance to view our diarama from the Kids Cave? Trust me, adults can fit inside to have a look too!',
+						dimensions: { width: 1280 , height: 853 }
 					},
 				]}
 

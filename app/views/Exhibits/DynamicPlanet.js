@@ -12,16 +12,19 @@ export default class DynamicPlanet extends React.Component {
 				heroImage = { images.heroImages.dynamicplanet }
 				gallery = {[
 					{
-						image: images.galleries.dynamicplanet.image1,
-						description: 'Installing minerals into the Dynamic Planet exhibit.'
+						source: images.galleries.dynamicplanet.image1,
+						caption: 'Installing minerals into the Dynamic Planet exhibit.',
+						dimensions: { width: 1280 , height: 885 }
 					},
 					{
-						image: images.galleries.dynamicplanet.image2,
-						description: 'The drawers throughout Dynamic Planet hold even more to see!'
+						source: images.galleries.dynamicplanet.image2,
+						caption: 'The drawers throughout Dynamic Planet hold even more to see!',
+						dimensions: { width: 1280 , height: 1707 }
 					},
 					{
-						image: images.galleries.dynamicplanet.image3,
-						description: 'Two pieces of wood, one modern and one petrified. Interact with these to learn more about petrification!'
+						source: images.galleries.dynamicplanet.image3,
+						caption: 'Two pieces of wood, one modern and one petrified. Interact with these to learn more about petrification!',
+						dimensions: { width: 1280 , height: 960 }
 					},
 				]}
 

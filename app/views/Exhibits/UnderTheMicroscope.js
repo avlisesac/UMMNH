@@ -12,20 +12,24 @@ export default class UnderTheMicroscope extends React.Component {
 				heroImage = { images.heroImages.underthemicroscope }
 				gallery = {[
 					{
-						image: images.galleries.underthemicroscope.image1,
-						description: 'What the home of the Giant Cell looked like when it was just forming.'
+						source: images.galleries.underthemicroscope.image1,
+						caption: 'What the home of the Giant Cell looked like when it was just forming.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.underthemicroscope.image2,
-						description: 'Ensuring that the cell structure is stable.'
+						source: images.galleries.underthemicroscope.image2,
+						caption: 'Ensuring that the cell structure is stable.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.underthemicroscope.image3,
-						description: 'Watching other cells form - a view from the nucleus.'
+						source: images.galleries.underthemicroscope.image3,
+						caption: 'Watching other cells form - a view from the nucleus.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.underthemicroscope.image4,
-						description: 'Our Giant Cell is so big, we need help reaching the top.'
+						source: images.galleries.underthemicroscope.image4,
+						caption: 'Our Giant Cell is so big, we need help reaching the top.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 				]}
 

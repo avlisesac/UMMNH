@@ -23,15 +23,18 @@ import GalleryScreen from '../views/GalleryScreen'
 export default class ExhibitListStack extends React.Component {
   render (){
     return (
-      <ExhibitListStackNav.Navigator>
+      <ExhibitListStackNav.Navigator
+        screenOptions = {{
+          headerStyle: {
+            backgroundColor: colors.ummnhLightRed,
+          },
+          headerTintColor: colors.ummnhDarkBlue,
+          headerBackTitle: 'Back'
+        }}
+      >
         <ExhibitListStackNav.Screen
           name = "Exhibits"
           component = {ExhibitListScreen}
-          options = {{
-            headerStyle: {
-              backgroundColor: colors.ummnhLightRed
-            },
-          }}
         />
 
         {/* Exhibit Screens */}
@@ -44,7 +47,7 @@ export default class ExhibitListStack extends React.Component {
         <ExhibitListStackNav.Screen name = "Giant Cell" component = { UnderTheMicroscope } />
 
         {/* Other Necessary Screens */}
-        <ExhibitListStackNav.Screen name = "GalleryScreen" component = { GalleryScreen } />
+        <ExhibitListStackNav.Screen name = "Image Gallery" component = { GalleryScreen } />
 
       </ExhibitListStackNav.Navigator>
     )

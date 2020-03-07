@@ -12,20 +12,24 @@ export default class Majungasaurus extends React.Component {
 				heroImage = { images.heroImages.majungasaurus }
 				gallery = {[
 					{
-						image: images.galleries.majungasaurus.image1,
-						description: 'Installing <i>Majungasaurus</i> in the new museum space.'
+						source: images.galleries.majungasaurus.image1,
+						caption: 'Installing <i>Majungasaurus</i> in the new museum space.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.majungasaurus.image2,
-						description: 'Making sure every detail is just right.'
+						source: images.galleries.majungasaurus.image2,
+						caption: 'Making sure every detail is just right.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.majungasaurus.image3,
-						description: 'A close-up of <i>Majungasaurus’</i> extremely large scapula.'
+						source: images.galleries.majungasaurus.image3,
+						caption: 'A close-up of <i>Majungasaurus’</i> extremely large scapula.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.majungasaurus.image4,
-						description: 'A great view of <i>Majungasaurus’</i> skull.'
+						source: images.galleries.majungasaurus.image4,
+						caption: 'A great view of <i>Majungasaurus’</i> skull.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 				]}
 

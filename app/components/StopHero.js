@@ -18,7 +18,6 @@ const ButtonEx = withPreventDoubleClick(Button)
 
 function StopHero(props){
 	const navigation = useNavigation()
-	console.log('passed props to hero..', props)
 
 	return (
 		<View style = { styles.mainContainer }>
@@ -31,10 +30,10 @@ function StopHero(props){
 				<ButtonEx
 					title = 'Image Gallery'
 					onPress = { () => {
-						navigation.push('GalleryScreen', {
+						navigation.push('Image Gallery', {
 						gallery: props.gallery
 					})
-					console.log('pushing gallery with: ', props.gallery)}}
+					}}
 				/>
 			</View>
 		</View>
@@ -42,38 +41,6 @@ function StopHero(props){
 }
 
 export default StopHero
-
-// export default class StopHero extends React.Component {
-// 	constructor(props){
-// 		super(props)
-// 		console.log('gallery passed: ', this.props.gallery)
-// 	}
-//
-// 	render() {
-// 		const navigation = useNavigation()
-//
-// 		return (
-// 			<View style = { styles.mainContainer }>
-// 				<Image
-// 					source = { this.props.image }
-// 					style = { styles.image }
-// 				/>
-//
-// 				<View style = { styles.buttonWrapper }>
-// 					<ButtonEx
-// 						title = 'Image Gallery'
-// 						onPress = { () => {
-// 							navigation.push('GalleryScreen', {
-// 							gallery: this.props.gallery
-// 						})
-// 						console.log('pushing gallery with: ', this.props.gallery)}}
-// 					/>
-// 				</View>
-// 			</View>
-// 		)
-// 	}
-// }
-
 
 const styles = StyleSheet.create({
 	mainContainer:{

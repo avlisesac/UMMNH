@@ -12,32 +12,39 @@ export default class Mastodons extends React.Component {
 				heroImage = { images.heroImages.mastodons }
 				gallery = {[
 					{
-						image: images.galleries.mastodons.image1,
-						description: 'Installing the trail of mastodon prints.'
+						source: images.galleries.mastodons.image1,
+						caption: 'Installing the trail of mastodon prints.',
+						dimensions: { width: 933 , height: 1920 }
 					},
 					{
-						image: images.galleries.mastodons.image2,
-						description: 'Pieces of the mastodon display laid out and labeled.'
+						source: images.galleries.mastodons.image2,
+						caption: 'Pieces of the mastodon display laid out and labeled.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.mastodons.image3,
-						description: 'Mastodon skull on its way to join its body at the new museum space'
+						source: images.galleries.mastodons.image3,
+						caption: 'Mastodon skull on its way to join its body at the new museum space',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.mastodons.image4,
-						description: 'Map showing the location of the Owosso mastodon dig site.'
+						source: images.galleries.mastodons.image4,
+						caption: 'Map showing the location of the Owosso mastodon dig site.',
+						dimensions: { width: 1280 , height: 1223 }
 					},
 					{
-						image: images.galleries.mastodons.image5,
-						description: 'Newspaper clipping of the discovery of a mastodon in a local barnyard.'
+						source: images.galleries.mastodons.image5,
+						caption: 'Newspaper clipping of the discovery of a mastodon in a local barnyard.',
+						dimensions: { width: 1484 , height: 1920 }
 					},
 					{
-						image: images.galleries.mastodons.image6,
-						description: 'Dr. Dan Fisher displays a mastodon jawbone.'
+						source: images.galleries.mastodons.image6,
+						caption: 'Dr. Dan Fisher displays a mastodon jawbone.',
+						dimensions: { width: 889 , height: 1423 }
 					},
 					{
-						image: images.galleries.mastodons.image7,
-						description: 'A map of the mastodon trackway.'
+						source: images.galleries.mastodons.image7,
+						caption: 'A map of the mastodon trackway.',
+						dimensions: { width: 1280 , height: 900 }
 					},
 				]}
 

@@ -12,24 +12,29 @@ export default class Quetz extends React.Component {
 				heroImage = { images.heroImages.quetz }
 				gallery = {[
 					{
-						image: images.galleries.quetz.image1,
-						description: 'Bringing the <i>Quetzalcoatlus</i> to its home at the museum in the Biological Sciences Building.'
+						source: images.galleries.quetz.image1,
+						caption: 'Bringing the <i>Quetzalcoatlus</i> to its home at the museum in the Biological Sciences Building.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.quetz.image2,
-						description: 'Detail view of the <i>Quetzalcoatlus</i> model.'
+						source: images.galleries.quetz.image2,
+						caption: 'Detail view of the <i>Quetzalcoatlus</i> model.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.quetz.image3,
-						description: 'Detail view of the <i>Quetzalcoatlus</i> model.'
+						source: images.galleries.quetz.image3,
+						caption: 'Detail view of the <i>Quetzalcoatlus</i> model.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 					{
-						image: images.galleries.quetz.image4,
-						description: 'A piece of the <i>Quetzalcoatlus</i> before being attached.'
+						source: images.galleries.quetz.image4,
+						caption: 'A piece of the <i>Quetzalcoatlus</i> before being attached.',
+						dimensions: { width: 1280 , height: 1920 }
 					},
 					{
-						image: images.galleries.quetz.image5,
-						description: 'A few final details are applied before lifting <i>Quetzalcoatlus</i> to its place above the atrium.'
+						source: images.galleries.quetz.image5,
+						caption: 'A few final details are applied before lifting <i>Quetzalcoatlus</i> to its place above the atrium.',
+						dimensions: { width: 1280 , height: 853 }
 					},
 				]}
 
