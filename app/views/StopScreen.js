@@ -36,7 +36,7 @@ class StopScreen extends React.Component{
 		if(this.props.isOnTour === true){
 			this.setState({
 				bottomButtonTitle: this.props.bottomButtonTitle ,
-				bottomButtonTarget: this.props.bottomButtonTarget 
+				bottomButtonTarget: this.props.bottomButtonTarget
 			})
 		}
 	}
@@ -53,13 +53,13 @@ class StopScreen extends React.Component{
 						<StopQuickInfo header = { this.props.header } subheader = { this.props.subheader } shortDescription = { this.props.shortDescription }/>
 
 						{/* Audio Tour */}
-						<StopAudioTour 
+						<StopAudioTour
 							audioFile = { this.props.audioFile }
 							fullText = { this.props.fullText }
 						/>
 
 						{/* TLAS Holder */}
-						<StopTLAS 
+						<StopTLAS
 							q1 = { this.props.q1 }
 							q2 = { this.props.q2 }
 							q3 = { this.props.q3 }
@@ -80,11 +80,11 @@ class StopScreen extends React.Component{
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = { this.state.bottomButtonTitle }
-									onPress = { () => { 
+									onPress = { () => {
 										if(this.props.isOnTour === true){
 											console.log('please push:', this.props.bottomButtonTarget)
 											this.pushScreen(this.props.bottomButtonTarget)
-											
+
 										} else {
 											console.log('please go home')
 											this.props.navigation.popToTop()
@@ -96,7 +96,7 @@ class StopScreen extends React.Component{
 					</View>
 				</ScrollView>
 			</SafeAreaView>
-			
+
 		)
 	}
 }

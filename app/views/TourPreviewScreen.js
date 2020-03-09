@@ -23,57 +23,46 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-export default class TourPreviewScreen extends React.Component{
-	static navigationOptions = {
-		title: "Highlights Tour",
-		headerStyle: {
-			backgroundColor: colors.ummnhLightRed
-		},
-	}
-
-	pushScreen = (screenToPush) => {
-		this.props.navigation.push(screenToPush)
-	}
-
-	render(){
-		return(
-			<SafeAreaView style = { styles.safeArea }>
-				<View style = { styles.mainContainer }>
-					<View style = { styles.heroContainer }>
-						<Image source = { images.heroImages.feedingfrenzy } style = { styles.heroImage }/>
-					</View>
-
-					<Text style = { styles.header }>Self Guided Highlights Tour</Text>
-
-					<View style = { styles.subheaderContainer }>
-						<Icon
-							name = 'md-time'
-							type = 'ionicon'
-							size = { fontSizes.subheader }
-							color = { colors.ummnhDarkRed }
-						/>
-						<Text style = { styles.subheader }>35 min.</Text>
-					</View>
-
-					<Text style = { styles.body }>
-						See the best that the Museum of Natural history has to offer! This tour will last approximately thirty-five minutes and show you our favorite features of this amazing new space. At each stop, you will get additional facts and information that we couldn't quite cram on to the placards. (Trust us, we tried!)
-					</Text>
-
-					<View style = { styles.buttonContainer }>
-						<ButtonEx
-							title = "Let's Go!"
-							onPress = { () => {
-								Analytics.logEvent('StartedTour')
-								this.pushScreen('HighlightsTourShortNav1')
-
-							}}
-						/>
-					</View>
+const TourPreviewScreen = ({ navigation }) => {
+	console.log('logging nav from preview screen', navigation)
+	return(
+		<SafeAreaView style = { styles.safeArea }>
+			<View style = { styles.mainContainer }>
+				<View style = { styles.heroContainer }>
+					<Image source = { images.heroImages.feedingfrenzy } style = { styles.heroImage }/>
 				</View>
-			</SafeAreaView>
-		)
-	}
+
+				<Text style = { styles.header }>Self Guided Highlights Tour</Text>
+
+				<View style = { styles.subheaderContainer }>
+					<Icon
+						name = 'md-time'
+						type = 'ionicon'
+						size = { fontSizes.subheader }
+						color = { colors.ummnhDarkRed }
+					/>
+					<Text style = { styles.subheader }>35 min.</Text>
+				</View>
+
+				<Text style = { styles.body }>
+					See the best that the Museum of Natural history has to offer! This tour will last approximately thirty-five minutes and show you our favorite features of this amazing new space. At each stop, you will get additional facts and information that we couldn't quite cram on to the placards. (Trust us, we tried!)
+				</Text>
+
+				<View style = { styles.buttonContainer }>
+					<ButtonEx
+						title = "Let's Go!"
+						onPress = { () => {
+							Analytics.logEvent('StartedTour')
+							navigation.push('Find: 1/7')
+						}}
+					/>
+				</View>
+			</View>
+		</SafeAreaView>
+	)
 }
+
+export default TourPreviewScreen
 
 const styles = StyleSheet.create({
 	safeArea: {

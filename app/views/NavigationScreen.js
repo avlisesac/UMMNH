@@ -27,70 +27,63 @@ import BodyCopy from '../components/BodyCopy'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-class NavigationScreen extends React.Component {
+const NavigationScreen = (props) => {
+	const navigation = props.navigation
+	console.log('logging nav from navigation screen', navigation)
+	return(
+		<SafeAreaView style = { styles.safeAreaView }>
+			<ScrollView style = { styles.scrollView }>
+				<View style = { styles.mainContainer }>
+					<View style = { styles.upperArea }>
 
-	pushScreen = (screenToPush) => {
-		this.props.navigation.push(screenToPush, {
-			gallery: this.props.gallery
-		})
-	}
-
-	render(){
-		return(
-			<SafeAreaView style = { styles.safeAreaView }>
-				<ScrollView style = { styles.scrollView }>
-					<View style = { styles.mainContainer }>
-						<View style = { styles.upperArea }>
-						
-							<View style = { styles.swipeContainer }>
-								<Swiper style = { styles.wrapper } removeClippedSubviews = { false } showsButtons = { true } activeDotColor = { 'white' } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
-									<Image 
-										source = { this.props.image1 }
-										style = { styles.imageStyle }
-									/>
-									<Image 
-										source = { this.props.image2 }
-										style = { styles.imageStyle }
-									/>
-								</Swiper>
-							</View>
-							
-							<Text style = { styles.header }>{ this.props.header }</Text>
-
-							<View style = { styles.subheaderContainer }>
-								<Icon name = 'md-pin' type = 'ionicon' size = { fontSizes.subheader } color = { colors.ummnhDarkRed } />
-								<Text style = { styles.subheader }>{ this.props.subheader }</Text>
-							</View>
-
-							<Text style = { styles.bodyCopy }>
-								<BodyCopy textString = { this.props.body }/>
-							</Text>
+						<View style = { styles.swipeContainer }>
+							<Swiper style = { styles.wrapper } removeClippedSubviews = { false } showsButtons = { true } activeDotColor = { 'white' } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
+								<Image
+									source = { props.image1 }
+									style = { styles.imageStyle }
+								/>
+								<Image
+									source = { props.image2 }
+									style = { styles.imageStyle }
+								/>
+							</Swiper>
 						</View>
 
-						<View style = { styles.lowerArea }>
-							<View style = { styles.buttonContainer }>
-								<View style = { styles.buttonWrapper }>
-									<ButtonEx
-										title = 'Show on Map'
-										onPress = { () => this.pushScreen(this.props.map)}
-									/>
-								</View>
-								<View style = { styles.buttonWrapper }>
-									<ButtonEx
-										title = 'Found It!'
-										onPress = { () => this.pushScreen(this.props.stop)}
-									/>
-								</View>
+						<Text style = { styles.header }>{ props.header }</Text>
+
+						<View style = { styles.subheaderContainer }>
+							<Icon name = 'md-pin' type = 'ionicon' size = { fontSizes.subheader } color = { colors.ummnhDarkRed } />
+							<Text style = { styles.subheader }>{ props.subheader }</Text>
+						</View>
+
+						<Text style = { styles.bodyCopy }>
+							<BodyCopy textString = { props.body }/>
+						</Text>
+					</View>
+
+					<View style = { styles.lowerArea }>
+						<View style = { styles.buttonContainer }>
+							<View style = { styles.buttonWrapper }>
+								<ButtonEx
+									title = 'Show on Map'
+									onPress = { () => navigation.push(props.map)}
+								/>
+							</View>
+							<View style = { styles.buttonWrapper }>
+								<ButtonEx
+									title = 'Found It!'
+									onPress = { () => navigation.push(props.stop)}
+								/>
 							</View>
 						</View>
 					</View>
-				</ScrollView>
-			</SafeAreaView>
-		)
-	}
+				</View>
+			</ScrollView>
+		</SafeAreaView>
+	)
 }
 
-export default withNavigation(NavigationScreen)
+export default NavigationScreen
 
 const styles = StyleSheet.create({
 	safeAreaView: {

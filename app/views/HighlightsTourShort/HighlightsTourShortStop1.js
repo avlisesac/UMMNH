@@ -1,6 +1,11 @@
 import React from 'react'
 
 import {
+	Text,
+	View,
+} from 'react-native'
+
+import {
 	Button
 } from 'react-native-elements'
 
@@ -10,36 +15,17 @@ let Analytics = firebase.analytics()
 //Change to desired exhibit
 import Mastodons from '../Exhibits/Mastodons'
 
-import images from '../../modules/Images'
-import colors from '../../modules/Colors'
+import TourStopButtons from '../../components/TourStopButtons'
 
-export default class HighlightsTourShortStop1 extends React.Component{
-	static navigationOptions = ({navigation}) => ({
-		title: 'Stop: 1 / 7',
-		headerStyle: {
-			backgroundColor: colors.ummnhLightRed
-		},
-		headerRight: (
-			<Button
-				title = "Exit"
-				titleStyle = {{ color: colors.ummnhDarkBlue }}
-				buttonStyle = {{ backgroundColor: 'rgba(0,0,0,0)' }}
-				onPress = { () => navigation.push('Exit')}
+const HighlightsTourShortStop1 = ({navigation}) => {
+	return(
+		<Mastodons>
+			<TourStopButtons
+				buttonText = { 'Next Stop!' }
+				target = { 'HighlightsTourShortNav2' }
 			/>
-		)
-	})
-
-	componentDidMount = () => {
-		Analytics.logEvent('Viewed_TourStop_1')
-	}
-
-	render(){
-		return(
-			<Mastodons
-				isOnTour = { true }
-				bottomButtonTitle = { 'Next Stop! '}
-				bottomButtonTarget = { 'HighlightsTourShortNav2' }
-			/>
-		)
-	}
+		</Mastodons>
+	)
 }
+
+export default HighlightsTourShortStop1

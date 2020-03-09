@@ -6,8 +6,6 @@ import {
 	View,
 } from 'react-native'
 
-import Swiper from 'react-native-swiper'
-
 //import Gallery from 'react-native-image-gallery'
 import GallerySwiper from "react-native-gallery-swiper";
 
@@ -26,7 +24,7 @@ function GalleryScreen({route, navigation}){
 
 	return(
 		<View style = { styles.safeArea }>
-			<Text style = { styles.text }>(swipe to navigate)</Text>
+			<Text style = { styles.text }>Image { (index + 1) } / { gallery.length } { '\n(swipe to navigate)' }</Text>
 			<GallerySwiper style = {{ flex: 1, backgroundColor: 'white' }}
 				images = { gallery }
 				onPageSelected = { this.onChangeImage }

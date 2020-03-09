@@ -12,46 +12,47 @@ import StopAudioTour from '../components/StopAudioTour'
 import StopTLAS from '../components/StopTLAS'
 import WhileYoureHere from '../components/WhileYoureHere'
 
-export default class ExhibitScreen extends React.Component{
-	render(){
-		return (
-      <SafeAreaView style = { styles.safeAreaView}>
-				<ScrollView style = { styles.scrollView }>
-					<View style = { styles.mainContainer }>
-						{/* Hero */}
-						<StopHero image = { this.props.heroImage } gallery = { this.props.gallery }/>
+const ExhibitScreen = (props) => {
+	return (
+    <SafeAreaView style = { styles.safeAreaView}>
+			<ScrollView style = { styles.scrollView }>
+				<View style = { styles.mainContainer }>
+					{/* Hero */}
+					<StopHero image = { props.heroImage } gallery = { props.gallery }/>
 
-						{/* Quick Info */}
-						<StopQuickInfo header = { this.props.header } subheader = { this.props.subheader } shortDescription = { this.props.shortDescription }/>
+					{/* Quick Info */}
+					<StopQuickInfo header = { props.header } subheader = { props.subheader } shortDescription = { props.shortDescription }/>
 
-						{/* Audio Tour */}
-						<StopAudioTour
-							audioFile = { this.props.audioFile }
-							fullText = { this.props.fullText }
-						/>
+					{/* Audio Tour */}
+					<StopAudioTour
+						audioFile = { props.audioFile }
+						fullText = { props.fullText }
+					/>
 
-						{/* TLAS Holder */}
-						<StopTLAS
-							q1 = { this.props.q1 }
-							q2 = { this.props.q2 }
-							q3 = { this.props.q3 }
-							a1 = { this.props.a1 }
-							a2 = { this.props.a2 }
-							a3 = { this.props.a3 }/>
+					{/* TLAS Holder */}
+					<StopTLAS
+						q1 = { props.q1 }
+						q2 = { props.q2 }
+						q3 = { props.q3 }
+						a1 = { props.a1 }
+						a2 = { props.a2 }
+						a3 = { props.a3 }/>
 
-						{/* While You're Here Holder */}
-						<WhileYoureHere
-							substop1title = { this.props.substop1title }
-							substop1text = { this.props.substop1text }
-							substop2title = { this.props.substop2title }
-							substop2text = { this.props.substop2text }
-						/>
-					</View>
-				</ScrollView>
-			</SafeAreaView>
-		)
-	}
+					{/* While You're Here Holder */}
+					<WhileYoureHere
+						substop1title = { props.substop1title }
+						substop1text = { props.substop1text }
+						substop2title = { props.substop2title }
+						substop2text = { props.substop2text }
+					/>
+				</View>
+				{ props.children }
+			</ScrollView>
+		</SafeAreaView>
+	)
 }
+
+export default ExhibitScreen
 
 const styles = StyleSheet.create({
 	safeAreaView: {
