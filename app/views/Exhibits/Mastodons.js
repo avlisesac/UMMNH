@@ -80,7 +80,9 @@ The larger skeleton is from a male that lived about 13,000 years ago. He was fou
 			substop2title = { `Research Station` }
 			substop2text = { `Investigate the Field Research Station located next to the Welcome Desk to get some extra info about what scientists at the University of Michigan are currently studying! Look for the block 'M'.` }
 		>
+			{/* Do not modify below */}
 			{ props.children }
+
 		</ExhibitScreen>
 	)
 }

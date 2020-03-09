@@ -21,7 +21,7 @@ const HighlightsTourShortStop1 = ({navigation}) => {
 	return(
 		<Mastodons>
 			<TourStopButtons
-				buttonText = { 'Next Stop!' }
+				navigation = { navigation }
 				target = { 'HighlightsTourShortNav2' }
 			/>
 		</Mastodons>

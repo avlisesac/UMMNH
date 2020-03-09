@@ -18,8 +18,6 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 const ButtonEx = withPreventDoubleClick(Button)
 
 const HomeScreen = ({navigation}) => {
-	console.log('logging nav from home screen', navigation)
-
 	return (
 		<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
 			<SafeAreaView style = { styles.mainContainer }>

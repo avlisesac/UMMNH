@@ -29,7 +29,7 @@ const ButtonEx = withPreventDoubleClick(Button)
 
 const NavigationScreen = (props) => {
 	const navigation = props.navigation
-	console.log('logging nav from navigation screen', navigation)
+	
 	return(
 		<SafeAreaView style = { styles.safeAreaView }>
 			<ScrollView style = { styles.scrollView }>

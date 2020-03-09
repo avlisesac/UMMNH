@@ -102,7 +102,6 @@ export default class TodayAtUMMNHScreen extends React.Component {
 	render() {
 		//Before Anything
 		if(this.state.activeConnection === null){
-			console.log('connection is nullllllll')
 			return(
 				<View style = {  styles.notifContainer }>
 					<LoadingIndicator />

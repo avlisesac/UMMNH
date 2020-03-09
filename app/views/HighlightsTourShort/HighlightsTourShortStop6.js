@@ -10,36 +10,17 @@ let Analytics = firebase.analytics()
 //Change to desired exhibit
 import DynamicPlanet from '../Exhibits/DynamicPlanet'
 
-import images from '../../modules/Images'
-import colors from '../../modules/Colors'
+import TourStopButtons from '../../components/TourStopButtons'
 
-export default class HighlightsTourShortStop6 extends React.Component{
-	static navigationOptions = ({navigation}) => ({
-		title: 'Stop: 6 / 7',
-		headerStyle: {
-			backgroundColor: colors.ummnhLightRed
-		},
-		headerRight: (
-			<Button
-				title = "Exit"
-				titleStyle = {{ color: colors.ummnhDarkBlue }}
-				buttonStyle = {{ backgroundColor: 'rgba(0,0,0,0)' }}
-				onPress = { () => navigation.push('Exit')}
+const HighlightsTourShortStop6 = ({navigation}) => {
+	return(
+		<DynamicPlanet>
+			<TourStopButtons
+				navigation = { navigation }
+				target = { 'HighlightsTourShortNav2' }
 			/>
-		)
-	})
-
-	componentDidMount = () => {
-		Analytics.logEvent('Viewed_TourStop_6')
-	}
-
-	render(){
-		return(
-			<DynamicPlanet
-				isOnTour = { true }
-				bottomButtonTitle = { 'Next Stop! '}
-				bottomButtonTarget = { 'HighlightsTourShortNav7' }
-			/>
-		)
-	}
+		</DynamicPlanet>
+	)
 }
+
+export default HighlightsTourShortStop6

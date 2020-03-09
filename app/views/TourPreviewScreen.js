@@ -24,7 +24,6 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 const ButtonEx = withPreventDoubleClick(Button)
 
 const TourPreviewScreen = ({ navigation }) => {
-	console.log('logging nav from preview screen', navigation)
 	return(
 		<SafeAreaView style = { styles.safeArea }>
 			<View style = { styles.mainContainer }>

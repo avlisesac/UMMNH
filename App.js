@@ -49,33 +49,6 @@ import ExitScreen from './app/views/ExitScreen'
 import EndOfTourScreen from './app/views/EndOfTourScreen'
 import TourPreviewScreen from './app/views/TourPreviewScreen'
 
-//Navigation Screens
-import HighlightsTourShortNav1 from './app/views/HighlightsTourShort/HighlightsTourShortNav1'
-import HighlightsTourShortNav2 from './app/views/HighlightsTourShort/HighlightsTourShortNav2'
-import HighlightsTourShortNav3 from './app/views/HighlightsTourShort/HighlightsTourShortNav3'
-import HighlightsTourShortNav4 from './app/views/HighlightsTourShort/HighlightsTourShortNav4'
-import HighlightsTourShortNav5 from './app/views/HighlightsTourShort/HighlightsTourShortNav5'
-import HighlightsTourShortNav6 from './app/views/HighlightsTourShort/HighlightsTourShortNav6'
-import HighlightsTourShortNav7 from './app/views/HighlightsTourShort/HighlightsTourShortNav7'
-
-//Map Screens
-import HighlightsTourShortMap1 from './app/views/HighlightsTourShort/HighlightsTourShortMap1'
-import HighlightsTourShortMap2 from './app/views/HighlightsTourShort/HighlightsTourShortMap2'
-import HighlightsTourShortMap3 from './app/views/HighlightsTourShort/HighlightsTourShortMap3'
-import HighlightsTourShortMap4 from './app/views/HighlightsTourShort/HighlightsTourShortMap4'
-import HighlightsTourShortMap5 from './app/views/HighlightsTourShort/HighlightsTourShortMap5'
-import HighlightsTourShortMap6 from './app/views/HighlightsTourShort/HighlightsTourShortMap6'
-import HighlightsTourShortMap7 from './app/views/HighlightsTourShort/HighlightsTourShortMap7'
-
-//Stop Screens
-import HighlightsTourShortStop1 from './app/views/HighlightsTourShort/HighlightsTourShortStop1'
-import HighlightsTourShortStop2 from './app/views/HighlightsTourShort/HighlightsTourShortStop2'
-import HighlightsTourShortStop3 from './app/views/HighlightsTourShort/HighlightsTourShortStop3'
-import HighlightsTourShortStop4 from './app/views/HighlightsTourShort/HighlightsTourShortStop4'
-import HighlightsTourShortStop5 from './app/views/HighlightsTourShort/HighlightsTourShortStop5'
-import HighlightsTourShortStop6 from './app/views/HighlightsTourShort/HighlightsTourShortStop6'
-import HighlightsTourShortStop7 from './app/views/HighlightsTourShort/HighlightsTourShortStop7'
-
 import colors from './app/modules/Colors'
 
 const Tab = createBottomTabNavigator()
@@ -182,7 +155,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    console.log('rendering...')
     return (
       <NavigationContainer>
         <Tab.Navigator
