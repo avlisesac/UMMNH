@@ -6,11 +6,11 @@ import {
 	View,
 } from 'react-native'
 
-//import Gallery from 'react-native-image-gallery'
 import GallerySwiper from "react-native-gallery-swiper";
 
-import PinchableGalleryImage from '../components/PinchableGalleryImage'
 import fontSizes from '../modules/FontSizes'
+
+import PinchableGalleryImage from '../components/PinchableGalleryImage'
 import BodyCopy from '../components/BodyCopy'
 
 function GalleryScreen({route, navigation}){
@@ -20,6 +20,7 @@ function GalleryScreen({route, navigation}){
 
 	onChangeImage = (index) => {
 		setIndex(index)
+		console.log(gallery[index].caption)
 	}
 
 	return(
@@ -29,7 +30,9 @@ function GalleryScreen({route, navigation}){
 				images = { gallery }
 				onPageSelected = { this.onChangeImage }
 			/>
-			<Text style = { styles.text }>{ gallery[index].caption }</Text>
+			<Text style = { styles.text }>
+				<BodyCopy textString = { gallery[index].caption }/>
+			</Text>
 		</View>
 	)
 }

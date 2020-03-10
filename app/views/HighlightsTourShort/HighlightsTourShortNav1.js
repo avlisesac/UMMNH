@@ -12,7 +12,7 @@ const HighlightsTourShortNav1 = ({navigation}) => {
 			header = 'Find: The Mastodons'
 			subheader = '1st Floor - Main Atrium'
 			body = "Enter the museum through the main entrance. You will know you're at the right door if you walk between two pumas. The Mastodons are in the main atrium across from the information desk."
-			map = "Map: 1/7"
+			map = { images.mapImages.mastodons }
 			stop = "Stop: 1/7"
 			navigation = { navigation }
 		/>

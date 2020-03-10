@@ -29,7 +29,7 @@ const ButtonEx = withPreventDoubleClick(Button)
 
 const NavigationScreen = (props) => {
 	const navigation = props.navigation
-	
+
 	return(
 		<SafeAreaView style = { styles.safeAreaView }>
 			<ScrollView style = { styles.scrollView }>
@@ -66,7 +66,9 @@ const NavigationScreen = (props) => {
 							<View style = { styles.buttonWrapper }>
 								<ButtonEx
 									title = 'Show on Map'
-									onPress = { () => navigation.push(props.map)}
+									onPress = { () => navigation.push("Museum Map", {
+										image: props.map
+									})}
 								/>
 							</View>
 							<View style = { styles.buttonWrapper }>

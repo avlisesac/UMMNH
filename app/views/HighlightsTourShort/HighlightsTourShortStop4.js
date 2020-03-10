@@ -1,9 +1,5 @@
 import React from 'react'
 
-import {
-	Button
-} from 'react-native-elements'
-
 import firebase from 'react-native-firebase'
 let Analytics = firebase.analytics()
 
@@ -17,7 +13,7 @@ const HighlightsTourShortStop4 = ({navigation}) => {
 		<Majungasaurus>
 			<TourStopButtons
 				navigation = { navigation }
-				target = { 'HighlightsTourShortNav2' }
+				target = { 'Find: 5/7' }
 			/>
 		</Majungasaurus>
 	)

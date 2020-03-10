@@ -7,45 +7,29 @@ import {
 	Text,
 } from 'react-native'
 
+import GallerySwiper from "react-native-gallery-swiper";
+
 import colors from '../modules/Colors'
 import images from '../modules/Images'
 
-import PinchableMapImage from '../components/PinchableMapImage'
+const MapScreen = ({route, navigation}) => {
+	const { image } = route.params
 
-export default class MapScreen extends React.Component{
-	static navigationOptions = {
-		title: 'Map',
-		headerStyle: {
-			backgroundColor: colors.ummnhLightRed
-		},
-	}
-
-	pushScreen = (screenToPush) => {
-		this.props.navigation.push(screenToPush)
-	}
-
-	constructor(props){
-		super(props)
-
-		this.state = {
-			renderedOnce: false
-		}
-	}
-
-	componentDidMount(){
-		this.setState({
-			renderedOnce: true
-		})
-	}
-
-	render(){
-		return(
-			<SafeAreaView style = { styles.mainContainer }>
-				<PinchableMapImage style = { styles.mapImage } image = { images.map } showOverlay = { this.props.showOverlay } xPercent = { this.props.xPercent } yPercent = { this.props.yPercent } />
-			</SafeAreaView>
-		)
-	}
+	return(
+		<SafeAreaView style = { styles.mainContainer }>
+			<GallerySwiper style = {{ flex: 1, backgroundColor: 'white' }}
+				images = {[
+					{
+						source: image,
+						dimensions: { width: 1680, height: 1280}
+					}
+				]}
+			/>
+		</SafeAreaView>
+	)
 }
+
+export default  MapScreen
 
 const styles = StyleSheet.create({
 	mainContainer: {
@@ -53,17 +37,4 @@ const styles = StyleSheet.create({
 		width: '100%',
 		backgroundColor: 'white'
 	},
-	mapImage: {
-		width: '100%',
-		flex: 1,
-		resizeMode: 'contain',
-		backgroundColor: 'white'
-	},
-	underView: {
-		backgroundColor: 'white'
-	},
-	underText: {
-		padding: 10,
-		textAlign: 'center'
-	}
 })

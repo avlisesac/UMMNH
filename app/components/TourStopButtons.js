@@ -21,6 +21,10 @@ const TourStopButtons = (props) => {
         <View style = { styles.buttonWrapper }>
           <ButtonEx
             title = "Next Stop!"
+            onPress = { () => {
+              props.navigation.push(props.target)
+              console.log('want to go to next stop')
+            }}
             />
         </View>
       </View>

@@ -7,15 +7,6 @@ import HighlightsTourShortNav5 from '../views/HighlightsTourShort/HighlightsTour
 import HighlightsTourShortNav6 from '../views/HighlightsTourShort/HighlightsTourShortNav6'
 import HighlightsTourShortNav7 from '../views/HighlightsTourShort/HighlightsTourShortNav7'
 
-//Map Screens
-import HighlightsTourShortMap1 from '../views/HighlightsTourShort/HighlightsTourShortMap1'
-import HighlightsTourShortMap2 from '../views/HighlightsTourShort/HighlightsTourShortMap2'
-import HighlightsTourShortMap3 from '../views/HighlightsTourShort/HighlightsTourShortMap3'
-import HighlightsTourShortMap4 from '../views/HighlightsTourShort/HighlightsTourShortMap4'
-import HighlightsTourShortMap5 from '../views/HighlightsTourShort/HighlightsTourShortMap5'
-import HighlightsTourShortMap6 from '../views/HighlightsTourShort/HighlightsTourShortMap6'
-import HighlightsTourShortMap7 from '../views/HighlightsTourShort/HighlightsTourShortMap7'
-
 //Stop Screens
 import HighlightsTourShortStop1 from '../views/HighlightsTourShort/HighlightsTourShortStop1'
 import HighlightsTourShortStop2 from '../views/HighlightsTourShort/HighlightsTourShortStop2'
@@ -34,15 +25,6 @@ const TourScreens = {
   HighlightsTourShortNav5: HighlightsTourShortNav5,
   HighlightsTourShortNav6: HighlightsTourShortNav6,
   HighlightsTourShortNav7: HighlightsTourShortNav7,
-
-  //Map Screens
-  HighlightsTourShortMap1: HighlightsTourShortMap1,
-  HighlightsTourShortMap2: HighlightsTourShortMap2,
-  HighlightsTourShortMap3: HighlightsTourShortMap3,
-  HighlightsTourShortMap4: HighlightsTourShortMap4,
-  HighlightsTourShortMap5: HighlightsTourShortMap5,
-  HighlightsTourShortMap6: HighlightsTourShortMap6,
-  HighlightsTourShortMap7: HighlightsTourShortMap7,
 
   //Stop Screens
   HighlightsTourShortStop1: HighlightsTourShortStop1,

@@ -12,8 +12,8 @@ const HighlightsTourShortNav5 = ({navigation}) => {
 			header = 'Find: Quetzalcoatlus'
 			subheader = '2nd Floor - West Atrium'
 			body = "Continue through the Evolution gallery until you exit on the other side. When you come out to the atrium overlook, you will see <i>Quetzalcoatlus</i> soaring through the air above."
-			map = "HighlightsTourShortMap5"
-			stop = "HighlightsTourShortStop5"
+			map = { images.mapImages.quetz }
+			stop = "Stop: 5/7"
 			navigation = { navigation }
 		/>
 	)

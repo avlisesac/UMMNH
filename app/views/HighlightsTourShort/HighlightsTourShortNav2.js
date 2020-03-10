@@ -12,8 +12,8 @@ const HighlightsTourShortNav2 = ({navigation}) => {
 			header = 'Find: Michigan Rivers'
 			subheader = '1st Floor - Exploring Michigan Gallery'
 			body = "From the mastodons, turn right and go down the hallway. Once you pass the Museum store, turn left and you will see the entrance to the Exploring Michigan gallery. You will find the Michigan Rivers diorama on the opposite wall, a large cottonwood tree and black bear are both easily visible."
-			map = "HighlightsTourShortMap2"
-			stop = "HighlightsTourShortStop2"
+			map = { images.mapImages.michiganrivers }
+			stop = "Stop: 2/7"
 			navigation = { navigation }
 		/>
 	)

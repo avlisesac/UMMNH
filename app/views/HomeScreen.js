@@ -39,7 +39,9 @@ const HomeScreen = ({navigation}) => {
 						<View style = { styles.buttonWrapper }>
 							<ButtonEx
 								title = "Map"
-								onPress = { () => navigation.push('Map')}
+								onPress = { () => navigation.push('Museum Map', {
+									image: images.mapImages.blank
+								})}
 							/>
 						</View>
 						<View style = { styles.buttonWrapper }>
@@ -56,51 +58,6 @@ const HomeScreen = ({navigation}) => {
 }
 
 export default HomeScreen
-
-// export default class HomeScreen extends React.Component {
-// 	pushScreen = (screenToPush) => {
-// 		this.props.navigation.push(screenToPush)
-// 	}
-//
-// 	render() {
-// 		const { navigate } = this.props.navigation
-// 		return (
-// 			<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
-// 				<SafeAreaView style = { styles.mainContainer }>
-// 					<View style = { styles.menuContainer }>
-// 						<View style = { styles.messageContainer }>
-// 							<Text style = {[ styles.messageText, styles.messageHeader ]}>Welcome</Text>
-// 							<Text style = {[ styles.messageText, styles.messageBody ]}>to the brand new</Text>
-// 							<Text style = {[ styles.messageText, styles.messageBody ]}>University of Michigan</Text>
-// 							<Text style = {[ styles.messageText, styles.messageBig ]}>Museum of</Text>
-// 							<Text style = {[ styles.messageText, styles.messageBig ]}>Natural History!</Text>
-// 						</View>
-// 						<View style = { styles.buttonContainer }>
-// 							<View style = { styles.buttonWrapper }>
-// 								<ButtonEx
-// 									title = "Tour"
-// 									onPress = { () => this.pushScreen('Highlights Tour')}
-// 								/>
-// 							</View>
-// 							<View style = { styles.buttonWrapper }>
-// 								<ButtonEx
-// 									title = "Map"
-// 									onPress = { () => this.pushScreen('Map')}
-// 								/>
-// 							</View>
-// 							<View style = { styles.buttonWrapper }>
-// 								<ButtonEx
-// 									title = "About"
-// 									onPress = { () => this.pushScreen('About')}
-// 								/>
-// 							</View>
-// 						</View>
-// 					</View>
-// 				</SafeAreaView>
-// 			</ImageBackground>
-// 		)
-// 	}
-// }
 
 const styles = StyleSheet.create({
 	mainContainer: {

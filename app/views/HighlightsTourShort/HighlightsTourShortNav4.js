@@ -12,8 +12,8 @@ const HighlightsTourShortNav4 = ({navigation}) => {
 			header = 'Find: Majungasaurus'
 			subheader = '2nd Floor - Evolution Gallery'
 			body = "Exit the Under the Microscope gallery on the opposite side and enter the Evolution gallery ahead. Using the numbered ‘Mass Extinction Pillars’ as a guide, continue until you pass pillar #4. When you do, you will see <i>Majungasaurus</i> looming down from above on the left."
-			map = "HighlightsTourShortMap4"
-			stop = "HighlightsTourShortStop4"
+			map = { images.mapImages.majungasaurus }
+			stop = "Stop: 4/7"
 			navigation = { navigation }
 		/>
 	)
