@@ -386,6 +386,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				96BDAFD64A58E201AD3C6ABD /* [CP] Copy Pods Resources */,
+				A2086D23DEE47D93E99D076D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -715,6 +716,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMMNH/Pods-UMMNH-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2086D23DEE47D93E99D076D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UMMNH/Pods-UMMNH-frameworks.sh",
+				"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning/EstimoteBluetoothScanning.framework",
+				"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK/EstimoteProximitySDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteBluetoothScanning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteProximitySDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UMMNH/Pods-UMMNH-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ACA96C82A13B2E6E1B971F8E /* [CP] Check Pods Manifest.lock */ = {

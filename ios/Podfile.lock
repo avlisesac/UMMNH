@@ -3,6 +3,12 @@ PODS:
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
   - DoubleConversion (1.1.6)
+  - estimote-react-native-proximity (0.6.0):
+    - EstimoteProximitySDK (~> 1.0)
+    - React
+  - EstimoteBluetoothScanning (1.0.8)
+  - EstimoteProximitySDK (1.6.0):
+    - EstimoteBluetoothScanning (~> 1.0.6)
   - Fabric (1.10.2)
   - FBLazyVector (0.61.5)
   - FBReactNativeSpec (0.61.5):
@@ -338,6 +344,7 @@ PODS:
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - "estimote-react-native-proximity (from `../node_modules/@estimote/react-native-proximity`)"
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Firebase/Analytics
@@ -383,6 +390,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - boost-for-react-native
     - Crashlytics
+    - EstimoteBluetoothScanning
+    - EstimoteProximitySDK
     - Fabric
     - Firebase
     - FirebaseAnalytics
@@ -404,6 +413,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  estimote-react-native-proximity:
+    :path: "../node_modules/@estimote/react-native-proximity"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -479,6 +490,9 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
+  estimote-react-native-proximity: bba65e276c1a16dcb2c24e7b6214a284c172610e
+  EstimoteBluetoothScanning: aef117c8584951609403dc73cb07f6501911a365
+  EstimoteProximitySDK: 50c648423820b1ad44a69adffec83f60825894fc
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
@@ -532,6 +546,6 @@ SPEC CHECKSUMS:
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 93bb92f51f357778a565ff4d12845c5d84971ff9
+PODFILE CHECKSUM: fe441a8e023b1c2313c5acbeed963d14ea6bb2f7
 
 COCOAPODS: 1.7.5
