@@ -49,7 +49,7 @@ const DiscoverScreen = (props) => {
 						animating = { discoverModeBool }
 					/>
 					<Text style = { styles.searchingSubheader }>
-						{ discoverModeBool ? 'Searching for nearby exhibits...' : 'Discover mode disabled' }
+						{ discoverModeBool ? 'Searching for nearby exhibits...' : 'Discover mode disabled\n\nTurn Discover mode on to allow us to use your phone\'s Bluetooth functionality to notify you when you are near an exhibit we want to tell you more about!' }
 					</Text>
 				</View>
 			</View>
@@ -92,6 +92,8 @@ const styles = StyleSheet.create({
 	searchingSubheader: {
 		marginTop: 10,
 		fontFamily: 'Whitney-Medium',
-		fontSize: fontSizes.body
+		fontSize: fontSizes.body,
+		textAlign: 'center',
+
 	}
 })
