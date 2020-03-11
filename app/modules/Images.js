@@ -1,7 +1,16 @@
 const images = {
 	homescreenBackground: require('../assets/images/home_background.png'),
 
-	map: require('../assets/images/mapImages/MuseumMap.jpg'),
+	mapImages: {
+		blank: require('../assets/images/mapImages/map_blank.jpg'),
+		bristlemammoth: require('../assets/images/mapImages/map_bristlemammoth.jpg'),
+		dynamicplanet: require('../assets/images/mapImages/map_dynamicplanet.jpg'),
+		majungasaurus: require('../assets/images/mapImages/map_majungasaurus.jpg'),
+		mastodons: require('../assets/images/mapImages/map_mastodons.jpg'),
+		michiganrivers: require('../assets/images/mapImages/map_michiganrivers.jpg'),
+		quetz: require('../assets/images/mapImages/map_quetz.jpg'),
+		underthemicroscope: require('../assets/images/mapImages/map_underthemicroscope.jpg'),
+	},
 
 	heroImages: {
 		bristlemammoth: require('../assets/images/heroImages/bristlemammoth.jpg'),

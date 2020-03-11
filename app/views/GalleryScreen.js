@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
 	SafeAreaView,
 	StyleSheet,
@@ -6,48 +6,43 @@ import {
 	View,
 } from 'react-native'
 
-import Swiper from 'react-native-swiper'
+import GallerySwiper from "react-native-gallery-swiper";
+
+import fontSizes from '../modules/FontSizes'
 
 import PinchableGalleryImage from '../components/PinchableGalleryImage'
-import fontSizes from '../modules/FontSizes'
 import BodyCopy from '../components/BodyCopy'
 
-export default class GalleryScreen extends React.Component{
-	constructor(props){
-		super(props)
+function GalleryScreen({route, navigation}){
+	const { gallery } = route.params
+	const [index, setIndex] = useState(0)
+	const [caption, setCaption] = useState("")
 
-		this.state = {
-			gallery: this.props.navigation.getParam('gallery')
-		}
-		console.log('navigation is:', this.props.navigation)
-		console.log('gallery is: ', this.props.navigation.getParam('gallery'))
+	onChangeImage = (index) => {
+		setIndex(index)
+		console.log(gallery[index].caption)
 	}
 
-	render(){
-		let slides = Object.keys(this.state.gallery).map( (key, index) => {
-			return(
-				<View style = { styles.slide } key = { index }>
-					<PinchableGalleryImage style = { styles.image } image = { this.state.gallery[key].image }/>
-					<Text style = { styles.text }>
-						<BodyCopy textString = { this.state.gallery[key].description } />
-					</Text>
-				</View>
-			)
-		})
-
-		return(
-			<SafeAreaView style = { styles.safeArea }>
-				<Swiper style = { styles.wrapper } removeClippedSubviews = { false } paginationStyle = { {bottom:5, backgroundColor: 'rgba(255,255,255,0.5)'}} activeDotColor = { 'black' } showsButtons = { true } nextButton = { <Text style = { styles.swipeButtonText }>›</Text>} prevButton = { <Text style = { styles.swipeButtonText }>‹</Text>}>
-					{ slides }
-				</Swiper>
-			</SafeAreaView>
-		)
-	}
+	return(
+		<View style = { styles.safeArea }>
+			<Text style = { styles.text }>Image { (index + 1) } / { gallery.length } { '\n(swipe to navigate)' }</Text>
+			<GallerySwiper style = {{ flex: 1, backgroundColor: 'white' }}
+				images = { gallery }
+				onPageSelected = { this.onChangeImage }
+			/>
+			<Text style = { styles.text }>
+				<BodyCopy textString = { gallery[index].caption }/>
+			</Text>
+		</View>
+	)
 }
+
+export default GalleryScreen
 
 const styles = StyleSheet.create({
 	safeArea: {
 		flex: 1,
+		backgroundColor: 'white',
 	},
 	slide: {
 		flex: 1,
@@ -55,7 +50,7 @@ const styles = StyleSheet.create({
 	},
 	text: {
 		marginTop: 10,
-		marginBottom: 25,
+		marginBottom: 10,
 		width: '90%',
 		alignSelf: 'center',
 		backgroundColor: 'rgba(255,255,255,0.5)',

@@ -17,63 +17,47 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-export default class HomeScreen extends React.Component {
-	static navigationOptions = {
-		title: "Home",
-		headerStyle: {
-			backgroundColor: colors.ummnhLightBlue
-		},
-	}
-
-	pushScreen = (screenToPush) => {
-		this.props.navigation.push(screenToPush)
-	}
-
-	render() {
-		const { navigate } = this.props.navigation
-		return (
-			<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
-				<SafeAreaView style = { styles.mainContainer }>
-					<View style = { styles.menuContainer }>			
-						<View style = { styles.messageContainer }>
-							<Text style = {[ styles.messageText, styles.messageHeader ]}>Welcome</Text>
-							<Text style = {[ styles.messageText, styles.messageBody ]}>to the brand new</Text>
-							<Text style = {[ styles.messageText, styles.messageBody ]}>University of Michigan</Text>
-							<Text style = {[ styles.messageText, styles.messageBig ]}>Museum of</Text>
-							<Text style = {[ styles.messageText, styles.messageBig ]}>Natural History!</Text>
+const HomeScreen = ({navigation}) => {
+	return (
+		<ImageBackground style = { styles.imageBackground } source = { images.homescreenBackground }>
+			<SafeAreaView style = { styles.mainContainer }>
+				<View style = { styles.menuContainer }>
+					<View style = { styles.messageContainer }>
+						<Text style = {[ styles.messageText, styles.messageHeader ]}>Welcome</Text>
+						<Text style = {[ styles.messageText, styles.messageBody ]}>to the brand new</Text>
+						<Text style = {[ styles.messageText, styles.messageBody ]}>University of Michigan</Text>
+						<Text style = {[ styles.messageText, styles.messageBig ]}>Museum of</Text>
+						<Text style = {[ styles.messageText, styles.messageBig ]}>Natural History!</Text>
+					</View>
+					<View style = { styles.buttonContainer }>
+						<View style = { styles.buttonWrapper }>
+							<ButtonEx
+								title = "Tour"
+								onPress = { () => navigation.push('Highlights Tour')}
+							/>
 						</View>
-						<View style = { styles.buttonContainer }>
-							<View style = { styles.buttonWrapper }>
-								<ButtonEx
-									title = "Tours"
-									onPress = { () => this.pushScreen('TourPreview')}
-								/>
-							</View>
-							<View style = { styles.buttonWrapper }>
-								<ButtonEx
-									title = "Today @ UMMNH"
-									onPress = { () => this.pushScreen('TodayAtUMMNH') }
-								/>
-							</View>
-							<View style = { styles.buttonWrapper }>
-								<ButtonEx
-									title = "Map"
-									onPress = { () => this.pushScreen('Map')}
-								/>
-							</View>
-							<View style = { styles.buttonWrapper }>
-								<ButtonEx
-									title = "About"
-									onPress = { () => this.pushScreen('About')}
-								/>
-							</View>
+						<View style = { styles.buttonWrapper }>
+							<ButtonEx
+								title = "Map"
+								onPress = { () => navigation.push('Museum Map', {
+									image: images.mapImages.blank
+								})}
+							/>
+						</View>
+						<View style = { styles.buttonWrapper }>
+							<ButtonEx
+								title = "About"
+								onPress = { () => navigation.push('About')}
+							/>
 						</View>
 					</View>
-				</SafeAreaView>
-			</ImageBackground>
-		)
-	}
+				</View>
+			</SafeAreaView>
+		</ImageBackground>
+	)
 }
+
+export default HomeScreen
 
 const styles = StyleSheet.create({
 	mainContainer: {

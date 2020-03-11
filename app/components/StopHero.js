@@ -9,43 +9,38 @@ import {
 	Button
 } from 'react-native-elements'
 import {
-	withNavigation
-} from 'react-navigation'
+	useNavigation
+} from '@react-navigation/native'
 
 import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-class StopHero extends React.Component {
-	constructor(props){
-		super(props)
-		console.log('gallery passed: ', this.props.gallery)
-	}
+function StopHero(props){
+	const navigation = useNavigation()
 
-	render() {
-		return (
-			<View style = { styles.mainContainer }>
-				<Image
-					source = { this.props.image }
-					style = { styles.image }
+	return (
+		<View style = { styles.mainContainer }>
+			<Image
+				source = { props.image }
+				style = { styles.image }
+			/>
+
+			<View style = { styles.buttonWrapper }>
+				<ButtonEx
+					title = 'Image Gallery'
+					onPress = { () => {
+						navigation.push('Image Gallery', {
+						gallery: props.gallery
+					})
+					}}
 				/>
-
-				<View style = { styles.buttonWrapper }>
-					<ButtonEx 
-						title = 'Image Gallery'
-						onPress = { () => {
-							this.props.navigation.push('GalleryScreen', {
-							gallery: this.props.gallery
-						}) 
-						console.log('pushing gallery with: ', this.props.gallery)}}
-					/>
-				</View>
 			</View>
-		)
-	}
+		</View>
+	)
 }
 
-export default withNavigation(StopHero)
+export default StopHero
 
 const styles = StyleSheet.create({
 	mainContainer:{

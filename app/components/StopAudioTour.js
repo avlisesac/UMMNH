@@ -13,9 +13,6 @@ import BodyCopy from '../components/BodyCopy'
 
 import fontSizes from '../modules/FontSizes'
 import colors from '../modules/Colors'
-import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
-
-const ButtonEx = withPreventDoubleClick(Button)
 
 export default class StopAudioTour extends React.Component {
 	constructor(props){
@@ -96,7 +93,7 @@ export default class StopAudioTour extends React.Component {
 							}}
 						/>
 						</View>
-						
+
 						<View style = { styles.audioButtonWrapper }>
 						<Button
 							buttonStyle = { styles.button }
@@ -122,13 +119,13 @@ export default class StopAudioTour extends React.Component {
 					</View>
 				</View>
 
-				{ this.state.showFullDescription && 
+				{ this.state.showFullDescription &&
 					<Text style = { styles.fullDescription }>
 						<BodyCopy textString = { this.props.fullText }/>
 					</Text>
 				}
 			</View>
-			
+
 		)
 	}
 }

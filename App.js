@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import 'react-native-gesture-handler'
+import React from 'react'
 import {
   Alert,
   SafeAreaView,
@@ -7,11 +8,19 @@ import {
   View,
   Text,
   StatusBar,
-} from 'react-native';
+} from 'react-native'
 
 import {
-  createAppContainer
-} from 'react-navigation'
+	Icon,
+} from 'react-native-elements'
+
+import {
+  NavigationContainer
+} from '@react-navigation/native'
+
+import {
+  createBottomTabNavigator
+} from '@react-navigation/bottom-tabs'
 
 import {
   createStackNavigator
@@ -21,45 +30,27 @@ import SplashScreen from 'react-native-splash-screen'
 
 import AsyncStorage from '@react-native-community/async-storage'
 
-import firebase from 'react-native-firebase';
+import firebase from 'react-native-firebase'
+
+//Stacks
+import HomeStack from './app/stacks/HomeStack'
+import TodayStack from './app/stacks/TodayStack'
+import ExhibitListStack from './app/stacks/ExhibitListStack'
+import DiscoverStack from './app/stacks/DiscoverStack'
 
 import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
-import BlankMap from './app/views/BlankMap'
 import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
+import ExhibitListScreen from './app/views/ExhibitListScreen'
+import DiscoverScreen from './app/views/DiscoverScreen'
 import GalleryScreen from './app/views/GalleryScreen'
 import ExitScreen from './app/views/ExitScreen'
 import EndOfTourScreen from './app/views/EndOfTourScreen'
 import TourPreviewScreen from './app/views/TourPreviewScreen'
 
-//Navigation Screens
-import HighlightsTourShortNav1 from './app/views/HighlightsTourShort/HighlightsTourShortNav1'
-import HighlightsTourShortNav2 from './app/views/HighlightsTourShort/HighlightsTourShortNav2'
-import HighlightsTourShortNav3 from './app/views/HighlightsTourShort/HighlightsTourShortNav3'
-import HighlightsTourShortNav4 from './app/views/HighlightsTourShort/HighlightsTourShortNav4'
-import HighlightsTourShortNav5 from './app/views/HighlightsTourShort/HighlightsTourShortNav5'
-import HighlightsTourShortNav6 from './app/views/HighlightsTourShort/HighlightsTourShortNav6'
-import HighlightsTourShortNav7 from './app/views/HighlightsTourShort/HighlightsTourShortNav7'
-
-//Map Screens
-import HighlightsTourShortMap1 from './app/views/HighlightsTourShort/HighlightsTourShortMap1'
-import HighlightsTourShortMap2 from './app/views/HighlightsTourShort/HighlightsTourShortMap2'
-import HighlightsTourShortMap3 from './app/views/HighlightsTourShort/HighlightsTourShortMap3'
-import HighlightsTourShortMap4 from './app/views/HighlightsTourShort/HighlightsTourShortMap4'
-import HighlightsTourShortMap5 from './app/views/HighlightsTourShort/HighlightsTourShortMap5'
-import HighlightsTourShortMap6 from './app/views/HighlightsTourShort/HighlightsTourShortMap6'
-import HighlightsTourShortMap7 from './app/views/HighlightsTourShort/HighlightsTourShortMap7'
-
-//Stop Screens
-import HighlightsTourShortStop1 from './app/views/HighlightsTourShort/HighlightsTourShortStop1'
-import HighlightsTourShortStop2 from './app/views/HighlightsTourShort/HighlightsTourShortStop2'
-import HighlightsTourShortStop3 from './app/views/HighlightsTourShort/HighlightsTourShortStop3'
-import HighlightsTourShortStop4 from './app/views/HighlightsTourShort/HighlightsTourShortStop4'
-import HighlightsTourShortStop5 from './app/views/HighlightsTourShort/HighlightsTourShortStop5'
-import HighlightsTourShortStop6 from './app/views/HighlightsTourShort/HighlightsTourShortStop6'
-import HighlightsTourShortStop7 from './app/views/HighlightsTourShort/HighlightsTourShortStop7'
-
 import colors from './app/modules/Colors'
+
+const Tab = createBottomTabNavigator()
 
 export default class App extends React.Component {
 
@@ -164,65 +155,36 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppContainer />
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions = {({route}) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName
+
+              if(route.name === 'Home') {
+                iconName = 'md-home'
+              } else if(route.name === 'Today'){
+                iconName = 'md-calendar'
+              } else if(route.name === 'Exhibits'){
+                iconName = 'md-list'
+              } else if(route.name === 'Discover'){
+                iconName = 'md-compass'
+              }
+
+              return <Icon type='ionicon' name = {iconName} color = {color}/>
+            }
+          })}
+          tabBarOptions = {{
+            activeTintColor: colors.ummnhLightBlue,
+            inactiveTintColor: 'gray'
+          }}
+        >
+          <Tab.Screen name = "Home" component = {HomeStack}/>
+          <Tab.Screen name = "Today" component = {TodayStack}/>
+          <Tab.Screen name = "Exhibits" component = {ExhibitListStack}/>
+          <Tab.Screen name = "Discover" component = {DiscoverStack}/>
+        </Tab.Navigator>
+      </NavigationContainer>
     )
   }
 };
-
-
-//Navigation Stack
-const RootStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-    About: AboutScreen,
-    Map: BlankMap,
-    TodayAtUMMNH: TodayAtUMMNHScreen,
-    GalleryScreen: GalleryScreen,
-    Exit: ExitScreen,
-    EndOfTour: EndOfTourScreen,
-    TourPreview: TourPreviewScreen,
-    
-    //Navigation
-    HighlightsTourShortNav1: HighlightsTourShortNav1,
-    HighlightsTourShortNav2: HighlightsTourShortNav2,
-    HighlightsTourShortNav3: HighlightsTourShortNav3,
-    HighlightsTourShortNav4: HighlightsTourShortNav4,
-    HighlightsTourShortNav5: HighlightsTourShortNav5,
-    HighlightsTourShortNav6: HighlightsTourShortNav6,
-    HighlightsTourShortNav7: HighlightsTourShortNav7,
-
-    //Maps
-    HighlightsTourShortMap1: HighlightsTourShortMap1,
-    HighlightsTourShortMap2: HighlightsTourShortMap2,
-    HighlightsTourShortMap3: HighlightsTourShortMap3,
-    HighlightsTourShortMap4: HighlightsTourShortMap4,
-    HighlightsTourShortMap5: HighlightsTourShortMap5,
-    HighlightsTourShortMap6: HighlightsTourShortMap6,
-    HighlightsTourShortMap7: HighlightsTourShortMap7,
-
-    //Stops
-    HighlightsTourShortStop1: HighlightsTourShortStop1,
-    HighlightsTourShortStop2: HighlightsTourShortStop2,
-    HighlightsTourShortStop3: HighlightsTourShortStop3,
-    HighlightsTourShortStop4: HighlightsTourShortStop4,
-    HighlightsTourShortStop5: HighlightsTourShortStop5,
-    HighlightsTourShortStop6: HighlightsTourShortStop6,
-    HighlightsTourShortStop7: HighlightsTourShortStop7,
-  },
-  {
-    initialRouteName: 'Home',
-    defaultNavigationOptions: {
-      headerTitleStyle: {
-        color: colors.ummnhDarkBlue
-      },
-      headerBackTitleStyle: {
-        color: colors.ummnhDarkBlue
-      },
-      headerTintColor: colors.ummnhDarkBlue,
-
-    }
-  },
-)
-
-//App Container
-const AppContainer = createAppContainer(RootStack)
