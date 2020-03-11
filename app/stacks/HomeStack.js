@@ -6,6 +6,8 @@ import HomeScreen from '../views/HomeScreen'
 import TourPreviewScreen from '../views/TourPreviewScreen'
 import AboutScreen from '../views/AboutScreen'
 import MapScreen from '../views/MapScreen'
+import GalleryScreen from '../views/GalleryScreen'
+import EndOfTourScreen from '../views/EndOfTourScreen'
 
 import colors from '../modules/Colors'
 import TourScreens from '../modules/TourScreens'
@@ -25,7 +27,7 @@ const HomeStack = () => {
     >
       <HomeStackNav.Screen
         name = "Home"
-        component = {HomeScreen}
+        component = { HomeScreen }
         options = {{
           headerStyle: {
             backgroundColor: colors.ummnhLightBlue
@@ -45,6 +47,16 @@ const HomeStack = () => {
       <HomeStackNav.Screen
         name = "Museum Map"
         component = { MapScreen }
+      />
+
+      <HomeStackNav.Screen
+        name = "Image Gallery"
+        component = { GalleryScreen }
+      />
+
+      <HomeStackNav.Screen
+        name = "End of Tour"
+        component = { EndOfTourScreen }
       />
 
       <HomeStackNav.Screen name = "Find: 1/7" component = { TourScreens.HighlightsTourShortNav1 } />

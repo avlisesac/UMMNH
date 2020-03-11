@@ -23,7 +23,6 @@ const TourStopButtons = (props) => {
             title = "Next Stop!"
             onPress = { () => {
               props.navigation.push(props.target)
-              console.log('want to go to next stop')
             }}
             />
         </View>
