@@ -1,14 +1,15 @@
 import * as RNEP from "@estimote/react-native-proximity"
 import { Alert } from 'react-native'
 
+const config = require('./config.json')
+
 const startProximityObserver = () => {
-  Alert.alert('Starting proximity observer.')
   console.log("starting proximity observer")
 
-  const ESTIMOTE_APP_ID = ""
-  const ESTIMOTE_APP_TOKEN = ""
+  const ESTIMOTE_APP_ID = config.ESTIMOTE_APP_ID
+  const ESTIMOTE_APP_TOKEN = config.ESTIMOTE_APP_TOKEN
 
-  const whiteZone = new RNEP.ProximityZone(5, '52a56c209c08b106cf556fd3ceee2139')
+  const whiteZone = new RNEP.ProximityZone(5, 'white')
   whiteZone.onEnterAction = context => {
     console.log("entered the white zone", context)
     Alert.alert("You entered the white zone.")
@@ -21,6 +22,8 @@ const startProximityObserver = () => {
   RNEP.locationPermission.request().then(
     permission => {
       console.log(`location permission: ${permission}`)
+      console.log('app id:', ESTIMOTE_APP_ID)
+      console.log('app token:', ESTIMOTE_APP_TOKEN)
 
       if(permission !== RNEP.locationPermission.DENIED){
         const credentials = new RNEP.CloudCredentials(
@@ -40,7 +43,7 @@ const startProximityObserver = () => {
           }
         }
 
-        //RNEP.proximityObserver.initialize(credentials, config)
+        RNEP.proximityObserver.initialize(credentials, config)
         RNEP.proximityObserver.startObservingZones([whiteZone])
       }
     },
