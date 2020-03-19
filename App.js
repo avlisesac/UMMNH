@@ -56,6 +56,7 @@ export default class App extends React.Component {
 
   //When application loads, check for permissions and listen for notifications
   componentDidMount = async () => {
+    console.log("App component mounted...")
     SplashScreen.hide()
     this.checkPermission()
     this.createNotificationListeners()

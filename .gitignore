@@ -61,3 +61,6 @@ buck-out/
 
 #gradle properties
 gradle.properties
+
+#env
+.env
