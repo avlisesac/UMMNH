@@ -10,4 +10,4 @@ AppRegistry.registerComponent(appName, () => App);
 
 import { startProximityObserver, stopProximityObserver } from './proximityObserver'
 
-startProximityObserver()
+startProximityObserver(App)

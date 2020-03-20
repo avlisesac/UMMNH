@@ -57,9 +57,14 @@ export default class App extends React.Component {
   //When application loads, check for permissions and listen for notifications
   componentDidMount = async () => {
     console.log("App component mounted...")
+    console.log(this.createAlert)
     SplashScreen.hide()
     this.checkPermission()
     this.createNotificationListeners()
+  }
+
+  createAlert = (toAlert) => {
+    Alert.alert(`change in beacon ${toAlert}`)
   }
 
   //Remove listeners allocated in createNotificationListener

@@ -3,27 +3,30 @@ import { Alert } from 'react-native'
 
 const config = require('./config.json')
 
-const startProximityObserver = () => {
+const startProximityObserver = (passedFunc) => {
   console.log("starting proximity observer")
 
   const ESTIMOTE_APP_ID = config.ESTIMOTE_APP_ID
   const ESTIMOTE_APP_TOKEN = config.ESTIMOTE_APP_TOKEN
 
-  const whiteZone = new RNEP.ProximityZone(5, 'white')
-  whiteZone.onEnterAction = context => {
-    console.log("entered the white zone", context)
-    Alert.alert("You entered the white zone.")
-  }
-  whiteZone.onExitAction = context => {
-    console.log("left the white zone", context)
-    Alert.alert("You exited the white zone.")
+  const allBeacons = new RNEP.ProximityZone(5, 'museum')
+
+  allBeacons.onChangeAction = context => {
+    numOfBeaconsInRange = context.length
+    console.log(`within range of ${numOfBeaconsInRange} beacons:`)
+
+    for(let i = 0; i < numOfBeaconsInRange; i++){
+      const beaconID = context[i].deviceIdentifier
+      const beaconName = config[beaconID]
+      console.log(`-- ${beaconName}`)
+    }
   }
 
   RNEP.locationPermission.request().then(
     permission => {
       console.log(`location permission: ${permission}`)
-      console.log('app id:', ESTIMOTE_APP_ID)
-      console.log('app token:', ESTIMOTE_APP_TOKEN)
+      console.log('what got passed to prox obs', passedFunc)
+      passedFunc.createAlert('test')
 
       if(permission !== RNEP.locationPermission.DENIED){
         const credentials = new RNEP.CloudCredentials(
@@ -44,7 +47,7 @@ const startProximityObserver = () => {
         }
 
         RNEP.proximityObserver.initialize(credentials, config)
-        RNEP.proximityObserver.startObservingZones([whiteZone])
+        RNEP.proximityObserver.startObservingZones([allBeacons])
       }
     },
 
