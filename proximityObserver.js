@@ -3,30 +3,28 @@ import { Alert } from 'react-native'
 
 const config = require('./config.json')
 
-const startProximityObserver = (passedFunc) => {
-  console.log("starting proximity observer")
-
+const startProximityObserver = (updateBeaconsInRange) => {
   const ESTIMOTE_APP_ID = config.ESTIMOTE_APP_ID
   const ESTIMOTE_APP_TOKEN = config.ESTIMOTE_APP_TOKEN
 
   const allBeacons = new RNEP.ProximityZone(5, 'museum')
 
   allBeacons.onChangeAction = context => {
-    numOfBeaconsInRange = context.length
-    console.log(`within range of ${numOfBeaconsInRange} beacons:`)
+    const numOfBeaconsInRange = context.length
+    let arrayOfBeaconNames = []
 
     for(let i = 0; i < numOfBeaconsInRange; i++){
       const beaconID = context[i].deviceIdentifier
       const beaconName = config[beaconID]
-      console.log(`-- ${beaconName}`)
+      arrayOfBeaconNames.push(beaconName)
     }
+
+    updateBeaconsInRange(arrayOfBeaconNames)
   }
 
   RNEP.locationPermission.request().then(
     permission => {
       console.log(`location permission: ${permission}`)
-      console.log('what got passed to prox obs', passedFunc)
-      passedFunc.createAlert('test')
 
       if(permission !== RNEP.locationPermission.DENIED){
         const credentials = new RNEP.CloudCredentials(

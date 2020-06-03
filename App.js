@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Alert,
   SafeAreaView,
@@ -32,6 +32,8 @@ import AsyncStorage from '@react-native-community/async-storage'
 
 import firebase from 'react-native-firebase'
 
+import { startProximityObserver, stopProximityObserver } from './proximityObserver'
+
 //Stacks
 import HomeStack from './app/stacks/HomeStack'
 import TodayStack from './app/stacks/TodayStack'
@@ -49,32 +51,43 @@ import EndOfTourScreen from './app/views/EndOfTourScreen'
 import TourPreviewScreen from './app/views/TourPreviewScreen'
 
 import colors from './app/modules/Colors'
+import BeaconContext from './app/modules/BeaconContext'
 
 const Tab = createBottomTabNavigator()
 
-export default class App extends React.Component {
 
-  //When application loads, check for permissions and listen for notifications
-  componentDidMount = async () => {
-    console.log("App component mounted...")
-    console.log(this.createAlert)
+export default class App extends React.Component {
+  constructor(props){
+    super(props)
+
     SplashScreen.hide()
     this.checkPermission()
     this.createNotificationListeners()
+
+    this.state = {
+      nearbyBeacons: []
+    }
   }
 
-  createAlert = (toAlert) => {
-    Alert.alert(`change in beacon ${toAlert}`)
+  updateNearbyBeacons = (newArray) => {
+    this.setState({
+      nearbyBeacons: newArray
+    })
+
+    console.log('App.js state:', this.state)
   }
 
-  //Remove listeners allocated in createNotificationListener
+  componentDidMount(){
+    startProximityObserver(this.updateNearbyBeacons)
+  }
+
   componentWillUnmount(){
+    stopProximityObserver()
     this.notificationListener()
     //this.notificationOpenedListener()
   }
 
-  //Check if permission given
-  checkPermission = async () => {
+  checkPermission = async () =>{
     const enabled = await firebase.messaging().hasPermission();
 
     if (enabled) {
@@ -84,17 +97,15 @@ export default class App extends React.Component {
     }
   }
 
-  //Request permission if not granted
   requestPermission = async () => {
     try {
       await firebase.messaging().requestPermission();
-      this.getToken()
+      getToken()
     } catch (error) {
       console.log('permission rejected')
     }
   }
 
-  //Store Firebase token
   getToken = async () => {
     let fcmToken = null
 
@@ -149,7 +160,7 @@ export default class App extends React.Component {
     })
   }
 
-  showAlert(title, body){
+  showAlert = (title, body) => {
     Alert.alert(
       title, body,
       [
@@ -159,38 +170,48 @@ export default class App extends React.Component {
     )
   }
 
-  render() {
-    return (
-      <NavigationContainer>
-        <Tab.Navigator
-          screenOptions = {({route}) => ({
-            tabBarIcon: ({ focused, color, size }) => {
-              let iconName
+  render(){
+    return(
+      <BeaconContext.Provider value = { this.state.nearbyBeacons }>
+        <NavigationContainer>
+          <Tab.Navigator
+            screenOptions = {({route}) => ({
+              tabBarIcon: ({ focused, color, size }) => {
+                let iconName
 
-              if(route.name === 'Home') {
-                iconName = 'md-home'
-              } else if(route.name === 'Today'){
-                iconName = 'md-calendar'
-              } else if(route.name === 'Exhibits'){
-                iconName = 'md-list'
-              } else if(route.name === 'Discover'){
-                iconName = 'md-compass'
+                if(route.name === 'Home') {
+                  iconName = 'md-home'
+                } else if(route.name === 'Today'){
+                  iconName = 'md-calendar'
+                } else if(route.name === 'Exhibits'){
+                  iconName = 'md-list'
+                } else if(route.name === 'Discover'){
+                  iconName = 'md-compass'
+                }
+
+                return <Icon type='ionicon' name = {iconName} color = {color}/>
               }
-
-              return <Icon type='ionicon' name = {iconName} color = {color}/>
-            }
-          })}
-          tabBarOptions = {{
-            activeTintColor: colors.ummnhLightBlue,
-            inactiveTintColor: 'gray'
-          }}
-        >
-          <Tab.Screen name = "Home" component = {HomeStack}/>
-          <Tab.Screen name = "Today" component = {TodayStack}/>
-          <Tab.Screen name = "Exhibits" component = {ExhibitListStack}/>
-          <Tab.Screen name = "Discover" component = {DiscoverStack}/>
-        </Tab.Navigator>
-      </NavigationContainer>
+            })}
+            tabBarOptions = {{
+              activeTintColor: colors.ummnhLightBlue,
+              inactiveTintColor: 'gray'
+            }}
+          >
+            <Tab.Screen
+              name = "Home"
+              component = {HomeStack}/>
+            <Tab.Screen
+              name = "Today"
+              component = {TodayStack}/>
+            <Tab.Screen
+              name = "Exhibits"
+              component = {ExhibitListStack}/>
+            <Tab.Screen
+              name = "Discover"
+              component = {DiscoverStack}/>
+          </Tab.Navigator>
+        </NavigationContainer>
+      </BeaconContext.Provider>
     )
   }
-};
+}

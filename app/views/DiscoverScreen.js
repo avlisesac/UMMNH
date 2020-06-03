@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import {
 	ActivityIndicator,
@@ -22,16 +22,18 @@ import withPreventDoubleClick from '../modules/WithPreventDoubleClick'
 import colors from '../modules/Colors'
 import fontSizes from '../modules/FontSizes'
 import links from '../modules/Links'
+import BeaconContext from '../modules/BeaconContext'
 
 const ButtonEx = withPreventDoubleClick(Button)
 
-const DiscoverScreen = (props) => {
+const DiscoverScreen = ({navigation, route}) => {
 	const [discoverModeBool, setDiscoverModeBool] = useState(false)
 
 	return(
 		<SafeAreaView style = { styles.safeArea }>
 			<View style = { styles.mainContainer }>
 				<Text style = { styles.switchHeader }>Discover mode:</Text>
+
 				<View style = { styles.switchContainer }>
 					<Text style = { styles.switchLabel }>Off</Text>
 					<Switch
@@ -51,6 +53,18 @@ const DiscoverScreen = (props) => {
 					<Text style = { styles.searchingSubheader }>
 						{ discoverModeBool ? 'Searching for nearby exhibits...' : 'Discover mode disabled\n\nTurn Discover mode on to allow us to use your phone\'s Bluetooth functionality to notify you when you are near an exhibit we want to tell you more about!' }
 					</Text>
+				</View>
+
+				<BeaconContext.Consumer>
+					{
+						context => <NearbyBeaconFlatlist nearbyBeacons = { context }/>
+					}
+				</BeaconContext.Consumer>
+				<View style = { styles.beaconTester }>
+					<Text>Beacon tester:</Text>
+					<BeaconContext.Consumer>
+						{ context => <Text>{ context }</Text> }
+					</BeaconContext.Consumer>
 				</View>
 			</View>
 		</SafeAreaView>
@@ -94,6 +108,8 @@ const styles = StyleSheet.create({
 		fontFamily: 'Whitney-Medium',
 		fontSize: fontSizes.body,
 		textAlign: 'center',
-
+	},
+	beaconTester: {
+		backgroundColor: 'red'
 	}
 })

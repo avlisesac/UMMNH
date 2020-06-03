@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import moment from 'moment'
 import { createStackNavigator } from '@react-navigation/stack'
 
@@ -6,9 +6,10 @@ import DiscoverScreen from '../views/DiscoverScreen'
 
 import colors from '../modules/Colors'
 
+
 const DiscoverStackNav = createStackNavigator()
 
-const DiscoverStack = () => {
+const DiscoverStack = ({ route, navigation }) => {
   return (
     <DiscoverStackNav.Navigator>
       <DiscoverStackNav.Screen

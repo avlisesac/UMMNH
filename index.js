@@ -8,6 +8,6 @@ import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
 
-import { startProximityObserver, stopProximityObserver } from './proximityObserver'
+//import { startProximityObserver, stopProximityObserver } from './proximityObserver'
 
-startProximityObserver(App)
+//startProximityObserver()
