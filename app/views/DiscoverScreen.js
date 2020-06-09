@@ -55,11 +55,6 @@ const DiscoverScreen = ({navigation, route}) => {
 					</Text>
 				</View>
 
-				<BeaconContext.Consumer>
-					{
-						context => <NearbyBeaconFlatlist nearbyBeacons = { context }/>
-					}
-				</BeaconContext.Consumer>
 				<View style = { styles.beaconTester }>
 					<Text>Beacon tester:</Text>
 					<BeaconContext.Consumer>

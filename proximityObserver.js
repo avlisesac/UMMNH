@@ -10,6 +10,8 @@ const startProximityObserver = (updateBeaconsInRange) => {
   const allBeacons = new RNEP.ProximityZone(5, 'museum')
 
   allBeacons.onChangeAction = context => {
+    console.log('beacon listener change.')
+
     const numOfBeaconsInRange = context.length
     let arrayOfBeaconNames = []
 
@@ -19,6 +21,7 @@ const startProximityObserver = (updateBeaconsInRange) => {
       arrayOfBeaconNames.push(beaconName)
     }
 
+    console.log('beacons in range: ', arrayOfBeaconNames)
     updateBeaconsInRange(arrayOfBeaconNames)
   }
 
