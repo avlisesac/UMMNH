@@ -32,12 +32,6 @@ const HomeScreen = ({navigation}) => {
 					<View style = { styles.buttonContainer }>
 						<View style = { styles.buttonWrapper }>
 							<ButtonEx
-								title = "Tour"
-								onPress = { () => navigation.push('Highlights Tour')}
-							/>
-						</View>
-						<View style = { styles.buttonWrapper }>
-							<ButtonEx
 								title = "Map"
 								onPress = { () => navigation.push('Museum Map', {
 									image: images.mapImages.blank

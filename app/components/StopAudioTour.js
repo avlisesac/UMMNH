@@ -7,7 +7,7 @@ import {
 import {
 	Button
 } from 'react-native-elements'
-import SoundPlayer from 'react-native-sound-player'
+import AudioPlayer from '../components/AudioPlayer'
 
 import BodyCopy from '../components/BodyCopy'
 
@@ -21,110 +21,19 @@ export default class StopAudioTour extends React.Component {
 		this.state = {
 			showFullDescription: false,
 			playPauseIcon: 'md-play',
+			audioState: null,
 			audioPlaying: false,
 			audioLoaded: false,
 		}
-
-		_onFinishedLoadingFileSubscription = SoundPlayer.addEventListener('FinishedLoadingFile', ({success, name, type }) => {
-			console.log('finished loading file', success, name, type)
-
-		})
-
-		_onFinishedPlayingSubscription = SoundPlayer.addEventListener('FinishedPlaying', ({success}) => {
-			console.log('finished playing', success)
-			if(success){
-				console.log('finished playing audio file successfully. stopping...')
-				this.stop()
-			}
-
-		})
-
-		SoundPlayer.loadSoundFile(this.props.audioFile, 'mp3')
 	}
 
-	componentWillUnmount(){
-		this.stop()
-		_onFinishedPlayingSubscription.remove()
-		_onFinishedLoadingFileSubscription.remove()
-	}
+	componentDidMount(){
 
-	playPause = () => {
-		console.log('play/pause pressed')
-		if(!this.state.audioPlaying){
-			console.log('audio not currently playing, starting...')
-			SoundPlayer.play()
-			this.setState({
-				audioPlaying: true,
-				playPauseIcon: 'md-pause'
-			})
-		} else {
-			console.log('audio currently playing, pausing...')
-			SoundPlayer.pause()
-			this.setState({
-				audioPlaying: false,
-				playPauseIcon: 'md-play'
-			})
-		}
-	}
-
-	stop = () => {
-		console.log('stop called')
-		SoundPlayer.stop()
-		SoundPlayer.seek(0)
-		this.setState({
-			audioPlaying: false,
-			playPauseIcon: 'md-play'
-		})
 	}
 
 	render() {
 		return (
-			<View style = { styles.mainContainer }>
-				<View style = { styles.audioPlayer }>
-					<Text style = { styles.audioPlayerHeader }>Audio Tour</Text>
-
-					<View style = { styles.audioPlayerButtonContainer }>
-						<View style = { styles.audioButtonWrapper }>
-						<Button
-							buttonStyle = { styles.button }
-							icon = {{ name: this.state.playPauseIcon, type: 'ionicon', size: fontSizes.button, style: {marginRight: 0}}}
-							onPress = { () => {
-								this.playPause()
-							}}
-						/>
-						</View>
-
-						<View style = { styles.audioButtonWrapper }>
-						<Button
-							buttonStyle = { styles.button }
-							icon = {{ name: 'md-square', type: 'ionicon', size: fontSizes.button, style: {marginRight: 0}}}
-							onPress = { () => {
-								this.stop()
-							}}
-						/>
-						</View>
-
-						<View style = { styles.textButtonWrapper }>
-						<Button
-							buttonStyle = { styles.button }
-							titleStyle = { styles.buttonTitle }
-							title = 'Show/Hide Text'
-							onPress = { () => {
-								this.setState({
-									showFullDescription: !this.state.showFullDescription
-								})
-							}}
-						/>
-						</View>
-					</View>
-				</View>
-
-				{ this.state.showFullDescription &&
-					<Text style = { styles.fullDescription }>
-						<BodyCopy textString = { this.props.fullText }/>
-					</Text>
-				}
-			</View>
+			
 
 		)
 	}

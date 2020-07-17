@@ -42,7 +42,7 @@ const Quetz = (props) => {
 			shortDescription = { `Soaring high in the hair, <i>Quetzalcoatlus northropi</i> (ketts-all-koh-AHT-uh-liss NORTH-rop-eye) would scour the ground below to find small animals to swoop down and devour. They weren’t picky, though. If given the chance, they were just as likely to eat carrion, the remnants of feedings left behind by other hunters.` }
 
 			//Audio Tour
-			audioFile = { 'mastodons' }
+			audioFile = { 'quetz' }
 
 			//Audio Tour Text
 			fullText = {

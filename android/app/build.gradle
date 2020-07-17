@@ -187,6 +187,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-sound')
     implementation project(':react-native-firebase')
 
     implementation "com.google.android.gms:play-services-base:16.1.0"

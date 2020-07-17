@@ -1,5 +1,4 @@
 import React from 'react'
-import moment from 'moment'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import ExhibitListScreen from '../views/ExhibitListScreen'

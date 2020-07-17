@@ -6,13 +6,16 @@ import {
 	View,
 } from 'react-native'
 
+
 import StopHero from '../components/StopHero'
 import StopQuickInfo from '../components/StopQuickInfo'
-import StopAudioTour from '../components/StopAudioTour'
+import AudioPlayer from '../components/AudioPlayer'
+// import StopAudioTour from '../components/StopAudioTour'
 import StopTLAS from '../components/StopTLAS'
 import WhileYoureHere from '../components/WhileYoureHere'
 
 const ExhibitScreen = (props) => {
+
 	return (
     <SafeAreaView style = { styles.safeAreaView}>
 			<ScrollView style = { styles.scrollView }>
@@ -24,7 +27,8 @@ const ExhibitScreen = (props) => {
 					<StopQuickInfo header = { props.header } subheader = { props.subheader } shortDescription = { props.shortDescription }/>
 
 					{/* Audio Tour */}
-					<StopAudioTour
+					<AudioPlayer
+						header = {props.header}
 						audioFile = { props.audioFile }
 						fullText = { props.fullText }
 					/>

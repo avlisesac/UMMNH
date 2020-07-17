@@ -37,7 +37,10 @@ import HomeStack from './app/stacks/HomeStack'
 import TodayStack from './app/stacks/TodayStack'
 import ExhibitListStack from './app/stacks/ExhibitListStack'
 import DiscoverStack from './app/stacks/DiscoverStack'
+import TourStack from './app/stacks/TourStack'
 
+
+//Screens
 import HomeScreen from './app/views/HomeScreen'
 import AboutScreen from './app/views/AboutScreen'
 import TodayAtUMMNHScreen from './app/views/TodayAtUMMNHScreen'
@@ -163,6 +166,8 @@ export default class App extends React.Component {
 
               if(route.name === 'Home') {
                 iconName = 'md-home'
+              } else if (route.name==='Tour'){
+                iconName = 'md-flag'
               } else if(route.name === 'Today'){
                 iconName = 'md-calendar'
               } else if(route.name === 'Exhibits'){
@@ -180,9 +185,10 @@ export default class App extends React.Component {
           }}
         >
           <Tab.Screen name = "Home" component = {HomeStack}/>
+          <Tab.Screen name = "Tour" component = {TourStack}/>
           <Tab.Screen name = "Today" component = {TodayStack}/>
           <Tab.Screen name = "Exhibits" component = {ExhibitListStack}/>
-          <Tab.Screen name = "Discover" component = {DiscoverStack}/>
+          {/*<Tab.Screen name = "Discover" component = {DiscoverStack}/>*/}
         </Tab.Navigator>
       </NavigationContainer>
     )
